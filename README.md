@@ -13,3 +13,11 @@ yarn dev
 ```
 
 ## Deploy
+
+
+## Style Convention
+
+### Global style and reset
+
+../layout/default.vue
+

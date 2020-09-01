@@ -52,12 +52,13 @@ main {
   justify-content: center;
   min-height: 100vh;
 }
+
 ul{
   list-style-type: none;
   padding:0;
 }
+
 li{
   margin-bottom:10px;
   text-align: left;
 }
-

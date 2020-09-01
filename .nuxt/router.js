@@ -5,7 +5,9 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _173cfcc9 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
 const _2a6516ef = () => interopDefault(import('../pages/database.vue' /* webpackChunkName: "pages/database" */))
+const _5bcf7486 = () => interopDefault(import('../pages/test.vue' /* webpackChunkName: "pages/test" */))
 const _36f4d78e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _bb302fbc = () => interopDefault(import('../pages/_artist.vue' /* webpackChunkName: "pages/_artist" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -32,9 +34,17 @@ export const routerOptions = {
     component: _2a6516ef,
     name: "database"
   }, {
+    path: "/test",
+    component: _5bcf7486,
+    name: "test"
+  }, {
     path: "/",
     component: _36f4d78e,
     name: "index"
+  }, {
+    path: "/:artist",
+    component: _bb302fbc,
+    name: "artist"
   }],
 
   fallback: false

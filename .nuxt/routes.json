@@ -3,18 +3,35 @@
     "name": "about",
     "path": "/about",
     "component": "/Users/wenqili/github/emerging-curator-2020/pages/about.vue",
-    "chunkName": "pages/about"
+    "chunkName": "pages/about",
+    "_name": "_173cfcc9"
   },
   {
     "name": "database",
     "path": "/database",
     "component": "/Users/wenqili/github/emerging-curator-2020/pages/database.vue",
-    "chunkName": "pages/database"
+    "chunkName": "pages/database",
+    "_name": "_2a6516ef"
+  },
+  {
+    "name": "test",
+    "path": "/test",
+    "component": "/Users/wenqili/github/emerging-curator-2020/pages/test.vue",
+    "chunkName": "pages/test",
+    "_name": "_5bcf7486"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/wenqili/github/emerging-curator-2020/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_36f4d78e"
+  },
+  {
+    "name": "artist",
+    "path": "/:artist",
+    "component": "/Users/wenqili/github/emerging-curator-2020/pages/_artist.vue",
+    "chunkName": "pages/_artist",
+    "_name": "_bb302fbc"
   }
 ]

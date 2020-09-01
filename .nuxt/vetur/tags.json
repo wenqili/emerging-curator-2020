@@ -1,8 +1,8 @@
 {
-  "TheNavigation": {
-    "description": "Auto imported from components/TheNavigation.vue"
+  "AppHeader": {
+    "description": "Auto imported from components/AppHeader.vue"
   },
-  "LazyTheNavigation": {
-    "description": "Auto imported from components/TheNavigation.vue"
+  "LazyAppHeader": {
+    "description": "Auto imported from components/AppHeader.vue"
   }
 }

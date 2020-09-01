@@ -1,20 +1,34 @@
 <template>
   <header>
+    <h1>Emerging Curators 2020</h1>
     <nav>
       <ul>
         <li>
-          <NuxtLink to="/">Home page</NuxtLink>
+          <NuxtLink to="/">
+            Home page
+          </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/about">About page</NuxtLink>
+          <NuxtLink to="/about">
+            About page
+          </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/database">Database page</NuxtLink>
+          <NuxtLink to="/database">
+            Database page
+          </NuxtLink>
         </li>
       </ul>
     </nav>
   </header>
 </template>
+
+<script>
+export default {
+  name: 'AppHeader'
+}
+</script>
+
 <style scoped>
 header {
   position: fixed;
@@ -26,6 +40,7 @@ header {
   justify-content: center;
   padding: 0 1rem;
 }
+
 nav {
   padding: 0 1rem;
 }
