@@ -1,0 +1,20 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/wenqili/github/emerging-curator-2020/pages/about.vue",
+    "chunkName": "pages/about"
+  },
+  {
+    "name": "database",
+    "path": "/database",
+    "component": "/Users/wenqili/github/emerging-curator-2020/pages/database.vue",
+    "chunkName": "pages/database"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/wenqili/github/emerging-curator-2020/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]
