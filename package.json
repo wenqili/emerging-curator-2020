@@ -2,7 +2,8 @@
   "name": "emerging-curator-2020",
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "nuxt generate",
+    "nexbuild": "nuxt build",
     "generate": "nuxt generate",
     "start": "nuxt start"
   },
