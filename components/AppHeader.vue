@@ -1,25 +1,10 @@
 <template>
   <header>
-    <h1>Emerging Curators 2020</h1>
-    <nav>
-      <ul>
-        <li>
-          <NuxtLink to="/">
-            Home page
-          </NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/about">
-            About page
-          </NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/database">
-            Database page
-          </NuxtLink>
-        </li>
-      </ul>
-    </nav>
+    <h1 class="title is-1">
+      <nuxt-link to="/">
+        Emerging Curators
+      </nuxt-link>
+    </h1>
   </header>
 </template>
 
@@ -31,29 +16,20 @@ export default {
 
 <style scoped>
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
+  grid-area: 2 / 2 / 3 / 7;
 }
 
-nav {
-  padding: 0 1rem;
+h1 {
+  font-family: 'Oriya MN';
+  font-weight: bolder;
+  text-align: right;
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+.nuxt-link-active {
+  color: black;
 }
 
-nav ul li {
-  padding: 1rem;
-  font-size: 1.2rem;
+h1:active {
+  color: black;
 }
 </style>

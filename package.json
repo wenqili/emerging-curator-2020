@@ -12,15 +12,21 @@
   "author": "Wenqi Li, Zui Chen",
   "license": "MIT",
   "dependencies": {
+    "@nuxtjs/bulma": "^1.3.0",
     "nuxt": "^2.14.4"
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@nuxtjs/fontawesome": "^1.1.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^6.2.2",
-    "prettier": "^2.1.1"
+    "node-sass": "^4.14.1",
+    "prettier": "^2.1.1",
+    "sass-loader": "^10.0.2"
   }
 }

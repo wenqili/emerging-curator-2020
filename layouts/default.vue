@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <AppHeader />
+  <div class="main-grid">
+
     <nuxt />
   </div>
 </template>
 
 <script>
-import AppHeader from '../components/AppHeader'
+
 export default {
   components: {
-    AppHeader
+
   }
 }
 </script>
@@ -25,5 +25,6 @@ body {
   font-size: 1rem;
   line-height: 1.6;
 }
+
 
 </style>
