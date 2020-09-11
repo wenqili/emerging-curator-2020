@@ -1,5 +1,5 @@
 <template>
-  <nav :style="cssProps">
+  <nav :style="cssProps" :class="{ 'is-active': isActive }">
     <div class="dropdown" :class="{ 'is-active': isActive }">
       <div class="dropdown-trigger">
         <button
@@ -54,14 +54,23 @@ nav {
   border-right: 5px solid black;
 }
 
+nav.is-active {
+  grid-area: 1 / 1 / 8 / 8;
+
+}
+
 button {
   z-index: 21;
   background-color: transparent !important;
   border: none;
 }
 
+.dropdown {
+  width: 100%;
+  height: 100%;
+}
 #dropdown-menu{
-  position: fixed;
+  position: absolute;
   top: 0;
   opacity: 0;
   width: 100%;

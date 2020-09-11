@@ -33,6 +33,7 @@ export default {
     /*
      ** You can extend webpack config here
     */
+    transpile: ['GLTFLoader.js', 'OrbitControls.js', 'TransformControls.js'],
     postcss: {
       preset: {
         features: {

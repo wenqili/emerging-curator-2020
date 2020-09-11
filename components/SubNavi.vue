@@ -16,6 +16,11 @@
           <span>3</span>Company
         </NuxtLink>
       </li>
+      <li class="title is-4 mb-0">
+        <NuxtLink to="/about">
+          <span>4</span>About Us
+        </NuxtLink>
+      </li>
     </ul>
   </div>
 </template>
@@ -26,7 +31,7 @@ export default {
 </script>
 <style scoped>
 .subnavi {
-  position: fixed;
+  position: absolute;
   left: 5rem;
   bottom: 3rem;
 }

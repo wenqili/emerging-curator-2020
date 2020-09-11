@@ -68,6 +68,7 @@ aside div {
   border-bottom: 5px solid yellow;
   background-color: var(--primary-grey);
   padding: 1rem;
+  overflow-y: auto;
 }
 
 .institution-section {
