@@ -35,8 +35,8 @@
           <div v-if="currentFocus === 'artist'" class="artist-section artist-section-list">
             <div>
               <ul>
-                <li v-for="artist in cleanArtists" :key="JSON.stringify(artist)" @mouseover="current = artist.name">
-                  <nuxt-link :to="{ name: 'artist-artist', params: { artist: JSON.stringify(artist) }}">
+                <li v-for="artist in cleanArtists" :key="artist.id" @mouseover="current = artist.name">
+                  <nuxt-link :to="{ name: 'artist-artist', params: { artist: artist.id }}">
                     {{ artist.name }}
                   </nuxt-link>
                 </li>
@@ -52,8 +52,8 @@
           <div v-if="currentFocus === 'artist'" class="artist-section artist-section-list">
             <div>
               <ul>
-                <li v-for="artist in cleanArtists" :key="JSON.stringify(artist)" @mouseover="current = artist.name">
-                  <nuxt-link :to="{ name: 'artist-artist', params: { artist: JSON.stringify(artist) }}">
+                <li v-for="artist in cleanArtists" :key="artist.id" @mouseover="current = artist.name">
+                  <nuxt-link :to="{ name: 'artist-artist', params: { artist: artist.id }}">
                     {{ artist.name }}
                   </nuxt-link>
                 </li>
@@ -64,8 +64,8 @@
           <div v-if="currentFocus === 'artist'" class="artist-section artist-section-list">
             <div>
               <ul>
-                <li v-for="artist in cleanArtists" :key="JSON.stringify(artist)" @mouseover="current = artist.name">
-                  <nuxt-link :to="{ name: 'artist-artist', params: { artist: JSON.stringify(artist) }}">
+                <li v-for="artist in cleanArtists" :key="artist.id" @mouseover="current = artist.name">
+                  <nuxt-link :to="{ name: 'artist-artist', params: { artist: artist.id }}">
                     {{ artist.name }}
                   </nuxt-link>
                 </li>
