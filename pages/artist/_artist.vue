@@ -1,42 +1,111 @@
 <template>
   <div class="rotating" :class="{ 'is-menu': isMenu }">
     <div class="catalog-grid" :class="{ 'is-menu': isMenu }">
-      <div class="left-banner second-row">
-        <button class="main-button">
-          > Artists
-        </button>
+      <!-- First -->
+      <div class="first-row-container ">
+        <div v-if="currentFocus === 'artist'" class="artist-collection" :class="{ 'is-active': currentFocus === 'artist'}" @click="currentFocus = 'artist'">
+          Artists
+        </div>
+        <div v-else class="artist-collection" :class="{ 'is-active': currentFocus === 'artist'}" />
+
+        <div v-if="currentFocus === 'artist'" class="artist-collection" :class="{ 'is-active': currentFocus === 'artist'}" @click="currentFocus = 'artist'">
+          Artwork
+        </div>
+
+        <div v-if="currentFocus === 'artist'" class="artist-collection" :class="{ 'is-active': currentFocus === 'artist'}" @click="currentFocus = 'artist'">
+          information
+        </div>
+
+
+        <div v-if="currentFocus === 'insititution'" class="insititution-collection" :class="{ 'is-active': currentFocus === 'insititution'}" @click="currentFocus = 'insititution'">
+          Institutions
+        </div>
+        <div v-else class="insititution-collection" :class="{ 'is-active': currentFocus === 'insititution'}" />
+
+        <div v-if="currentFocus === 'company'" class="company-collection" :class="{ 'is-active': currentFocus === 'company'}" @click="currentFocus = 'company'">
+          companies
+        </div>
+        <div v-else class="company-collection" :class="{ 'is-active': currentFocus === 'company'}" />
       </div>
-      <div class="middle-banner second-row">
-        <button class="main-button">
-          > Institutions
-        </button>
+
+      <!-- Second -->
+      <div class="second-row-container">
+        <div class="left-section" :class="{ 'is-active': currentFocus === 'artist'}">
+          <!-- Artists -->
+          <div v-if="currentFocus === 'artist'" class="artist-section artist-section-list">
+            <div>
+              <ul>
+                <li v-for="artist in cleanArtists" :key="JSON.stringify(artist)" @mouseover="current = artist.name">
+                  <nuxt-link :to="{ name: 'artist-artist', params: { artist: JSON.stringify(artist) }}">
+                    {{ artist.name }}
+                  </nuxt-link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div v-else class="section-title" @click="currentFocus = 'artist'">
+            <h3>
+              Artists
+            </h3>
+          </div>
+
+          <div v-if="currentFocus === 'artist'" class="artist-section artist-section-list">
+            <div>
+              <ul>
+                <li v-for="artist in cleanArtists" :key="JSON.stringify(artist)" @mouseover="current = artist.name">
+                  <nuxt-link :to="{ name: 'artist-artist', params: { artist: JSON.stringify(artist) }}">
+                    {{ artist.name }}
+                  </nuxt-link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div v-if="currentFocus === 'artist'" class="artist-section artist-section-list">
+            <div>
+              <ul>
+                <li v-for="artist in cleanArtists" :key="JSON.stringify(artist)" @mouseover="current = artist.name">
+                  <nuxt-link :to="{ name: 'artist-artist', params: { artist: JSON.stringify(artist) }}">
+                    {{ artist.name }}
+                  </nuxt-link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Insititution -->
+        <div class="middle-section" :class="{ 'is-active': currentFocus === 'insititution'}">
+          <ul v-if="currentFocus === 'insititution'">
+            <li>Name 1</li>
+          </ul>
+          <div v-else class="section-title" @click="currentFocus = 'insititution'">
+            <h3>
+              Insititution
+            </h3>
+          </div>
+        </div>
+
+        <!-- Company -->
+        <div class="right-section" :class="{ 'is-active': currentFocus === 'company'}">
+          <ul v-if="currentFocus === 'company'">
+            <li>Name 1</li>
+          </ul>
+          <div v-else class="section-title" @click="currentFocus = 'company'">
+            <h3>
+              companies
+            </h3>
+          </div>
+        </div>
       </div>
-      <div class="right-banner second-row last-col">
-        <button class="main-button">
-          > companies
-        </button>
-      </div>
-      <div class="left-section">
-        <ul>
-          <li v-for="artist in cleanArtists" :key="artist.id" @mouseover="current = artist.name">
-            <nuxt-link :to="{ name: 'artist-artist', params: { artist: artist.id }}">
-              {{ artist.name }}
-            </nuxt-link>
-          </li>
-        </ul>
-      </div>
-      <div class="middle-section">
-        <ul>
-          <li>Name 1</li>
-        </ul>
-      </div>
-      <div class="right-section last-col">
-        <ul>
-          <li>Name 1</li>
-        </ul>
-      </div>
-      <div class="grid-footer last-col">
-        <h1>Emerging Curators 2020</h1>
+
+      <!-- Third -->
+      <div class="grid-footer">
+        <h1>
+          <nuxt-link to="/catalog">
+            Emerging Curators 2020
+          </nuxt-link>
+        </h1>
         <button class="main-button">
           EN/CN
         </button>
@@ -70,6 +139,7 @@ export default {
     return {
       cleanArtists,
       isMenu: false,
+      currentFocus: 'artist',
     }
   },
   head() {
@@ -86,6 +156,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+* {
+  box-sizing: border-box;
+}
 
 .rotating{
   transform-origin: 3rem 3rem;
@@ -106,7 +179,6 @@ export default {
 
 .is-menu .navi-bar {
   width: 100vw;
-
 }
 
 .navi-bar {
@@ -122,6 +194,7 @@ export default {
   display: flex;
   justify-content: space-between;
   height: 3rem;
+  border-top: black 2px solid;
 }
 
 .menu {
@@ -160,48 +233,144 @@ export default {
   height: 100vh;
   transform: rotate(-90deg);
   transform-origin: left top;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 3rem repeat(4, 1fr) 3rem;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
   height: 100vh;
   line-height: 1;
-  /* background-color: aqua; */
 }
 
 .catalog-grid.is-menu {
   height: 100vw;
 }
 
-.catalog-grid > * {
-  border-left: black 2px solid;
-  /* border-right: black 2px solid; */
-  border-bottom: black 2px solid;
-}
-
 .header {
   grid-area: 1 / 1 / 2 / 13;
 }
 
-/* Helper */
-/* Border */
-
-.second-row {
+// First row
+.first-row-container {
   display: flex;
-  align-items: flex-end;
+  width: calc(100vw - 3rem);
+  height: 3rem;
+
+  & > * {
+    border-right: black 2px solid;
+  /* border-right: black 2px solid; */
+    border-bottom: black 2px solid;
+    display: flex;
+    align-items: center;
+    transition: all 200ms linear;
+  }
 }
 
-.last-col {
-  border-right: none;
+.artist-collection {
+  width: 3rem;
+  border-bottom: none;
+  &.is-active {
+    border-bottom: 2px black solid;
+    flex-grow: 2;
+    background-color:thistle;
+  }
 }
 
+.insititution-collection {
+  width: 3rem;
+  border-bottom: none;
+  &.is-active {
+    border-bottom: 2px black solid;
+    flex-grow: 2;
+    background-color: aquamarine;
+  }
+}
+
+.company-collection {
+  width: 3rem;
+  border-bottom: none;
+  &.is-active {
+    border-bottom: 2px black solid;
+    flex-grow: 2;
+    background-color: burlywood;
+  }
+}
+
+
+// Second row
+.second-row-container {
+  display: flex;
+  width: calc(100vw - 3rem);
+  height: calc(100vh - 6rem);
+  
+
+  & > * {
+    border-right: black 2px solid;
+  /* border-right: black 2px solid; */
+    border-bottom: black 2px solid;
+    display: flex;
+    align-items: center;
+    transition: all 200ms linear;
+  }
+}
+
+.is-menu {
+  .second-row-container {
+    height: calc(100vw - 6rem) !important;
+  }
+}
+
+.left-section {
+  overflow: auto;
+  width: 3rem;
+  display: flex;
+  &.is-active {
+    flex-grow: 2;
+  }
+}
+
+.artist-section {
+  flex-grow: 2;
+  height: 100%;
+  border-right: 2px black solid;
+
+  &:last-child {
+    border-right:none;
+  }
+}
+
+.middle-section {
+  position: relative;
+  width: 3rem;
+  &.is-active {
+    flex-grow: 2;
+    background-color: aquamarine;
+  }
+}
+
+.right-section {
+  width: 3rem;
+  &.is-active {
+    flex-grow: 2;
+    background-color: burlywood;
+  }
+}
+
+.section-title {
+  cursor: pointer;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+    top: -3rem;
+  // height: calc(100% + 3rem);
+  height: 100%;
+  & h3 {
+    transform: rotate(90deg);
+    transform-origin: 1.5rem;
+  }
+}
 /* Component */
 .main-button {
   border: transparent;
   background-color: transparent;
   font-size: 1rem;
-  padding: 0.3rem;
+  padding: 0.5rem;
 }
 
 .main-button:hover {
@@ -211,45 +380,25 @@ export default {
 }
 
 /* First row */
-.left-banner {
-  grid-area:  1 / 1 / 3 / 5;
-  background-color:thistle;
-}
 
-.middle-banner {
-  grid-area:  1 / 5 / 3 / 9;
-  background-color: aquamarine;
-}
-
-.right-banner {
-  grid-area:  1 / 9 / 3 / 13;
-  background-color: burlywood;
-}
 
 /* third row */
-.left-section {
-  grid-area:  3 / 1 / 6 / 5;
-  overflow: auto;
-}
 
-.middle-section {
-  grid-area:  3 / 5 / 6 / 9;
-}
-
-.right-section {
-  grid-area:  3 / 9 / 6 / 13;
-}
 
 .grid-footer {
-  grid-area: 6 / 1 / 7 / 13;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  padding: 0 0.5rem;
 }
 
 .grid-footer  h1 {
-  float: left;
+  
 }
 
 .grid-footer  button {
-  float: right;
+
 }
 
 li {

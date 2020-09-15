@@ -24,7 +24,7 @@
       </div>
       <div class="left-section">
         <ul>
-          <li v-for="artist in cleanArtists" :key="artist.id" :class="{ 'is-activeHover': currentArtist === artist }"
+          <li v-for="artist in cleanArtists" :key="JSON.stringify(artist)" :class="{ 'is-activeHover': currentArtist === artist }"
               @mouseover="currentArtist = artist"
           >
             <nuxt-link :to="{ name: 'artist-artist', params: { artist: artist.id }}">
@@ -35,7 +35,7 @@
       </div>
       <div class="middle-section">
         <ul>
-          <li v-for="artist in cleanArtists" :key="artist.id" :class="{ 'is-activeHover': currentArtist === artist }"
+          <li v-for="artist in cleanArtists" :key="JSON.stringify(artist)" :class="{ 'is-activeHover': currentArtist === artist }"
               @mouseover="currentArtist = artist"
           >
             <nuxt-link :to="{ name: 'institution-institution', params: { institution: artist.id }}">
