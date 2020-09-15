@@ -14,13 +14,6 @@
     "_name": "_4a1160f4"
   },
   {
-    "name": "catalog",
-    "path": "/catalog",
-    "component": "/Users/wenco/Github/emerging-curator-2020/pages/catalog.vue",
-    "chunkName": "pages/catalog",
-    "_name": "_63976a84"
-  },
-  {
     "name": "company",
     "path": "/company",
     "component": "/Users/wenco/Github/emerging-curator-2020/pages/company/index.vue",
@@ -33,6 +26,13 @@
     "component": "/Users/wenco/Github/emerging-curator-2020/pages/database.vue",
     "chunkName": "pages/database",
     "_name": "_240433a6"
+  },
+  {
+    "name": "index_temp",
+    "path": "/index_temp",
+    "component": "/Users/wenco/Github/emerging-curator-2020/pages/index_temp.vue",
+    "chunkName": "pages/index_temp",
+    "_name": "_3aef6d8c"
   },
   {
     "name": "institution",

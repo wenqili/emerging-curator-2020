@@ -102,11 +102,11 @@
       <!-- Third -->
       <div class="grid-footer">
         <h1>
-          <nuxt-link to="/catalog">
+          <nuxt-link to="/#">
             Emerging Curators 2020
           </nuxt-link>
         </h1>
-        <button class="main-button">
+        <button>
           EN/CN
         </button>
       </div>
@@ -316,6 +316,7 @@ export default {
 }
 
 .left-section {
+  position: relative;
   overflow: auto;
   width: 3rem;
   display: flex;
@@ -344,6 +345,7 @@ export default {
 }
 
 .right-section {
+  position: relative;
   width: 3rem;
   &.is-active {
     flex-grow: 2;
@@ -357,33 +359,14 @@ export default {
   position: absolute;
   display: flex;
   align-items: center;
-    top: -3rem;
-  // height: calc(100% + 3rem);
-  height: 100%;
+  top: -3rem;
+  height: calc(100% + 3rem);
+  // height: 100%;
   & h3 {
     transform: rotate(90deg);
     transform-origin: 1.5rem;
   }
 }
-/* Component */
-.main-button {
-  border: transparent;
-  background-color: transparent;
-  font-size: 1rem;
-  padding: 0.5rem;
-}
-
-.main-button:hover {
-  color: white;
-  text-decoration: underline;
-  font-style: italic;
-}
-
-/* First row */
-
-
-/* third row */
-
 
 .grid-footer {
   display: flex;
@@ -391,15 +374,13 @@ export default {
   align-items: center;
   height: 3rem;
   padding: 0 0.5rem;
-}
-
-.grid-footer  h1 {
   
+  button {
+    border: none;
+    background-color: transparent;
+  }
 }
 
-.grid-footer  button {
-
-}
 
 li {
   font-size: 2rem;
@@ -423,7 +404,6 @@ li {
     }
     
   }
-
 }
 
 a.nuxt-link-active{
