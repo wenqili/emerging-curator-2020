@@ -4,5 +4,35 @@
   },
   "LazyAppHeader": {
     "description": "Auto imported from components/AppHeader.vue"
+  },
+  "Canvas": {
+    "description": "Auto imported from components/Canvas.vue"
+  },
+  "LazyCanvas": {
+    "description": "Auto imported from components/Canvas.vue"
+  },
+  "Menu": {
+    "description": "Auto imported from components/Menu.vue"
+  },
+  "LazyMenu": {
+    "description": "Auto imported from components/Menu.vue"
+  },
+  "NaviBar": {
+    "description": "Auto imported from components/NaviBar.vue"
+  },
+  "LazyNaviBar": {
+    "description": "Auto imported from components/NaviBar.vue"
+  },
+  "SubNavi": {
+    "description": "Auto imported from components/SubNavi.vue"
+  },
+  "LazySubNavi": {
+    "description": "Auto imported from components/SubNavi.vue"
+  },
+  "WaffleChart": {
+    "description": "Auto imported from components/WaffleChart.vue"
+  },
+  "LazyWaffleChart": {
+    "description": "Auto imported from components/WaffleChart.vue"
   }
 }

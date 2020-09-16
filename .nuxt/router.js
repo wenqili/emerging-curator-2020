@@ -3,11 +3,13 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _173cfcc9 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
-const _2a6516ef = () => interopDefault(import('../pages/database.vue' /* webpackChunkName: "pages/database" */))
-const _5bcf7486 = () => interopDefault(import('../pages/test.vue' /* webpackChunkName: "pages/test" */))
-const _36f4d78e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
-const _bb302fbc = () => interopDefault(import('../pages/_artist.vue' /* webpackChunkName: "pages/_artist" */))
+const _154df549 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
+const _74289bcb = () => interopDefault(import('../pages/artists/index.vue' /* webpackChunkName: "pages/artists/index" */))
+const _9a599608 = () => interopDefault(import('../pages/company/index.vue' /* webpackChunkName: "pages/company/index" */))
+const _234b4e6f = () => interopDefault(import('../pages/database.vue' /* webpackChunkName: "pages/database" */))
+const _53561e77 = () => interopDefault(import('../pages/institution/index.vue' /* webpackChunkName: "pages/institution/index" */))
+const _61bb911f = () => interopDefault(import('../pages/artists/_artist.vue' /* webpackChunkName: "pages/artists/_artist" */))
+const _3505d00e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -27,24 +29,32 @@ export const routerOptions = {
 
   routes: [{
     path: "/about",
-    component: _173cfcc9,
+    component: _154df549,
     name: "about"
   }, {
+    path: "/artists",
+    component: _74289bcb,
+    name: "artists"
+  }, {
+    path: "/company",
+    component: _9a599608,
+    name: "company"
+  }, {
     path: "/database",
-    component: _2a6516ef,
+    component: _234b4e6f,
     name: "database"
   }, {
-    path: "/test",
-    component: _5bcf7486,
-    name: "test"
+    path: "/institution",
+    component: _53561e77,
+    name: "institution"
+  }, {
+    path: "/artists/:artist",
+    component: _61bb911f,
+    name: "artists-artist"
   }, {
     path: "/",
-    component: _36f4d78e,
+    component: _3505d00e,
     name: "index"
-  }, {
-    path: "/:artist",
-    component: _bb302fbc,
-    name: "artist"
   }],
 
   fallback: false
