@@ -1,4 +1,45 @@
 [
+    {
+        "name":"类型",
+        "children":[
+            {
+                "name":"Meyrin",
+                "value":1     
+            },
+            {
+                "name":"Rotterdam",
+                "value":1     
+            },
+            {
+                "name":"Beijing",
+                "value":1   
+            },
+            {
+                "name":"London",
+                "value":1     
+            },
+            {
+                "name":"New York",
+                "value":1   
+            },
+            {
+                "name":"Mountain View",
+                "value":1   
+            },
+            {
+                "name":"Perth",
+                "value":1     
+            },
+            {
+                "name":"Los Angelos",
+                "value":1   
+            },
+            {
+                "name":"Eindhoven",
+                "value":1   
+            }
+        ]
+    },
     {    
         "name":"类型",
         "children":[
