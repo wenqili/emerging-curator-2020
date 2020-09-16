@@ -17,6 +17,15 @@
   "LazyMenu": {
     "description": "Auto imported from components/Menu.vue"
   },
+<<<<<<< HEAD
+=======
+  "MenuSection": {
+    "description": "Auto imported from components/MenuSection.vue"
+  },
+  "LazyMenuSection": {
+    "description": "Auto imported from components/MenuSection.vue"
+  },
+>>>>>>> origin/master
   "NaviBar": {
     "description": "Auto imported from components/NaviBar.vue"
   },
@@ -28,11 +37,14 @@
   },
   "LazySubNavi": {
     "description": "Auto imported from components/SubNavi.vue"
+<<<<<<< HEAD
   },
   "WaffleChart": {
     "description": "Auto imported from components/WaffleChart.vue"
   },
   "LazyWaffleChart": {
     "description": "Auto imported from components/WaffleChart.vue"
+=======
+>>>>>>> origin/master
   }
 }
