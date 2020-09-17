@@ -29,6 +29,12 @@
   "LazyNaviBar": {
     "description": "Auto imported from components/NaviBar.vue"
   },
+  "OverviewDiagram": {
+    "description": "Auto imported from components/OverviewDiagram.vue"
+  },
+  "LazyOverviewDiagram": {
+    "description": "Auto imported from components/OverviewDiagram.vue"
+  },
   "SubNavi": {
     "description": "Auto imported from components/SubNavi.vue"
   },

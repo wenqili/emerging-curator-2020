@@ -2,71 +2,71 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "/Users/wenco/Github/emerging-curator-2020/pages/about.vue",
+    "component": "/Users/zuic/Github/emerging-curator-2020/pages/about.vue",
     "chunkName": "pages/about",
-    "_name": "_161ef372"
+    "_name": "_154df549"
   },
   {
     "name": "artists",
     "path": "/artists",
-    "component": "/Users/wenco/Github/emerging-curator-2020/pages/artists/index.vue",
+    "component": "/Users/zuic/Github/emerging-curator-2020/pages/artists/index.vue",
     "chunkName": "pages/artists/index",
-    "_name": "_4a1160f4"
+    "_name": "_74289bcb"
   },
   {
     "name": "company",
     "path": "/company",
-    "component": "/Users/wenco/Github/emerging-curator-2020/pages/company/index.vue",
+    "component": "/Users/zuic/Github/emerging-curator-2020/pages/company/index.vue",
     "chunkName": "pages/company/index",
-    "_name": "_ee880bb6"
+    "_name": "_9a599608"
   },
   {
     "name": "database",
     "path": "/database",
-    "component": "/Users/wenco/Github/emerging-curator-2020/pages/database.vue",
+    "component": "/Users/zuic/Github/emerging-curator-2020/pages/database.vue",
     "chunkName": "pages/database",
-    "_name": "_240433a6"
+    "_name": "_234b4e6f"
   },
   {
     "name": "index_temp",
     "path": "/index_temp",
-    "component": "/Users/wenco/Github/emerging-curator-2020/pages/index_temp.vue",
+    "component": "/Users/zuic/Github/emerging-curator-2020/pages/index_temp.vue",
     "chunkName": "pages/index_temp",
-    "_name": "_3aef6d8c"
+    "_name": "_f64a0bd6"
   },
   {
     "name": "institution",
     "path": "/institution",
-    "component": "/Users/wenco/Github/emerging-curator-2020/pages/institution/index.vue",
+    "component": "/Users/zuic/Github/emerging-curator-2020/pages/institution/index.vue",
     "chunkName": "pages/institution/index",
-    "_name": "_60d3b1c0"
+    "_name": "_53561e77"
   },
   {
     "name": "artist-artist",
     "path": "/artist/:artist?",
-    "component": "/Users/wenco/Github/emerging-curator-2020/pages/artist/_artist.vue",
+    "component": "/Users/zuic/Github/emerging-curator-2020/pages/artist/_artist.vue",
     "chunkName": "pages/artist/_artist",
-    "_name": "_59207fee"
+    "_name": "_27803fdc"
   },
   {
     "name": "artists-artist",
     "path": "/artists/:artist",
-    "component": "/Users/wenco/Github/emerging-curator-2020/pages/artists/_artist.vue",
+    "component": "/Users/zuic/Github/emerging-curator-2020/pages/artists/_artist.vue",
     "chunkName": "pages/artists/_artist",
-    "_name": "_6087b008"
+    "_name": "_61bb911f"
   },
   {
     "name": "institution-institution",
     "path": "/institution/:institution",
-    "component": "/Users/wenco/Github/emerging-curator-2020/pages/institution/_institution.vue",
+    "component": "/Users/zuic/Github/emerging-curator-2020/pages/institution/_institution.vue",
     "chunkName": "pages/institution/_institution",
-    "_name": "_0808749b"
+    "_name": "_2f3add64"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/wenco/Github/emerging-curator-2020/pages/index.vue",
+    "component": "/Users/zuic/Github/emerging-curator-2020/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_35d6ce37"
+    "_name": "_3505d00e"
   }
 ]
