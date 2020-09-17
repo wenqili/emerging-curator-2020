@@ -3,70 +3,60 @@
     "name": "about",
     "path": "/about",
     "component": "/Users/wenco/Github/emerging-curator-2020/pages/about.vue",
-    "chunkName": "pages/about",
-    "_name": "_161ef372"
+    "chunkName": "pages/about"
   },
   {
     "name": "artists",
     "path": "/artists",
     "component": "/Users/wenco/Github/emerging-curator-2020/pages/artists/index.vue",
-    "chunkName": "pages/artists/index",
-    "_name": "_4a1160f4"
+    "chunkName": "pages/artists/index"
   },
   {
     "name": "company",
     "path": "/company",
     "component": "/Users/wenco/Github/emerging-curator-2020/pages/company/index.vue",
-    "chunkName": "pages/company/index",
-    "_name": "_ee880bb6"
+    "chunkName": "pages/company/index"
   },
   {
     "name": "database",
     "path": "/database",
     "component": "/Users/wenco/Github/emerging-curator-2020/pages/database.vue",
-    "chunkName": "pages/database",
-    "_name": "_240433a6"
+    "chunkName": "pages/database"
   },
   {
     "name": "index_temp",
     "path": "/index_temp",
     "component": "/Users/wenco/Github/emerging-curator-2020/pages/index_temp.vue",
-    "chunkName": "pages/index_temp",
-    "_name": "_3aef6d8c"
+    "chunkName": "pages/index_temp"
+  },
+  {
+    "name": "index_temp2",
+    "path": "/index_temp2",
+    "component": "/Users/wenco/Github/emerging-curator-2020/pages/index_temp2.vue",
+    "chunkName": "pages/index_temp2"
   },
   {
     "name": "institution",
     "path": "/institution",
     "component": "/Users/wenco/Github/emerging-curator-2020/pages/institution/index.vue",
-    "chunkName": "pages/institution/index",
-    "_name": "_60d3b1c0"
-  },
-  {
-    "name": "artist-artist",
-    "path": "/artist/:artist?",
-    "component": "/Users/wenco/Github/emerging-curator-2020/pages/artist/_artist.vue",
-    "chunkName": "pages/artist/_artist",
-    "_name": "_59207fee"
+    "chunkName": "pages/institution/index"
   },
   {
     "name": "artists-artist",
     "path": "/artists/:artist",
     "component": "/Users/wenco/Github/emerging-curator-2020/pages/artists/_artist.vue",
-    "chunkName": "pages/artists/_artist",
-    "_name": "_6087b008"
+    "chunkName": "pages/artists/_artist"
   },
   {
     "name": "institution-institution",
     "path": "/institution/:institution",
     "component": "/Users/wenco/Github/emerging-curator-2020/pages/institution/_institution.vue",
-    "chunkName": "pages/institution/_institution",
-    "_name": "_0808749b"
+    "chunkName": "pages/institution/_institution"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/wenco/Github/emerging-curator-2020/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_35d6ce37"
+    "chunkName": "pages/index"
   }
 ]

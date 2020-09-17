@@ -1,5 +1,5 @@
 <template>
-  <div class="canvas" ref="container" />
+  <div ref="container" class="canvas" />
 </template>
 
 <script>

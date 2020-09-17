@@ -1,63 +1,89 @@
 <template>
   <div class="rotating" :class="{ 'is-menu': isMenu }">
     <div class="catalog-grid" :class="{ 'is-menu': isMenu }">
-      <div class="left-banner second-row">
-        <div class="artist-banner">
-          {{ currentArtist.name }} 's picture placeholder
+      <!-- First -->
+      <div class="first-row-container ">
+        <div class="left-section">
+          <figure>
+            <img src="~/static/placeholder1.jpeg">
+          </figure>
         </div>
-        <button class="main-button">
-          Artists
-        </button>
-      </div>
-      <div class="middle-banner second-row">
-        <div class="artist-banner">
-          {{ currentArtist.institution }} 's picture placeholder
+
+        <div class="middle-section">
+          <figure>
+            <img src="~/static/placeholder3.png">
+          </figure>
         </div>
-        <button class="main-button">
-          Institutions
-        </button>
+
+        <div class="right-section">
+          <figure>
+            <img src="~/static/placeholder5.png">
+          </figure>
+        </div>
       </div>
-      <div class="right-banner second-row last-col">
-        <button class="main-button">
-          companies
-        </button>
-      </div>
-      <div class="left-section">
-        <ul>
-          <li v-for="artist in cleanArtists" :key="artist.id" :class="{ 'is-activeHover': currentArtist === artist }"
-              @mouseover="currentArtist = artist"
-          >
-            <nuxt-link :to="{ name: 'artist-artist', params: { artist: artist.id }}">
-              {{ artist.name }}
-            </nuxt-link>
-          </li>
-        </ul>
-      </div>
-      <div class="middle-section">
-        <ul>
-          <li v-for="artist in cleanArtists" :key="artist.id" :class="{ 'is-activeHover': currentArtist === artist }"
-              @mouseover="currentArtist = artist"
-          >
-            <nuxt-link :to="{ name: 'institution-institution', params: { institution: artist.id }}">
-              {{ artist.institution }}
-            </nuxt-link>
-          </li>
-        </ul>
-      </div>
-      <div class="right-section last-col">
-        <ul>
-          <li>Name 1</li>
-        </ul>
-      </div>
-      <div class="grid-footer last-col">
-        <h1>
-          <nuxt-link to="/">
-            Emerging Curators 2020
+
+      <!-- Second -->
+      <div class="second-row-container">
+        <!-- Artists -->
+
+        <div class="IndexSection left-section">
+          <nuxt-link to="/artists">
+            <h3 class="IndexSection__sectionTitle">
+              Artists
+            </h3>
           </nuxt-link>
-        </h1>
-        <button class="main-button">
-          EN / CN
-        </button>
+
+          <div class="IndexSection__sectionContainer">
+            <!-- Artist name list -->
+            <div class="IndexSection__col IndexSection__leftCol">
+              <div>
+                <ul>
+                  <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" :class="{ 'is-activeHover': currentArtist === artist }" @mouseover="currentArtist = artist"> 
+                    <!-- <nuxt-link :to="{ name: 'artists-artist', params: { artist: artist.id }}"> -->
+                    {{ artist.name }}
+                    <!-- </nuxt-link> -->
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div> <!-- End of sectionContainer -->
+        </div>
+
+        <!-- Institution -->
+        <div class="IndexSection middle-section">
+          <h3 class="IndexSection__sectionTitle">
+            Institution
+          </h3>
+          
+          <!-- Institution list -->
+          <div class="IndexSection__col IndexSection__leftCol">
+            <div class="IndexSection__richtextContainer">
+              <ul>
+                <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" :class="{ 'is-activeHover': currentArtist === artist }" @mouseover="currentArtist = artist"> 
+                  {{ artist.institution }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> <!-- end of Institution -->
+
+        <!-- Company -->
+        <div class="IndexSection right-section">
+          <h3 class="IndexSection__sectionTitle">
+            Companies
+          </h3>
+          
+          <!-- Company list -->
+          <div class="IndexSection__col IndexSection__leftCol">
+            <div class="IndexSection__richtextContainer">
+              <ul>
+                <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" :class="{ 'is-activeHover': currentArtist === artist }" @mouseover="currentArtist = artist"> 
+                  {{ artist.institution }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="navi-bar">
@@ -77,21 +103,33 @@
 
 <script>
 import artists from "../assets/artists.json"
-import MenuSection from "../components/MenuSection"
 let cleanArtists = [...new Set(artists)]
+
 export default {
   layout: 'catalog',
   components: {
-    MenuSection,
+    
   },
   data: function() {
-    console.log(artists)
     return {
       cleanArtists,
       isMenu: false,
+      currentFocus: 'artist',
       currentArtist: {},
-      currentInstitution: '',
     }
+  },
+  created() {
+    this.name = this.$route.params.artist
+    console.log(this.$route)
+      // ? artists.archives[this.name]
+      // : {}
+    // console.log({ name: this.name, data: this.data })
+  },
+  methods: {
+    toggleArtwork: function() {
+      document.getElementById('artwork').classList.toggle('is-active')
+      document.getElementById('artinfo').classList.toggle('is-blur')
+    },
   },
   head() {
     return {
@@ -107,6 +145,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+* {
+  box-sizing: border-box;
+}
 
 .rotating{
   transform-origin: 3rem 3rem;
@@ -122,12 +163,12 @@ export default {
 
 .rotating.is-menu {
   transform: rotate(0deg) !important;
+  // transform: rotate(90deg) translate(0, -100px) !important;
   width: 100vw;
 }
 
 .is-menu .navi-bar {
   width: 100vw;
-
 }
 
 .navi-bar {
@@ -135,17 +176,15 @@ export default {
   position: relative;
   top: 3rem;
   height: calc(100vh - 3rem);
-  /* transform-origin: 0 0; */
-
 }
 
 .navi-bar nav {
   position: absolute;
   width: 100%;
-  /* background-color: yellow;  */
   display: flex;
   justify-content: space-between;
   height: 3rem;
+  border-top: black 3px solid;
 }
 
 .menu {
@@ -166,17 +205,6 @@ export default {
   font-weight: 900;
 }
 
-.menu-content {
-  position: absolute;
-  top: 3rem;
-  bottom: 0;
-  /* background-color: #fff; */
-  /* height: 100%; */
-  width: 100%;
-  /* filter: blur(4px); */
-}
-
-
 .catalog-grid {
   top: 3rem;
   position: absolute;
@@ -184,133 +212,183 @@ export default {
   height: 100vh;
   transform: rotate(-90deg);
   transform-origin: left top;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 3rem repeat(4, 1fr) 3rem;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
   height: 100vh;
   line-height: 1;
-  /* background-color: aqua; */
+  overflow: hidden;
 }
 
 .catalog-grid.is-menu {
   height: 100vw;
 }
 
-.catalog-grid > * {
-  border-left: black 2px solid;
-  /* border-right: black 2px solid; */
-  border-bottom: black 2px solid;
-  // padding: 0.5rem;
-}
-
-.header {
-  grid-area: 1 / 1 / 2 / 13;
-}
-
-/* Helper */
-/* Border */
-
-.second-row {
+// First row
+.first-row-container {
   display: flex;
-  align-items: flex-end;
+  width: calc(100vw - 3rem);
+  height: 48%;
+  
+  & > * {
+    display: flex;
+    align-items: center;
+    transition: all 200ms linear;
+  }
 }
 
-.last-col {
-  border-right: none;
-}
-
-/* Component */
-.main-button {
-  border: transparent;
-  background-color: transparent;
-  font-size: 1rem;
-  padding: 0.5rem;
-}
-
-.main-button:hover {
-  /* color: white; */
-  text-decoration: underline;
-  font-style: italic;
-}
-
-/* First row */
-.left-banner {
-  grid-area:  1 / 1 / 3 / 5;
-  position: relative;
-}
-
-.artist-banner {
-  position: absolute;
+// Second row
+.second-row-container {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  // background-color: rgb(random(255), random(1), 0);
+  width: calc(100vw - 3rem);
+  height: calc(100vh - 48%);
+
+  & > * {
+    display: flex;
+    align-items: center;
+    transition: all 300ms ease;
+  }
 }
 
-.middle-banner {
-  grid-area:  1 / 5 / 3 / 9;
-  position: relative;
+.is-menu {
+  .second-row-container {
+    height: calc(100vw - 6rem) !important;
+  }
 }
 
-.right-banner {
-  grid-area:  1 / 9 / 3 / 13;
-  background-color: burlywood;
-}
-
-/* third row */
 .left-section {
-  grid-area:  3 / 1 / 6 / 5;
-  overflow: auto;
+  width: 28%;
 }
 
 .middle-section {
-  grid-area:  3 / 5 / 6 / 9;
+  width: 44%;
+  border-left: 3px black solid;
 }
 
 .right-section {
-  grid-area:  3 / 9 / 6 / 13;
-}
-
-.grid-footer {
-  grid-area: 6 / 1 / 7 / 13;
-  padding: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-ul {
-  /* padding: 1rem; */
+  width: 28%;
+  border-left: 3px black solid;
 }
 
 li {
   font-size: 2rem;
-  padding: 0.25rem 0.5rem;
-
+  user-select: none;
+  margin-bottom: 0.2rem;
   a {
+    padding: 0.25rem 0.5rem;
     display: block;
     width: 100%;
-  }
 
-  &:hover {
-    background-color: black;
-
-    a {
-      color: white;
+    &:active {
     }
   }
 }
 
 .is-activeHover {
+  background: black;
+  color: white;
+}
+
+a.nuxt-link-active{
   background-color: black;
+  color: white;
+}
+
+// New CSS style
+.IndexSection {
+  position: relative;
+  top: 0;
+  right: 0;
+  padding-top: 1.2rem;
+  padding-left: 2rem;
+  // padding-bottom: 1.2rem;
+  height: 10.4rem;
+  z-index: 1;
+  // width: 1rem;
+  height: 100%;
   
-  a {
+  // & * {
+  //   transition: ease 300ms all;
+  // }
+
+  &.is-active {
+    left: 0;
+    
+    z-index: 0;
+    // width: calc(100vw - 3rem);
+  }
+
+  h3 {
+    top: 1.2rem;
+  }
+
+  &__sectionTitle {
+    top: 0;
+    left: 1.2rem;
+    position: absolute;
+    transform-origin: top left;
+    transform: rotate(90deg);
+    background-color: black;
     color: white;
+    width: 8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.3rem;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover{
+      background-color: transparent;
+      color: black;
+      border: 1px solid black;
+    }
+  }
+
+  &__sectionContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  &__col {
+    position: relative;
+    height: 100%;
+  }
+
+  &__leftCol {
+    width: 100%;
+  }
+
+  &__midCol {
+    height: 100%;
+    width: 40%;
+    border-left: black solid 3px;
+  }
+
+  &__rightCol {
+    min-width: 2rem;
+    height: 100%;
+    width: 30%;
+    border-left: black solid 3px;
+  }
+
+  &__richtextContainer {
+    overflow: auto;
+    height: 100%;
+  }
+
+  &__textContainer {
+    padding-left: 2rem;
+    padding-right: 4rem;
+    overflow: auto;
+    height: 100%;
+  }
+}
+
+figure {
+  width: 100%;
+  height: 100%;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }
 </style>
-
