@@ -6,10 +6,10 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _161ef372 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
 const _4a1160f4 = () => interopDefault(import('../pages/artists/index.vue' /* webpackChunkName: "pages/artists/index" */))
 const _ee880bb6 = () => interopDefault(import('../pages/company/index.vue' /* webpackChunkName: "pages/company/index" */))
-const _240433a6 = () => interopDefault(import('../pages/database.vue' /* webpackChunkName: "pages/database" */))
 const _3aef6d8c = () => interopDefault(import('../pages/index_temp.vue' /* webpackChunkName: "pages/index_temp" */))
 const _2315ed56 = () => interopDefault(import('../pages/index_temp2.vue' /* webpackChunkName: "pages/index_temp2" */))
 const _60d3b1c0 = () => interopDefault(import('../pages/institution/index.vue' /* webpackChunkName: "pages/institution/index" */))
+const _53feedff = () => interopDefault(import('../pages/residency.vue' /* webpackChunkName: "pages/residency" */))
 const _6087b008 = () => interopDefault(import('../pages/artists/_artist.vue' /* webpackChunkName: "pages/artists/_artist" */))
 const _0808749b = () => interopDefault(import('../pages/institution/_institution.vue' /* webpackChunkName: "pages/institution/_institution" */))
 const _35d6ce37 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
@@ -43,10 +43,6 @@ export const routerOptions = {
     component: _ee880bb6,
     name: "company"
   }, {
-    path: "/database",
-    component: _240433a6,
-    name: "database"
-  }, {
     path: "/index_temp",
     component: _3aef6d8c,
     name: "index_temp"
@@ -58,6 +54,10 @@ export const routerOptions = {
     path: "/institution",
     component: _60d3b1c0,
     name: "institution"
+  }, {
+    path: "/residency",
+    component: _53feedff,
+    name: "residency"
   }, {
     path: "/artists/:artist",
     component: _6087b008,

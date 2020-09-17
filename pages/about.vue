@@ -1,23 +1,12 @@
 <template>
-  <main>
-    <div v-for="archive in archives.archives" :key="archive.id">
-      <p>{{ archive.name }}</p>
-      <p>{{ archive.title }}</p>
-      <p>{{ archive.intro }}</p>
-      <nuxt-link :to="{ name: 'artist', params: { artist: archive.name, data: archive }}">
-        {{ archive.name }}
-      </nuxt-link>
-    </div>
-  </main>
+  <main />
 </template>
 
 <script>
-import archives from "../assets/projects.json"
 
 export default {
   data() {
     return {
-      archives,
     }
   },
 }

@@ -1,37 +1,9 @@
 <template>
   <div class="rotating" :class="{ 'is-menu': isMenu }">
     <div class="catalog-grid" :class="{ 'is-menu': isMenu }">
-      <!-- First -->
-      <!-- <div class="first-row-container ">
-        <div v-if="currentFocus === 'artist'" class="artist-collection" :class="{ 'is-active': currentFocus === 'artist'}" @click="currentFocus = 'artist'">
-          Artists
-        </div>
-        <div v-else class="artist-collection" :class="{ 'is-active': currentFocus === 'artist'}" />
-
-        <div v-if="currentFocus === 'artist'" class="artist-collection" :class="{ 'is-active': currentFocus === 'artist'}" @click="currentFocus = 'artist'">
-          Artwork
-        </div>
-
-        <div v-if="currentFocus === 'artist'" class="artist-collection" :class="{ 'is-active': currentFocus === 'artist'}" @click="currentFocus = 'artist'">
-          information
-        </div>
-
-
-        <div v-if="currentFocus === 'insititution'" class="insititution-collection" :class="{ 'is-active': currentFocus === 'insititution'}" @click="currentFocus = 'insititution'">
-          Institutions
-        </div>
-        <div v-else class="insititution-collection" :class="{ 'is-active': currentFocus === 'insititution'}" />
-
-        <div v-if="currentFocus === 'company'" class="company-collection" :class="{ 'is-active': currentFocus === 'company'}" @click="currentFocus = 'company'">
-          companies
-        </div>
-        <div v-else class="company-collection" :class="{ 'is-active': currentFocus === 'company'}" />
-      </div> -->
-
       <!-- Second -->
       <div class="second-row-container">
         <!-- Artists -->
-
         <div class="DataSection" :class="[{ 'is-active': currentFocus === 'artist'}, currentFocus]">
           <nuxt-link v-if="currentFocus === 'artist'" to="/artists">
             <h3 class="DataSection__sectionTitle">
@@ -48,9 +20,8 @@
             <div class="DataSection__col DataSection__leftCol">
               <div>
                 <ul>
-                  <!-- <li>{{ name }}</li> -->
                   <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" @mouseover="current = artist.name">
-                    <nuxt-link :to="{ name: 'artists-artist', params: { artist: artist.id }}">
+                    <nuxt-link :to="{ name: 'artists-artist', params: { artist: artist.url, id: artist.id }}">
                       {{ artist.name }}
                     </nuxt-link>
                   </li>
@@ -190,9 +161,6 @@ export default {
   },
   created() {
     this.name = this.$route.params.artist
-      // ? artists.archives[this.name]
-      // : {}
-    // console.log({ name: this.name, data: this.data })
   },
   methods: {
     toggleArtwork: function() {
