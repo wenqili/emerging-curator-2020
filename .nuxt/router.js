@@ -8,8 +8,8 @@ const _74289bcb = () => interopDefault(import('../pages/artists/index.vue' /* we
 const _9a599608 = () => interopDefault(import('../pages/company/index.vue' /* webpackChunkName: "pages/company/index" */))
 const _234b4e6f = () => interopDefault(import('../pages/database.vue' /* webpackChunkName: "pages/database" */))
 const _f64a0bd6 = () => interopDefault(import('../pages/index_temp.vue' /* webpackChunkName: "pages/index_temp" */))
+const _169bf1ed = () => interopDefault(import('../pages/index_temp2.vue' /* webpackChunkName: "pages/index_temp2" */))
 const _53561e77 = () => interopDefault(import('../pages/institution/index.vue' /* webpackChunkName: "pages/institution/index" */))
-const _27803fdc = () => interopDefault(import('../pages/artist/_artist.vue' /* webpackChunkName: "pages/artist/_artist" */))
 const _61bb911f = () => interopDefault(import('../pages/artists/_artist.vue' /* webpackChunkName: "pages/artists/_artist" */))
 const _2f3add64 = () => interopDefault(import('../pages/institution/_institution.vue' /* webpackChunkName: "pages/institution/_institution" */))
 const _3505d00e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
@@ -51,13 +51,13 @@ export const routerOptions = {
     component: _f64a0bd6,
     name: "index_temp"
   }, {
+    path: "/index_temp2",
+    component: _169bf1ed,
+    name: "index_temp2"
+  }, {
     path: "/institution",
     component: _53561e77,
     name: "institution"
-  }, {
-    path: "/artist/:artist?",
-    component: _27803fdc,
-    name: "artist-artist"
   }, {
     path: "/artists/:artist",
     component: _61bb911f,

@@ -5,6 +5,12 @@
   "LazyAppHeader": {
     "description": "Auto imported from components/AppHeader.vue"
   },
+  "ArtistsDataViz": {
+    "description": "Auto imported from components/ArtistsDataViz.vue"
+  },
+  "LazyArtistsDataViz": {
+    "description": "Auto imported from components/ArtistsDataViz.vue"
+  },
   "Canvas": {
     "description": "Auto imported from components/Canvas.vue"
   },

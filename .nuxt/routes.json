@@ -35,18 +35,18 @@
     "_name": "_f64a0bd6"
   },
   {
+    "name": "index_temp2",
+    "path": "/index_temp2",
+    "component": "/Users/zuic/Github/emerging-curator-2020/pages/index_temp2.vue",
+    "chunkName": "pages/index_temp2",
+    "_name": "_169bf1ed"
+  },
+  {
     "name": "institution",
     "path": "/institution",
     "component": "/Users/zuic/Github/emerging-curator-2020/pages/institution/index.vue",
     "chunkName": "pages/institution/index",
     "_name": "_53561e77"
-  },
-  {
-    "name": "artist-artist",
-    "path": "/artist/:artist?",
-    "component": "/Users/zuic/Github/emerging-curator-2020/pages/artist/_artist.vue",
-    "chunkName": "pages/artist/_artist",
-    "_name": "_27803fdc"
   },
   {
     "name": "artists-artist",

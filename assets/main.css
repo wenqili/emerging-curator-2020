@@ -1,6 +1,6 @@
 :root {
   --primary-blue:#2f80d5;
-  --primary-font: 'Oriya MN';
+  --primary-font: '-apple-system';
   --primary-grey: #B7B7B7;
   --primary-brown: #99815E;
 }
@@ -10,6 +10,7 @@ body {
       Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
       Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   margin: 0;
+  color: black;
 }
 
 a,
@@ -19,7 +20,8 @@ a:visited {
 }
 
 a:hover {
-  color: var(--primary-blue);
+  /* color: var(--primary-blue); */
+  font-style: italic;
 }
 
 a.nuxt-link-exact-active {
@@ -34,4 +36,5 @@ main {
   grid-row-gap: 0px;
   height: 100vh;
   line-height: 1;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
