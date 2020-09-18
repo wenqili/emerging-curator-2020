@@ -3,45 +3,35 @@
     <div class="catalog-grid" :class="{ 'is-menu': isMenu }">
       <!-- Second -->
       <div class="second-row-container">
-        <!-- Artists -->
-        <div class="DataSection" :class="[{ 'is-active': currentFocus === 'artist'}, currentFocus]">
-          <nuxt-link v-if="currentFocus === 'artist'" to="/artists">
-            <h3 class="DataSection__sectionTitle">
-              Artists
-            </h3>
-          </nuxt-link>
-
-          <h3 v-else class="DataSection__sectionTitle" @click="currentFocus = 'artist'">
-            Artists
+        <div class="DataSection is-active">
+          <h3 class="DataSection__sectionTitle">
+            Institutions
           </h3>
 
           <div v-if="currentFocus === 'artist'" class="DataSection__sectionContainer">
-            <!-- Artist name list -->
+            <!-- List col -->
             <div class="DataSection__col DataSection__leftCol">
               <div>
                 <ul>
-                  <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" @mouseover="current = artist.name">
-                    <nuxt-link :to="{ name: 'artists-artist', params: { artist: artist.url, id: artist.id }}">
-                      {{ artist.name }}
+                  <li v-for="(institution, index) in institutions" :key="index" @mouseover="current = institution.id">
+                    <nuxt-link :to="{ name: 'institutions-institution', params: { institution: institution.id, id: institution.id }}">
+                      {{ institution.name }}
                     </nuxt-link>
                   </li>
                 </ul>
               </div>
             </div>
           
-            <!-- Artwork -->
+            <!-- Data Viz Col -->
             <div class="DataSection__col DataSection__midCol DataSection__dataVizCol  is-active">
-              <!-- <h4 class="DataSection__sectionTitle" @click="toggleArtwork">
-                Artwork
-              </h4> -->
               <div class="DataSection__richtextContainer">
-                <ArtistsDataViz />
+                <InstitutionDataViz />
               </div>
             </div>
           </div> <!-- End of sectionContainer -->
         </div>
 
-        <GotoButton route="institutions" :order="1" />
+        <GotoButton route="artists" :order="1" />
         <GotoButton route="companies" :order="2" />
       </div>
     </div>
@@ -64,8 +54,7 @@
 </template>
 
 <script>
-import artists from "../../assets/artists.json"
-let cleanArtists = [...new Set(artists)]
+import institutions from '../../assets/institution.json'
 
 export default {
   layout: 'catalog',
@@ -74,13 +63,14 @@ export default {
   },
   data: function() {
     return {
-      cleanArtists,
+      institutions,
       isMenu: false,
       currentFocus: 'artist',
     }
   },
   created() {
-    this.name = this.$route.params.artist
+    // this.name = this.$route.params.artist
+    this.institutions = institutions
   },
   methods: {
     toggleArtwork: function() {
@@ -256,17 +246,7 @@ export default {
 }
 
 .right-section {
- 
-  &.is-active {
-  }
-
-  &.artist {
-    top: 9.2rem;
-  }
-
-  &.insititution {
-    top: 9.2rem;
-  }
+  top: 9.2rem !important;
 }
 
 li {

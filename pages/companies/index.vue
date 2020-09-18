@@ -21,9 +21,10 @@
               <div>
                 <ul>
                   <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" @mouseover="current = artist.name">
-                    <nuxt-link :to="{ name: 'artists-artist', params: { artist: artist.url, id: artist.id }}">
-                      {{ artist.name }}
-                    </nuxt-link>
+                    <!-- <nuxt-link :to="{ name: 'artists-artist', params: { artist: artist.url, id: artist.id }}"> -->
+                    <!-- {{ artist.name }} -->
+                    <!-- </nuxt-link> -->
+                    companies
                   </li>
                 </ul>
               </div>
@@ -31,11 +32,8 @@
           
             <!-- Artwork -->
             <div class="DataSection__col DataSection__midCol DataSection__dataVizCol  is-active">
-              <!-- <h4 class="DataSection__sectionTitle" @click="toggleArtwork">
-                Artwork
-              </h4> -->
               <div class="DataSection__richtextContainer">
-                <ArtistsDataViz />
+                <!-- <ArtistsDataViz /> -->
               </div>
             </div>
           </div> <!-- End of sectionContainer -->

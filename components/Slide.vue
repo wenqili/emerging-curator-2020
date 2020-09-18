@@ -1,20 +1,28 @@
 <template>
-  <div class="DataSection" :class="[{ 'is-active': currentFocus === 'artist'}, currentFocus]">
-    <nuxt-link v-if="currentFocus === 'artist'" to="/artists">
+  <div class="DataSection" :class="[{ 'is-active': currentFocus === category.left}, category.left, currentFocus]">
+    <!-- Artist Type :: Title will be able to navi to artist list -->
+    <!-- <nuxt-link v-if="category.left === 'Artist' && currentFocus === 'artist'" to="/artists">
       <h3 class="DataSection__sectionTitle">
         {{ category.left }}
       </h3>
     </nuxt-link>
-
+    
     <h3 v-else class="DataSection__sectionTitle" @click="$emit('focus-on-slide')">
       {{ category.left }}
-    </h3>
+    </h3> -->
 
-    <div v-if="currentFocus === 'artist'" class="DataSection__sectionContainer">
+    <GotoButton route="artists" />
+    <!-- Artist type :: left col will be 1 artist -->
+    <div v-if="currentFocus === category.left" class="DataSection__sectionContainer">
       <div class="DataSection__col DataSection__leftCol">
         <div>
           <ul>
-            <li>{{ data.name }}</li>
+            <li v-if="category.left === 'Artist'">
+              {{ data.name }}
+            </li>
+            <li v-for="(institution, index) in cleanInstitutions" v-else-if="category.left === 'Insititutions'" :key="index">
+              {{ institution.name }}
+            </li>
           </ul>
         </div>
       </div>
@@ -24,14 +32,11 @@
           {{ category.middle }}
         </h4>
         <div class="DataSection__richtextContainer">
-          <figure>
-            <img src="~/static/placeholder2.png">
-          </figure>
-          <figure>
-            <img src="~/static/placeholder2.png">
-          </figure>
-          <figure>
-            <img src="~/static/placeholder2.png">
+          <div v-if="assets.length === 0" style="text-align: center">
+            Artist didn't submit images
+          </div>
+          <figure v-for="(asset,index) in assets" v-else-if="category.middle === 'Artwork' && assets.length > 0" :key="index">
+            <img :src="'/artists/'+data.id+'/'+asset">
           </figure>
         </div>
       </div>
@@ -50,8 +55,10 @@
 
 <script>
 import artists from "../assets/artists.json"
-let cleanArtists = [...new Set(artists)]
+import institutions from '../assets/institution.json'
 
+let cleanArtists = [...new Set(artists)]
+let cleanInstitutions = [...new Set(institutions)]
 export default {
   name: "Slide",
   layout: 'catalog',
@@ -73,6 +80,7 @@ export default {
   data: function() {
     return {
       cleanArtists,
+      cleanInstitutions,
       isMenu: false,
     }
   },
@@ -80,6 +88,8 @@ export default {
     console.log(this.$route.params.artist)
     const routeName = this.$route.params.artist
     this.data = cleanArtists.find(artist => artist.url === routeName)
+    this.cleanInstitutions = cleanInstitutions
+    this.assets = this.data.assets ? this.data.assets.split(",") : []
   },
   methods: {
     toggleArtwork: function() {
@@ -245,7 +255,7 @@ export default {
   }
 }
 
-.middle-section {
+.Insititutions{
 
   &.is-active {
   }
@@ -260,11 +270,11 @@ export default {
   &.is-active {
   }
 
-  &.artist {
+  &.Artist {
     top: 9.2rem;
   }
 
-  &.insititution {
+  &.Insititutions {
     top: 9.2rem;
   }
 }

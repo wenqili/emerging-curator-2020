@@ -39,9 +39,7 @@
               <div>
                 <ul>
                   <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" :class="{ 'is-activeHover': currentArtist === artist }" @mouseover="currentArtist = artist"> 
-                    <!-- <nuxt-link :to="{ name: 'artists-artist', params: { artist: artist.id }}"> -->
                     {{ artist.name }}
-                    <!-- </nuxt-link> -->
                   </li>
                 </ul>
               </div>
@@ -52,7 +50,9 @@
         <!-- Institution -->
         <div class="IndexSection middle-section">
           <h3 class="IndexSection__sectionTitle">
-            Institution
+            <nuxt-link to="/institutions">
+              Institutions
+            </nuxt-link>
           </h3>
           
           <!-- Institution list -->
@@ -70,7 +70,9 @@
         <!-- Company -->
         <div class="IndexSection right-section">
           <h3 class="IndexSection__sectionTitle">
-            Companies
+            <nuxt-link to="/companies">
+              Companies
+            </nuxt-link>
           </h3>
           
           <!-- Company list -->
@@ -120,10 +122,6 @@ export default {
   },
   created() {
     this.name = this.$route.params.artist
-    console.log(this.$route)
-      // ? artists.archives[this.name]
-      // : {}
-    // console.log({ name: this.name, data: this.data })
   },
   methods: {
     toggleArtwork: function() {
