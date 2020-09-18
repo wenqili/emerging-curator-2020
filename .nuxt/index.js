@@ -12,8 +12,8 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_169b45f1 from 'nuxt_plugin_plugin_169b45f1' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_fontawesome_b058b6ee from 'nuxt_plugin_fontawesome_b058b6ee' // Source: ./fontawesome.js (mode: 'all')
+import nuxt_plugin_plugin_3be387ba from 'nuxt_plugin_plugin_3be387ba' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_fontawesome_1c819ddc from 'nuxt_plugin_fontawesome_1c819ddc' // Source: ./fontawesome.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -166,12 +166,12 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_169b45f1 === 'function') {
-    await nuxt_plugin_plugin_169b45f1(app.context, inject)
+  if (typeof nuxt_plugin_plugin_3be387ba === 'function') {
+    await nuxt_plugin_plugin_3be387ba(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_fontawesome_b058b6ee === 'function') {
-    await nuxt_plugin_fontawesome_b058b6ee(app.context, inject)
+  if (typeof nuxt_plugin_fontawesome_1c819ddc === 'function') {
+    await nuxt_plugin_fontawesome_1c819ddc(app.context, inject)
   }
 
   // Lock enablePreview in context

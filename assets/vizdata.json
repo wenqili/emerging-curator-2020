@@ -1,0 +1,80 @@
+{
+    "name":"artists",
+    "children":[
+        {
+            "name": "Xin Liu",
+            "children":[
+                {
+                    "name": "New Inc",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Yang Wang, Zhenzhen Qi",
+            "children":[
+                {
+                    "name": "New Inc",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Pei-Ying Lin",
+            "children":[
+                {
+                    "name": "BADAward / Erasmus Medical Center",
+                    "value": 1
+                },
+                {
+                    "name": "CERN",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Baoyang Chen",
+            "children":[
+                {
+                    "name": "接私活的大厂程序员",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Maya Man",
+            "children":[
+                {
+                    "name": "Google Creative Lab",
+                    "value": 1
+                },
+                {
+                    "name": "Processing Foundation",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Vivian Xu",
+            "children":[
+                {
+                    "name": "Max Plank Institute",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Jen Liu",
+            "children":[
+                {
+                    "name": "LACMA Art + Tech",
+                    "value": 1
+                },
+                {
+                    "name": "Pinoeer Works",
+                    "value": 1
+                }
+            ]
+        }
+    ]
+}

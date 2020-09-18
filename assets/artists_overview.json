@@ -1,0 +1,667 @@
+[
+    {
+        "name": "Role during the residency",
+        "children": [
+            {
+                "name": "team member",
+                "children": [
+                    {
+                        "name": "Wang Yang & Zhen Zhen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pei-Ying Lin (CERN)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Chen Baoyang",
+                        "value": 1
+                    },
+                    {
+                        "name": "Maya Man (Google Creative Lab)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Vivian Xu",
+                        "value": 1
+                    },
+                    {
+                        "name": "Kenny Wong",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "independent artist",
+                "children": [
+                    {
+                        "name": "Liu Xin",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pei-Ying Lin (BADAward / Erasmus Medical Center)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Maya Man (Processing Foundation)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Vivian Xu",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (LACMA Art + Tech)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (Pioneer Works)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Yiyun Chen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Angela Su",
+                        "value": 1
+                    },
+                    {
+                        "name": "Kenny Wong",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "other",
+                "children": [
+                    {
+                        "name": "Maya Man (Google Creative Lab)",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "curator of the collaborative project",
+                "children": [
+                    {
+                        "name": "Liu Xin",
+                        "value": 1
+                    },
+                    {
+                        "name": "Wang Yang & Zhen Zhen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Chen Baoyang",
+                        "value": 1
+                    },
+                    {
+                        "name": "Maya Man (Google Creative Lab)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Yiyun Chen",
+                        "value": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Means by which the artist learned about this residency",
+        "children": [
+            {
+                "name": "internal reference / nomination",
+                "children": [
+                    {
+                        "name": "Maya Man (Google Creative Lab)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Maya Man (Processing Foundation)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Vivian Xu",
+                        "value": 1
+                    },
+                    {
+                        "name": "Angela Su",
+                        "value": 1
+                    },
+                    {
+                        "name": "Kenny Wong",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Reputation",
+                "children": [
+                    {
+                        "name": "Pei-Ying Lin (CERN)",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Internal reference / nomination",
+                "children": [
+                    {
+                        "name": "Liu Xin",
+                        "value": 1
+                    },
+                    {
+                        "name": "Wang Yang & Zhen Zhen",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "reputation",
+                "children": [
+                    {
+                        "name": "Jen Liu (LACMA Art + Tech)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (Pioneer Works)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Yiyun Chen",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Other",
+                "children": [
+                    {
+                        "name": "Pei-Ying Lin (BADAward / Erasmus Medical Center)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Chen Baoyang",
+                        "value": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Requested materials for the application",
+        "children": [
+            {
+                "name": "timeline",
+                "children": [
+                    {
+                        "name": "Liu Xin",
+                        "value": 1
+                    },
+                    {
+                        "name": "Wang Yang & Zhen Zhen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pei-Ying Lin (BADAward / Erasmus Medical Center)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Chen Baoyang",
+                        "value": 1
+                    },
+                    {
+                        "name": "Vivian Xu",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (LACMA Art + Tech)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Yiyun Chen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Angela Su",
+                        "value": 1
+                    },
+                    {
+                        "name": "Kenny Wong",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "prototypes",
+                "children": [
+                    {
+                        "name": "Wang Yang & Zhen Zhen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pei-Ying Lin (BADAward / Erasmus Medical Center)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pei-Ying Lin (CERN)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Chen Baoyang",
+                        "value": 1
+                    },
+                    {
+                        "name": "Maya Man (Processing Foundation)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Vivian Xu",
+                        "value": 1
+                    },
+                    {
+                        "name": "Yiyun Chen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Angela Su",
+                        "value": 1
+                    },
+                    {
+                        "name": "Kenny Wong",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "budget plan",
+                "children": [
+                    {
+                        "name": "Wang Yang & Zhen Zhen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pei-Ying Lin (BADAward / Erasmus Medical Center)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (LACMA Art + Tech)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Yiyun Chen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Angela Su",
+                        "value": 1
+                    },
+                    {
+                        "name": "Kenny Wong",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "text-based proposal",
+                "children": [
+                    {
+                        "name": "Liu Xin",
+                        "value": 1
+                    },
+                    {
+                        "name": "Wang Yang & Zhen Zhen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pei-Ying Lin (BADAward / Erasmus Medical Center)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pei-Ying Lin (CERN)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Chen Baoyang",
+                        "value": 1
+                    },
+                    {
+                        "name": "Maya Man (Processing Foundation)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Vivian Xu",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (LACMA Art + Tech)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (Pioneer Works)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Yiyun Chen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Angela Su",
+                        "value": 1
+                    },
+                    {
+                        "name": "Kenny Wong",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "other",
+                "children": [
+                    {
+                        "name": "Maya Man (Processing Foundation)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (LACMA Art + Tech)",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "technical requirements",
+                "children": [
+                    {
+                        "name": "Wang Yang & Zhen Zhen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pei-Ying Lin (BADAward / Erasmus Medical Center)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Chen Baoyang",
+                        "value": 1
+                    },
+                    {
+                        "name": "Maya Man (Google Creative Lab)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Vivian Xu",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (LACMA Art + Tech)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (Pioneer Works)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Yiyun Chen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Angela Su",
+                        "value": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Time duration",
+        "children": [
+            {
+                "name": "3-5 months",
+                "children": [
+                    {
+                        "name": "Wang Yang & Zhen Zhen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Maya Man (Processing Foundation)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Vivian Xu",
+                        "value": 1
+                    },
+                    {
+                        "name": "Angela Su",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "More than half a year",
+                "children": [
+                    {
+                        "name": "Liu Xin",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pei-Ying Lin (BADAward / Erasmus Medical Center)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Chen Baoyang",
+                        "value": 1
+                    },
+                    {
+                        "name": "Maya Man (Google Creative Lab)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (LACMA Art + Tech)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (Pioneer Works)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Yiyun Chen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Kenny Wong",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "1-3 months",
+                "children": [
+                    {
+                        "name": "Pei-Ying Lin (CERN)",
+                        "value": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Support recived during the residency",
+        "children": [
+            {
+                "name": "business incubation (connecting with companies, road shows, etc.)",
+                "children": [
+                    {
+                        "name": "Pei-Ying Lin (BADAward / Erasmus Medical Center)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Chen Baoyang",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (LACMA Art + Tech)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (Pioneer Works)",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "funding",
+                "children": [
+                    {
+                        "name": "Pei-Ying Lin (BADAward / Erasmus Medical Center)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Maya Man (Processing Foundation)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (Pioneer Works)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Yiyun Chen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Angela Su",
+                        "value": 1
+                    },
+                    {
+                        "name": "Kenny Wong",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "guidance on the project (tutorial, critique, etc.)",
+                "children": [
+                    {
+                        "name": "Liu Xin",
+                        "value": 1
+                    },
+                    {
+                        "name": "Wang Yang & Zhen Zhen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pei-Ying Lin (CERN)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Maya Man (Google Creative Lab)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Maya Man (Processing Foundation)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Vivian Xu",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (LACMA Art + Tech)",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "pr (referring to curators, institutions, media resources)",
+                "children": [
+                    {
+                        "name": "Liu Xin",
+                        "value": 1
+                    },
+                    {
+                        "name": "Wang Yang & Zhen Zhen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pei-Ying Lin (BADAward / Erasmus Medical Center)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Chen Baoyang",
+                        "value": 1
+                    },
+                    {
+                        "name": "Vivian Xu",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (LACMA Art + Tech)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (Pioneer Works)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Yiyun Chen",
+                        "value": 1
+                    },
+                    {
+                        "name": "Angela Su",
+                        "value": 1
+                    },
+                    {
+                        "name": "Kenny Wong",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "publishing and other academic resources",
+                "children": [
+                    {
+                        "name": "Chen Baoyang",
+                        "value": 1
+                    },
+                    {
+                        "name": "Maya Man (Processing Foundation)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Angela Su",
+                        "value": 1
+                    },
+                    {
+                        "name": "Kenny Wong",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "access to latest technology (specialized team for technology development, technology demo from technology company, etc.)",
+                "children": [
+                    {
+                        "name": "Chen Baoyang",
+                        "value": 1
+                    },
+                    {
+                        "name": "Maya Man (Google Creative Lab)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Vivian Xu",
+                        "value": 1
+                    },
+                    {
+                        "name": "Jen Liu (Pioneer Works)",
+                        "value": 1
+                    },
+                    {
+                        "name": "Kenny Wong",
+                        "value": 1
+                    }
+                ]
+            }
+        ]
+    }
+]
