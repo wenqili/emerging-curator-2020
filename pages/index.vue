@@ -36,7 +36,7 @@
           <div class="IndexSection__sectionContainer">
             <!-- Artist name list -->
             <div class="IndexSection__col IndexSection__leftCol">
-              <div>
+              <div class="IndexSection__richtextContainer">
                 <ul>
                   <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" :class="{ 'is-activeHover': currentArtist === artist }" @mouseover="currentArtist = artist"> 
                     {{ artist.name }}
