@@ -48,12 +48,12 @@ h3.DataSection__sectionTitle{
   font-family: 'Univers LT Std';
   /* font-weight: normal; */
   src: local("Univers LT Std"), 
-  url('/fonts/Univers/UniversLTStd.otf') format('otf'),
+  url('~assets/fonts/Univers/UniversLTStd.otf') format('otf'),
 }
 
 @font-face {
   font-family: 'Replica-Regular';
   /* font-weight: normal; */
   src: local("Replica-Regular"), 
-  url('/fonts/Replica/Replica-Regular.otf') format('otf'),
+  url('~assets/fonts/Replica/Replica-Regular.otf') format('otf'),
 }
