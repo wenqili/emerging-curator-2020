@@ -22,3 +22,9 @@ node_modules/
 *.rar
 *.tar
 *.zip
+
+# Nuxt build
+.nuxt
+
+# Remove package-lock.json 
+package-lock.json

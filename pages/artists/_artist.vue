@@ -73,9 +73,9 @@
             <div class="DataSection__richtextContainer">
               <ul>
                 <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" @mouseover="current = artist.name">
-                  <nuxt-link :to="{ name: 'artists-artist', params: { artist: artist.id }}">
-                    {{ artist.institution }}
-                  </nuxt-link>
+                  <!-- <nuxt-link :to="{ name: 'artists-artist', params: { artist: artist.url }}"> -->
+                  {{ artist.residency }}
+                  <!-- </nuxt-link> -->
                 </li>
               </ul>
             </div>
@@ -121,9 +121,9 @@
             <div class="DataSection__richtextContainer">
               <ul>
                 <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" @mouseover="current = artist.name">
-                  <nuxt-link :to="{ name: 'artists-artist', params: { artist: artist.id }}">
-                    {{ artist.institution }}
-                  </nuxt-link>
+                  <!-- <nuxt-link :to="{ name: 'artists-artist', params: { artist: artist.id }}"> -->
+                  {{ artist.residency }}
+                  <!-- </nuxt-link> -->
                 </li>
               </ul>
             </div>
