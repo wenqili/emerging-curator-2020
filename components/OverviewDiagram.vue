@@ -23,12 +23,24 @@ export default {
       currData: this.currentData,
       height: 380,
       width: 1288,
+      onHover: false,
+      fillColor:"#fff",
+      textColor:"#000"
+    }
+  },
+  watch:{
+    onHover: function(prev, curr){
+      this.fillColor = curr?"#000":"#fff"
+      this.textColor  = curr?"#fff":"#000"
     }
   },
   mounted() {
     this.createDiagram()
   },
   methods: {
+    changeColor(){
+      d3.select
+    },
     createDiagram() {
       const data = this.currData
 
@@ -55,25 +67,40 @@ export default {
         .selectAll("g")
         .data(root.children.concat(root))
         .join("g")
+        .attr('pointer-events', 'all')
 
-        node
-          .filter((d) => (d === root ? d.parent : d.children))
-      //     .on("click", (event, d) => console.log(d === root ?"root": d))
 
       node
         .append("rect")
         .attr("class","tile")
-        .attr("fill", "none")
         .attr("stroke", (d) => (d === root ? "none" : "#000"))
-        .attr("stroke-width","2.5px")
-        // .on("mouseenter",console.log("here"))
+        .attr("stroke-width","0.18em")
+        .attr("fill", (d) => (d === root ? "none" : this.onHover?"#000":"none"))
+      // When the mouse moves over a rect
+      // .on('mouseover', (d, i, arr) => {
+    
+      //   d3.select(arr[i])
+      //     // .transition()
+      //     // .duration(100)
+      //     .attr('fill', '#000')
+    
+      // })
+      // // When the mouse leaves a rect
+      // .on('mouseout', (d, i, arr) => {
+    
+      //   d3.select(arr[i])
+      //     // .transition()
+      //     // .duration(2000)
+      //       .attr('fill', '#fff')
+    
+      // })
 
       node
         .append("text")
         .attr("class","option")
         .attr("font-weight", (d) => (d === root ? "bold" : null))
         .attr("font-size", (d) => (d === root ? "32px" : "19.2px"))
-        .attr("fill", "#000")
+        .attr("fill", (d) => (d === root ? "#000" : this.onHover?"#fff":"#000"))
         .attr("y", (d) => (d === root ? "22.5px" : "32px"))
         .selectAll("tspan")
         .data((d) => d3plus.textWrap().width((x(d.x1) - x(d.x0))*0.45)(`${d.data.name}`).lines)
@@ -89,7 +116,7 @@ export default {
         .append("text")
         .attr("class","count")
         .attr("font-weight", "bold")
-        .attr("fill", (d) => (d === root ? "#fff" : "#000"))
+        .attr("fill", (d) => (d === root ? "#000" : this.onHover?"#fff":"#000"))
         .attr("font-size", "32px")
         .attr("y", "37px")
         .attr("transform",(d)=>`translate(${x(d.x1) - x(d.x0)-17},0)`)
@@ -97,10 +124,9 @@ export default {
         .selectAll("tspan")
         .data((d) => ((d === root ? `` : `${d.value}`).split("$")))
         .join("tspan")
-        
-        
-        
         .text((d) => d)
+
+
 
       group
         .selectAll("g")
@@ -109,18 +135,31 @@ export default {
         )
         .select("rect")
         .attr("width", (d) => (d === root ? this.width : x(d.x1) - x(d.x0)))
-        .attr("height", (d) => (d === root ? 30 : y(d.y1) - y(d.y0))) 
+        .attr("height", (d) => (d === root ? 30 : y(d.y1) - y(d.y0)))
+        // .attr("fill", (d) => (d === root ? 30 : y(d.y1) - y(d.y0)))
+        .on('mouseenter', (event, d) => {
+            // this.currRectRef = d.data.name.replace(/[^A-Z0-9]+/ig, "")
+            console.log(d3.select('rect'))
+            // d3.select(this).attr("fill","#000")
+            this.onHover=true
+            this.$emit('current_list',d === root ?[]: d.data.children.map(each=>each.name))
+            })
     },
   },
 }
 </script>
 
-<style scoped>
+<style>
     .overview-viz{
         padding-top: 10px;
     }
 
-    .tile{
-        stroke-width: 5px;
-    }
+    /* svg >rect{
+        stroke-width: 15px;
+    } */
+
+    /* .tile:hover{
+      fill:#000;
+      color:#fff;
+    } */
 </style>

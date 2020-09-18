@@ -40,6 +40,7 @@
   },
   "LazyOverviewDiagram": {
     "description": "Auto imported from components/OverviewDiagram.vue"
+  },
   "Slide": {
     "description": "Auto imported from components/Slide.vue"
   },

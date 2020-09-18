@@ -3,27 +3,16 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-
 const _154df549 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
 const _74289bcb = () => interopDefault(import('../pages/artists/index.vue' /* webpackChunkName: "pages/artists/index" */))
 const _9a599608 = () => interopDefault(import('../pages/company/index.vue' /* webpackChunkName: "pages/company/index" */))
-const _234b4e6f = () => interopDefault(import('../pages/database.vue' /* webpackChunkName: "pages/database" */))
 const _f64a0bd6 = () => interopDefault(import('../pages/index_temp.vue' /* webpackChunkName: "pages/index_temp" */))
 const _169bf1ed = () => interopDefault(import('../pages/index_temp2.vue' /* webpackChunkName: "pages/index_temp2" */))
 const _53561e77 = () => interopDefault(import('../pages/institution/index.vue' /* webpackChunkName: "pages/institution/index" */))
+const _3d9b2c56 = () => interopDefault(import('../pages/residency.vue' /* webpackChunkName: "pages/residency" */))
 const _61bb911f = () => interopDefault(import('../pages/artists/_artist.vue' /* webpackChunkName: "pages/artists/_artist" */))
 const _2f3add64 = () => interopDefault(import('../pages/institution/_institution.vue' /* webpackChunkName: "pages/institution/_institution" */))
 const _3505d00e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
-const _161ef372 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
-const _4a1160f4 = () => interopDefault(import('../pages/artists/index.vue' /* webpackChunkName: "pages/artists/index" */))
-const _ee880bb6 = () => interopDefault(import('../pages/company/index.vue' /* webpackChunkName: "pages/company/index" */))
-const _3aef6d8c = () => interopDefault(import('../pages/index_temp.vue' /* webpackChunkName: "pages/index_temp" */))
-const _2315ed56 = () => interopDefault(import('../pages/index_temp2.vue' /* webpackChunkName: "pages/index_temp2" */))
-const _60d3b1c0 = () => interopDefault(import('../pages/institution/index.vue' /* webpackChunkName: "pages/institution/index" */))
-const _53feedff = () => interopDefault(import('../pages/residency.vue' /* webpackChunkName: "pages/residency" */))
-const _6087b008 = () => interopDefault(import('../pages/artists/_artist.vue' /* webpackChunkName: "pages/artists/_artist" */))
-const _0808749b = () => interopDefault(import('../pages/institution/_institution.vue' /* webpackChunkName: "pages/institution/_institution" */))
-const _35d6ce37 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -54,10 +43,6 @@ export const routerOptions = {
     component: _9a599608,
     name: "company"
   }, {
-    path: "/database",
-    component: _234b4e6f,
-    name: "database"
-  }, {
     path: "/index_temp",
     component: _f64a0bd6,
     name: "index_temp"
@@ -71,7 +56,7 @@ export const routerOptions = {
     name: "institution"
   }, {
     path: "/residency",
-    component: _53feedff,
+    component: _3d9b2c56,
     name: "residency"
   }, {
     path: "/artists/:artist",
