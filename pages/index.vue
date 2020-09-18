@@ -60,7 +60,7 @@
             <div class="IndexSection__richtextContainer">
               <ul>
                 <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" :class="{ 'is-activeHover': currentArtist === artist }" @mouseover="currentArtist = artist"> 
-                  {{ artist.institution }}
+                  {{ artist.residency }}
                 </li>
               </ul>
             </div>
@@ -268,7 +268,7 @@ export default {
 }
 
 li {
-  font-size: 2rem;
+  font-size: 1.5rem;
   user-select: none;
   margin-bottom: 0.2rem;
   a {

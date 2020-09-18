@@ -9,7 +9,7 @@
       <h3>1Artist</h3>
       <span v-for="archive in archives.archives" :key="archive.id">
         <span>[</span>
-        <nuxt-link :to="{ name: 'artists-artist', params: { artist: archive.id }}">{{ archive.name }}</nuxt-link>
+        <!-- <nuxt-link :to="{ name: 'artists-artist', params: { artist: archive.id }}">{{ archive.name }}</nuxt-link> -->
         <span>]</span>
       </span>
     </div>
@@ -23,13 +23,12 @@
 </template>
 
 <script>
-import archives from "../assets/projects.json"
 
 export default {
   name: 'Menu',
   data: function() {
     return {
-      archives,
+      
     }
   }
 }

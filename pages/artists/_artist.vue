@@ -4,8 +4,17 @@
       <!-- Second -->
       <div class="second-row-container">
         <!-- Artists -->
+        <Slide 
+          :category="{
+            left: 'artist',
+            middle: 'artwork',
+            right: 'information',
+          }" 
+          :current-focus="currentFocus" 
+          @focus-on-slide="currentFocus = 'artist'"
+        />
 
-        <div class="DataSection" :class="[{ 'is-active': currentFocus === 'artist'}, currentFocus]">
+        <!-- <div class="DataSection" :class="[{ 'is-active': currentFocus === 'artist'}, currentFocus]">
           <nuxt-link v-if="currentFocus === 'artist'" to="/artists">
             <h3 class="DataSection__sectionTitle">
               Artists
@@ -17,7 +26,6 @@
           </h3>
 
           <div v-if="currentFocus === 'artist'" class="DataSection__sectionContainer">
-            <!-- Artist name -->
             <div class="DataSection__col DataSection__leftCol">
               <div>
                 <ul>
@@ -26,7 +34,6 @@
               </div>
             </div>
           
-            <!-- Artwork -->
             <div id="artwork" class="DataSection__col DataSection__midCol is-active">
               <h4 class="DataSection__sectionTitle" @click="toggleArtwork">
                 Artwork
@@ -44,7 +51,6 @@
               </div>
             </div>
 
-            <!-- Info -->
             <div id="artinfo" class="DataSection__col DataSection__rightCol is-blur">
               <h4 class="DataSection__sectionTitle" @click="toggleArtwork">
                 Information
@@ -54,7 +60,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- Institution -->
         <div class="DataSection middle-section" :class="[{ 'is-active': currentFocus === 'insititution'}, currentFocus]">

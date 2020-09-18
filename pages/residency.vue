@@ -1,5 +1,5 @@
 <template>
   <main>
-    <h1>Database</h1>
+    <h1>Residency</h1>
   </main>
 </template>
