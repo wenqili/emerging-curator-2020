@@ -3,7 +3,7 @@
   --primary-font: 'Univers LT Std';
   --primary-grey: #B7B7B7;
   --primary-brown: #99815E;
-  --secondary-font: 'Replica-Regular';
+  --secondary-font: 'Replica';
 }
 
 body {
@@ -45,15 +45,35 @@ h3.DataSection__sectionTitle{
 }
 
 @font-face {
-  font-family: 'Univers LT Std';
-  /* font-weight: normal; */
-  src: local("Univers LT Std"), 
-  url('~assets/fonts/Univers/UniversLTStd.otf') format('otf'),
-}
-
-@font-face {
   font-family: 'Replica-Regular';
   /* font-weight: normal; */
   src: local("Replica-Regular"), 
   url('~assets/fonts/Replica/Replica-Regular.otf') format('otf'),
+}
+
+@font-face {
+  font-family: 'Replica';
+  src: url('~assets/fonts/Replica/Replica-Regular.eot?#iefix') format('embedded-opentype'),
+      url('~assets/fonts/Replica/Replica-Regular.woff2') format('woff2'),
+      url('~assets/fonts/Replica/Replica-Regular.woff') format('woff'),
+      url('~assets/fonts/Replica/Replica-Regular.ttf') format('truetype'),
+      url('~assets/fonts/Replica/Replica-Regular.svg#Replica-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'Univers LT Std';
+  /* src: url('UniversLTStd.eot'); */
+  src: url('~assets/fonts/Univers/UniversLTStd.eot?#iefix') format('embedded-opentype'),
+      url('~assets/fonts/Univers/UniversLTStd.woff2') format('woff2'),
+      url('~assets/fonts/Univers/UniversLTStd.woff') format('woff'),
+      url('~assets/fonts/Univers/UniversLTStd.ttf') format('truetype'),
+      url('~assets/fonts/Univers/UniversLTStd.svg#UniversLTStd') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

@@ -91,7 +91,7 @@
     <div class="navi-bar">
       <nav>
         <button class="navi-item" :class="{ 'is-focused': !isMenu }" @click="isMenu = false">
-          Index
+          New agencies and their cheese factories
         </button>
         <button class="navi-item" :class="{ 'is-focused': isMenu }" @click="isMenu = true">
           <font-awesome-icon icon="search" />
