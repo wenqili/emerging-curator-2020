@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import artists_overview from "~/assets/artists_overview.json"
+import artists_overview from "~/assets/artists_overview_cn.json"
 import OverviewDiagram from "~/components/OverviewDiagram.vue"
 export default {
   name: "ArtistsDataViz",

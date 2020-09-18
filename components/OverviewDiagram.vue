@@ -74,7 +74,7 @@ export default {
         .attr("font-weight", (d) => (d === root ? "bold" : null))
         .attr("font-size", (d) => (d === root ? "32px" : "19.2px"))
         .attr("fill", "#000")
-        .attr("y", (d) => (d === root ? "22.5px" : "28px"))
+        .attr("y", (d) => (d === root ? "22.5px" : "32px"))
         .selectAll("tspan")
         .data((d) => d3plus.textWrap().width((x(d.x1) - x(d.x0))*0.45)(`${d.data.name}`).lines)
 
@@ -91,13 +91,14 @@ export default {
         .attr("font-weight", "bold")
         .attr("fill", (d) => (d === root ? "#fff" : "#000"))
         .attr("font-size", "32px")
+        .attr("y", "37px")
         .attr("transform",(d)=>`translate(${x(d.x1) - x(d.x0)-17},0)`)
         .attr("text-anchor","end")
         .selectAll("tspan")
         .data((d) => ((d === root ? `` : `${d.value}`).split("$")))
         .join("tspan")
         
-        .attr("y", "28px")
+        
         
         .text((d) => d)
 
