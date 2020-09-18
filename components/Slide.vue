@@ -32,7 +32,7 @@
           <div v-if="assets.length === 0" style="text-align: center">
             Artist didn't submit images
           </div>
-          <figure v-for="(asset,index) in assets" v-else-if="category.middle === 'Artwork' && assets.length > 0" :key="index">
+          <figure v-for="(asset,index) in assets" v-else-if="category.middle === 'artwork' && assets.length > 0" :key="index">
             <img :src="'/artists/'+data.id+'/'+asset">
           </figure>
         </div>
@@ -345,7 +345,7 @@ a.nuxt-link-active{
     line-height: 1.3rem;
     cursor: pointer;
     user-select: none;
-
+    text-transform: capitalize;
     &:hover{
       background-color: transparent;
       color: black;
