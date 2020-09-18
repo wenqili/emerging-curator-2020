@@ -6,12 +6,12 @@
         <!-- Artists -->
         <Slide 
           :category="{
-            left: 'Artist',
-            middle: 'Artwork',
-            right: 'Information',
+            left: 'artists',
+            middle: 'artwork',
+            right: 'information',
           }" 
           :current-focus="currentFocus" 
-          @focus-on-slide="currentFocus = 'Artist'"
+          @focus-on-slide="currentFocus = 'artists'"
         />
 
         <GotoButton route="institutions" :order="1" />
@@ -133,7 +133,7 @@ export default {
     return {
       cleanArtists,
       isMenu: false,
-      currentFocus: 'Artist',
+      currentFocus: 'artists',
       name: 'test',
     }
   },

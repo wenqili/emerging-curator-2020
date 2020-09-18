@@ -1,14 +1,16 @@
 :root {
   --primary-blue:#2f80d5;
-  --primary-font: '-apple-system';
+  --primary-font: 'Univers LT Std';
   --primary-grey: #B7B7B7;
   --primary-brown: #99815E;
+  --secondary-font: 'Replica-Regular';
 }
 
 body {
-  font-family: var(--primary-font), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  font-family: var(--primary-font);
+  /* , system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
       Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
-      Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+      Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
   margin: 0;
   color: black;
 }
@@ -36,5 +38,22 @@ main {
   grid-row-gap: 0px;
   height: 100vh;
   line-height: 1;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h3.DataSection__sectionTitle{
+  font-family: var(--secondary-font);
+}
+
+@font-face {
+  font-family: 'Univers LT Std';
+  /* font-weight: normal; */
+  src: local("Univers LT Std"), 
+  url('/fonts/Univers/UniversLTStd.otf') format('otf'),
+}
+
+@font-face {
+  font-family: 'Replica-Regular';
+  /* font-weight: normal; */
+  src: local("Replica-Regular"), 
+  url('/fonts/Replica/Replica-Regular.otf') format('otf'),
 }

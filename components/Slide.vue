@@ -11,17 +11,14 @@
       {{ category.left }}
     </h3> -->
 
-    <GotoButton route="artists" />
+    <GotoButton :route="category.left" />
     <!-- Artist type :: left col will be 1 artist -->
     <div v-if="currentFocus === category.left" class="DataSection__sectionContainer">
       <div class="DataSection__col DataSection__leftCol">
         <div>
           <ul>
-            <li v-if="category.left === 'Artist'">
+            <li>
               {{ data.name }}
-            </li>
-            <li v-for="(institution, index) in cleanInstitutions" v-else-if="category.left === 'Insititutions'" :key="index">
-              {{ institution.name }}
             </li>
           </ul>
         </div>
@@ -46,7 +43,7 @@
           {{ category.right }}
         </h4>
         <div class="DataSection__textContainer">
-          <TextBlock :content="data" />
+          <TextBlock :content="data" :type="category.left" />
         </div>
       </div>
     </div>
@@ -85,9 +82,17 @@ export default {
     }
   },
   created() {
-    console.log(this.$route.params.artist)
     const routeName = this.$route.params.artist
-    this.data = cleanArtists.find(artist => artist.url === routeName)
+    switch(this.category.left) {
+      case 'artists':
+        this.data = cleanArtists.find(artist => artist.url === routeName) || {}
+      break
+      case 'institutions':
+        this.data = institutions[this.$route.params.institution] || {}
+        break
+      default:
+        this.data = {}
+    }
     this.cleanInstitutions = cleanInstitutions
     this.assets = this.data.assets ? this.data.assets.split(",") : []
   },
