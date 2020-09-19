@@ -1,14 +1,11 @@
 <template>
   <div class="DataViz">
-    <div v-for="cat in artists_data" :key="cat.name">
-      <OverviewDiagram :current-data="cat" />
-      <!-- {{cat}} -->
-    </div>
+    <OverviewDiagram v-for="cat in institution_data" :key="cat.name" :current-data="cat" @current_list="highlightList" />
   </div>
 </template>
 
 <script>
-import artists_overview from "~/assets/artists_overview.json"
+import institution_overview from "~/assets/institution_overview.json"
 import OverviewDiagram from "~/components/OverviewDiagram.vue"
 export default {
   name: "InstitutionDataViz",
@@ -17,9 +14,14 @@ export default {
   },
   data(){
     return{
-      artists_data: artists_overview
+      institution_data: institution_overview
+    } 
+  },
+  methods:{
+    highlightList: function(list){
+      this.$emit("highlight_list",list)
+      // console.log(list)
     }
-    
   }
 }
 </script>
@@ -31,4 +33,6 @@ export default {
   width: 100%;
   height: 100%;
 }
+
+
 </style>

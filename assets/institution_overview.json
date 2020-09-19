@@ -1,0 +1,1104 @@
+[
+    {
+        "name": "Location",
+        "children": [
+            {
+                "name": "Los Angeles, US",
+                "children": [
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Liverpool, UK",
+                "children": [
+                    {
+                        "name": "FACT",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Rotteredam\uff0cNL",
+                "children": [
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "New York, US",
+                "children": [
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Perth, Australia",
+                "children": [
+                    {
+                        "name": "SymbioticA",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "No detail provided",
+                "children": [
+                    {
+                        "name": "Bloomberg & Hyundai Art + Technology",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Mountain View, CA, US",
+                "children": [
+                    {
+                        "name": "SETI AIR ",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "China",
+                "children": [
+                    {
+                        "name": "art.jd.com",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Eindhoven, NL",
+                "children": [
+                    {
+                        "name": "Bio Art & Design Award",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Switzerland",
+                "children": [
+                    {
+                        "name": "Arts at CERN ",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "London, UK",
+                "children": [
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Institution Category",
+        "children": [
+            {
+                "name": "Independent interdisciplinary institution",
+                "children": [
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bio Art & Design Award",
+                        "value": 1
+                    },
+                    {
+                        "name": "FACT",
+                        "value": 1
+                    },
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Semi-independent institution/program affiliated to museum",
+                "children": [
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Research lab affiliated to university",
+                "children": [
+                    {
+                        "name": "SymbioticA",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Program affiliated to automotive enterprises",
+                "children": [
+                    {
+                        "name": "Bloomberg & Hyundai Art + Technology",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Institution/program supported by or affliated to research center",
+                "children": [
+                    {
+                        "name": "Arts at CERN ",
+                        "value": 1
+                    },
+                    {
+                        "name": "SETI AIR ",
+                        "value": 1
+                    },
+                    {
+                        "name": "SymbioticA",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Semi-independent institution/program affiliated to technology firm",
+                "children": [
+                    {
+                        "name": "Bloomberg & Hyundai Art + Technology",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Art trading platform affiliated to e-commerce firm",
+                "children": [
+                    {
+                        "name": "art.jd.com",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Charity",
+                "children": [
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Program of Institution",
+        "children": [
+            {
+                "name": "Field trip",
+                "children": [
+                    {
+                        "name": "SETI AIR ",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Exhibition",
+                "children": [
+                    {
+                        "name": "Arts at CERN ",
+                        "value": 1
+                    },
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "art.jd.com",
+                        "value": 1
+                    },
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bloomberg & Hyundai Art + Technology",
+                        "value": 1
+                    },
+                    {
+                        "name": "SETI AIR ",
+                        "value": 1
+                    },
+                    {
+                        "name": "SymbioticA",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bio Art & Design Award",
+                        "value": 1
+                    },
+                    {
+                        "name": "FACT",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Interdisciplinary collaboration of other forms",
+                "children": [
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Commission",
+                "children": [
+                    {
+                        "name": "Arts at CERN ",
+                        "value": 1
+                    },
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "art.jd.com",
+                        "value": 1
+                    },
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bloomberg & Hyundai Art + Technology",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Online trade of art works",
+                "children": [
+                    {
+                        "name": "art.jd.com",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Art-commerce incubation",
+                "children": [
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    },
+                    {
+                        "name": "art.jd.com",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Research, archiving and publication",
+                "children": [
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "SETI AIR ",
+                        "value": 1
+                    },
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bio Art & Design Award",
+                        "value": 1
+                    },
+                    {
+                        "name": "FACT",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "National and international forum/conference",
+                "children": [
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "SETI AIR ",
+                        "value": 1
+                    },
+                    {
+                        "name": "SymbioticA",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bio Art & Design Award",
+                        "value": 1
+                    },
+                    {
+                        "name": "FACT",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Artist/curator/designer in residency",
+                "children": [
+                    {
+                        "name": "Arts at CERN ",
+                        "value": 1
+                    },
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "SETI AIR ",
+                        "value": 1
+                    },
+                    {
+                        "name": "SymbioticA",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bio Art & Design Award",
+                        "value": 1
+                    },
+                    {
+                        "name": "FACT",
+                        "value": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Support Received from Institution",
+        "children": [
+            {
+                "name": "Project commercial incubation",
+                "children": [
+                    {
+                        "name": "art.jd.com",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Project tutorial or critique",
+                "children": [
+                    {
+                        "name": "Arts at CERN ",
+                        "value": 1
+                    },
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bloomberg & Hyundai Art + Technology",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "SETI AIR ",
+                        "value": 1
+                    },
+                    {
+                        "name": "SymbioticA",
+                        "value": 1
+                    },
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Advanced techniques application",
+                "children": [
+                    {
+                        "name": "Arts at CERN ",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bloomberg & Hyundai Art + Technology",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Publication opportunities and academic resources",
+                "children": [
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "SETI AIR ",
+                        "value": 1
+                    },
+                    {
+                        "name": "SymbioticA",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Fund",
+                "children": [
+                    {
+                        "name": "Arts at CERN ",
+                        "value": 1
+                    },
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "art.jd.com",
+                        "value": 1
+                    },
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bloomberg & Hyundai Art + Technology",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bio Art & Design Award",
+                        "value": 1
+                    },
+                    {
+                        "name": "FACT",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Project promotion",
+                "children": [
+                    {
+                        "name": "Arts at CERN ",
+                        "value": 1
+                    },
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "art.jd.com",
+                        "value": 1
+                    },
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bio Art & Design Award",
+                        "value": 1
+                    },
+                    {
+                        "name": "FACT",
+                        "value": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Resources Provided by Institution",
+        "children": [
+            {
+                "name": "Exhibition space",
+                "children": [
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    },
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Media resources",
+                "children": [
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "art.jd.com",
+                        "value": 1
+                    },
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bloomberg & Hyundai Art + Technology",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Community support",
+                "children": [
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bloomberg & Hyundai Art + Technology",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "SETI AIR ",
+                        "value": 1
+                    },
+                    {
+                        "name": "SymbioticA",
+                        "value": 1
+                    },
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "In-house technology development team",
+                "children": [
+                    {
+                        "name": "Arts at CERN ",
+                        "value": 1
+                    },
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "art.jd.com",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "SETI AIR ",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bio Art & Design Award",
+                        "value": 1
+                    },
+                    {
+                        "name": "FACT",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Marketing and development team",
+                "children": [
+                    {
+                        "name": "art.jd.com",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bloomberg & Hyundai Art + Technology",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "In-house research team",
+                "children": [
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    },
+                    {
+                        "name": "SETI AIR ",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bio Art & Design Award",
+                        "value": 1
+                    },
+                    {
+                        "name": "FACT",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Technology firms and research centers",
+                "children": [
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bloomberg & Hyundai Art + Technology",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "SETI AIR ",
+                        "value": 1
+                    },
+                    {
+                        "name": "SymbioticA",
+                        "value": 1
+                    },
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bio Art & Design Award",
+                        "value": 1
+                    },
+                    {
+                        "name": "FACT",
+                        "value": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Sources of Fund",
+        "children": [
+            {
+                "name": "Donor/investor",
+                "children": [
+                    {
+                        "name": "Arts at CERN ",
+                        "value": 1
+                    },
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bloomberg & Hyundai Art + Technology",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "SETI AIR ",
+                        "value": 1
+                    },
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    },
+                    {
+                        "name": "art.jd.com",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Local government",
+                "children": [
+                    {
+                        "name": "Arts at CERN ",
+                        "value": 1
+                    },
+                    {
+                        "name": "V2_Lab for Unstable Media",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "Bio Art & Design Award",
+                        "value": 1
+                    },
+                    {
+                        "name": "FACT",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Private foundation",
+                "children": [
+                    {
+                        "name": "Arts at CERN ",
+                        "value": 1
+                    },
+                    {
+                        "name": "Welcome Trust",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Membership",
+                "children": [
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Technology firm",
+                "children": [
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Commercial income",
+                "children": [
+                    {
+                        "name": "art.jd.com",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pioneer Works",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Research center sponsor",
+                "children": [
+                    {
+                        "name": "SETI AIR ",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Research center",
+                "children": [
+                    {
+                        "name": "Arts at CERN ",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "University",
+                "children": [
+                    {
+                        "name": "SymbioticA",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Public foundation",
+                "children": [
+                    {
+                        "name": "Arts at CERN ",
+                        "value": 1
+                    },
+                    {
+                        "name": "New Inc",
+                        "value": 1
+                    },
+                    {
+                        "name": "Google Creative Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "LACMA Art + Technology Lab",
+                        "value": 1
+                    },
+                    {
+                        "name": "FACT",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Enterprise sponsor",
+                "children": [
+                    {
+                        "name": "Bloomberg & Hyundai Art + Technology",
+                        "value": 1
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,9 +1,6 @@
 <template>
   <div class="DataViz">
-    <div v-for="cat in artists_data" :key="cat.name">
-      <OverviewDiagram :currentData="cat" @current_list="highlightList" />
-      <!-- {{cat}} -->
-    </div>
+    <OverviewDiagram v-for="cat in artists_data" :key="cat.name" :currentData="cat" @current_list="highlightList" />
   </div>
 </template>
 
