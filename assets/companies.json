@@ -1,0 +1,163 @@
+[
+  {
+  "companyid": "0",
+  "company": "Uniqa Group",
+  "introduction": "The Uniqa Insurance Group AG (corporately styled \"UNIQA\") is one of the largest insurance groups in its core markets of Austria and Central and Eastern Europe and has approximately 40 companies in 16 countries and serve about 10.5 million customers.",
+  "institution": "Arts at CERN",
+  "institutionid": "0"
+  },
+  {
+  "companyid": 1,
+  "company": "Stimuleringsfonds Creatieve Industrie",
+  "introduction": "The Creative Industries Fund NL is the Dutch cultural fund for architecture, design, digital culture and all possible crossovers. The fund implements various subsidy schemes aimed at deepening and developing the design disciplines. Part of this aim is the interdisciplinary interaction between the cultural, social and economic domain.",
+  "institution": "V2_Lab for Unstable Media",
+  "institutionid": 1
+  },
+  {
+  "companyid": 2,
+  "company": "G.Ph.Verhagen-Stichting",
+  "introduction": "The G. Ph. Verhagen - Foundation was founded in 1950 by the Kralingse industrialist G.Ph.",
+  "institution": null,
+  "institutionid": 99
+  },
+  {
+  "companyid": 3,
+  "company": "JD.com",
+  "introduction": "JD.com, Inc. is a Chinese e-commerce company headquartered in Beijing. It is one of the two massive B2C online retailers in China by transaction volume and revenue, a member of the Fortune Global 500.",
+  "institution": "art.jd.com",
+  "institutionid": 2
+  },
+  {
+  "companyid": 4,
+  "company": "Wellcome Trust",
+  "introduction": "G. Ph. Verhagen (Rotterdam 1878) was founder, director and major shareholder of the Vereenigde Industrieën Rotterdam (V.I.R.) NV. The V.I.R. located at the Oudedijk in Rotterdam, it emerged from a knitting factory and mainly produced textile products and light bulbs.",
+  "institution": "Welcome Trust",
+  "institutionid": 3
+  },
+  {
+  "companyid": 5,
+  "company": "Bloomberg",
+  "introduction": "Bloomberg L.P. is a privately held financial, software, data, and media company headquartered in Manhattan, New York. Bloomberg L.P. provides financial software tools and enterprise applications such as analytics and equity trading platform, data services, and news to financial companies and organizations through the Bloomberg Terminal.",
+  "institution": "Bloomberg",
+  "institutionid": 4
+  },
+  {
+  "companyid": 6,
+  "company": "Nokia Bell Labs",
+  "introduction": "Nokia Bell Labs (formerly named Bell Labs Innovations (1996–2007), AT&T Bell Laboratories (1984–1996) and Bell Telephone Laboratories (1925–1984)) is an American industrial research and scientific development company owned by Finnish company Nokia. With headquarters located in Murray Hill, New Jersey, the company operates several laboratories in the United States and around the world.",
+  "institution": "New Inc",
+  "institutionid": 5
+  },
+  {
+  "companyid": 7,
+  "company": "Google",
+  "introduction": "Google, LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.",
+  "institution": "Google Creative Lab",
+  "institutionid": 6
+  },
+  {
+  "companyid": 8,
+  "company": "Google",
+  "introduction": "Google, LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.",
+  "institution": "SETI AIR",
+  "institutionid": 7
+  },
+  {
+  "companyid": 9,
+  "company": "IBM",
+  "introduction": "International Business Machines Corporation is an American multinational technology company headquartered in Armonk, New York. It was founded in 1911 in Endicott, New York, as the Computing-Tabulating-Recording Company and was renamed \"International Business Machines\" in 1924.",
+  "institution": "SETI AIR",
+  "institutionid": 7
+  },
+  {
+  "companyid": 10,
+  "company": "Nvidia",
+  "introduction": "Nvidia Corporation is an American multinational technology company incorporated in Delaware and based in Santa Clara, California. It designs graphics processing units for the gaming and professional markets, as well as system on a chip units for the mobile computing and automotive market.",
+  "institution": "SETI AIR",
+  "institutionid": 7
+  },
+  {
+  "companyid": 11,
+  "company": "Intel",
+  "introduction": "Intel Corporation is an American multinational corporation and technology company headquartered in Santa Clara, California, in Silicon Valley.",
+  "institution": "SETI AIR",
+  "institutionid": 7
+  },
+  {
+  "companyid": 12,
+  "company": "Lockheed Martin",
+  "introduction": "Lockheed Martin Corporation is an American aerospace, defense, arms, security, and advanced technologies company with worldwide interests. It was formed by the merger of Lockheed Corporation with Martin Marietta in March 1995.",
+  "institution": "SETI AIR",
+  "institutionid": 7
+  },
+  {
+  "companyid": 13,
+  "company": null,
+  "introduction": null,
+  "institution": "SymbioticA",
+  "institutionid": 8
+  },
+  {
+  "companyid": 14,
+  "company": "Hyundai",
+  "introduction": "The Hyundai Motor Company, commonly known as Hyundai Motors, is a South Korean multinational automotive manufacturer headquartered in Seoul.",
+  "institution": "LACMA Art + Technology Lab",
+  "institutionid": 9
+  },
+  {
+  "companyid": 15,
+  "company": "Snap Inc",
+  "introduction": "Snap Inc. is an American camera and social media company, founded on September 16, 2011, by Evan Spiegel, Bobby Murphy, and Reggie Brown based in Santa Monica, California. It has three products: Snapchat, Spectacles, and Bitmoji.",
+  "institution": "LACMA Art + Technology Lab",
+  "institutionid": 9
+  },
+  {
+  "companyid": 16,
+  "company": "Accenture",
+  "introduction": "Accenture plc is a multinational professional services company. A Fortune Global 500 company, it reported revenues of $43.2 billion in 2019 and had 492,000 employees, serving clients in more than 120 countries.",
+  "institution": "LACMA Art + Technology Lab",
+  "institutionid": 9
+  },
+  {
+  "companyid": 17,
+  "company": "Youtube",
+  "introduction": "YouTube is an American online video-sharing platform headquartered in San Bruno, California. Three former PayPal employees—Chad Hurley, Steve Chen, and Jawed Karim—created the service in February 2005. Google bought the site in November 2006 for US$1.65 billion; YouTube now operates as one of Google's subsidiaries.",
+  "institution": "LACMA Art + Technology Lab",
+  "institutionid": 9
+  },
+  {
+  "companyid": 18,
+  "company": "Space X",
+  "introduction": "Space Exploration Technologies Corp., t/a SpaceX, is an American aerospace manufacturer and space transportation services company headquartered in Hawthorne, California. It was founded in 2002 by Elon Musk with the goal of reducing space transportation costs to enable the colonization of Mars.",
+  "institution": "LACMA Art + Technology Lab",
+  "institutionid": 9
+  },
+  {
+  "companyid": 19,
+  "company": "Google",
+  "introduction": "Google, LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.",
+  "institution": "LACMA Art + Technology Lab",
+  "institutionid": 9
+  },
+  {
+  "companyid": 20,
+  "company": "HBO",
+  "introduction": "Home Box Office is an American pay television network owned by WarnerMedia Studios & Networks and the flagship property of parent subsidiary Home Box Office, Inc.",
+  "institution": "Pioneer Works",
+  "institutionid": 10
+  },
+  {
+  "companyid": 21,
+  "company": "WSJ",
+  "introduction": "The Wall Street Journal is an American business-focused, English-language international daily newspaper based in New York City, with international editions also available in Chinese and Japanese. The Journal, along with its Asian editions, is published six days a week by Dow Jones & Company, a division of News Corp.",
+  "institution": "Pioneer Works",
+  "institutionid": 10
+  },
+  {
+  "companyid": 22,
+  "company": "ZonMw",
+  "introduction": "ZonMw promotes health research and care innovation throughout the entire knowledge chain from fundamental research to implementation. Through various subsidy programmes we promote and fund development and practical application in the area of prevention improvement, care and health.",
+  "institution": "Bio Art & Design Award",
+  "institutionid": 11
+  }
+  ]

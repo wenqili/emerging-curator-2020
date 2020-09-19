@@ -73,9 +73,10 @@ export default {
     cursor: pointer;
     user-select: none;
     text-transform:capitalize;
+    padding-top: 0.1rem;
 
     &:hover{
-      background-color: transparent;
+      background-color: white;
       color: black;
       border: 1px solid black;
     }

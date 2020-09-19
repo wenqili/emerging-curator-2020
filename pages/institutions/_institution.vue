@@ -6,7 +6,7 @@
           :category="{
             left: 'institutions',
             middle: 'Information',
-            right: 'Materials',
+            right: 'research',
           }" 
           :current-focus="currentFocus" 
           @focus-on-slide="currentFocus = 'institutions'"

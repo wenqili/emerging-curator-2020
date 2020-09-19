@@ -1,23 +1,25 @@
 <template>
   <div class="rotating" :class="{ 'is-menu': isMenu }">
     <div class="catalog-grid" :class="{ 'is-menu': isMenu }">
-      <!-- First -->
-      <div class="first-row-container ">
+      <div class="first-row-container">
         <div class="left-section">
           <figure>
-            <img src="~/static/placeholder1.jpeg">
+            <div :style="'backgroundImage: url(/artists/'+currentArtistId[0]+'/static1.jpg)'" />
+            <!-- <img :src="'/artists/'+currentArtistId[0]+'/static1.jpg'"> -->
           </figure>
         </div>
 
         <div class="middle-section">
           <figure>
-            <img src="~/static/placeholder3.png">
+            <div :style="'backgroundImage: url(/institution/'+currentInstitutionId[0]+'/1.jpg)'" />
+            <!-- <img :src="'/institution/'+currentInstitutionId[0]+'/1.jpg'"> -->
           </figure>
         </div>
 
         <div class="right-section">
           <figure>
-            <img src="~/static/placeholder5.png">
+            <div :style="'backgroundImage: url(/company/'+currentCompanyId[0]+'/1.png)'" />
+            <!-- <img :src="'/company/'+currentCompanyId[0]+'/1.png'"> -->
           </figure>
         </div>
       </div>
@@ -38,13 +40,19 @@
             <div class="IndexSection__col IndexSection__leftCol">
               <div class="IndexSection__richtextContainer">
                 <ul>
-                  <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" :class="{ 'is-activeHover': currentArtist === artist }" @mouseover="currentArtist = artist"> 
-                    {{ artist.name }}
+                  <li
+                    v-for="artist in artists"
+                    :key="artist.id"
+                    :class="{ 'is-activeHover': currentArtistId.includes(`${artist.id}`) }"
+                    @mouseover="handleHover({ artist: artist, type: 'artist' })"
+                  >
+                    <p>{{ artist.name }}</p>
                   </li>
                 </ul>
               </div>
             </div>
-          </div> <!-- End of sectionContainer -->
+          </div>
+          <!-- End of sectionContainer -->
         </div>
 
         <!-- Institution -->
@@ -54,18 +62,24 @@
               Institutions
             </nuxt-link>
           </h3>
-          
+
           <!-- Institution list -->
           <div class="IndexSection__col IndexSection__leftCol">
             <div class="IndexSection__richtextContainer">
               <ul>
-                <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" :class="{ 'is-activeHover': currentArtist === artist }" @mouseover="currentArtist = artist"> 
-                  {{ artist.residency }}
+                <li
+                  v-for="institution in institutions"
+                  :key="institution.id"
+                  :class="{ 'is-activeHover': currentInstitutionId.includes(`${institution.id}`) }"
+                  @mouseover="handleHover({ institution: institution, type: 'institution' })"
+                >
+                  <p>{{ institution.name }}</p>
                 </li>
               </ul>
             </div>
           </div>
-        </div> <!-- end of Institution -->
+        </div>
+        <!-- end of Institution -->
 
         <!-- Company -->
         <div class="IndexSection right-section">
@@ -74,13 +88,18 @@
               Companies
             </nuxt-link>
           </h3>
-          
+
           <!-- Company list -->
           <div class="IndexSection__col IndexSection__leftCol">
             <div class="IndexSection__richtextContainer">
               <ul>
-                <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" :class="{ 'is-activeHover': currentArtist === artist }" @mouseover="currentArtist = artist"> 
-                  {{ artist.institution }}
+                <li
+                  v-for="company in companies"
+                  :key="company.companyid"
+                  :class="{ 'is-activeHover': currentCompanyId.includes(`${company.companyid}`) }"
+                  @mouseover="handleHover({ company: company, type: 'company' })"
+                >
+                  <p>{{ company.company }}</p>
                 </li>
               </ul>
             </div>
@@ -90,12 +109,15 @@
     </div>
     <div class="navi-bar">
       <nav>
-        <button class="navi-item" :class="{ 'is-focused': !isMenu }" @click="isMenu = false">
+        <button
+          class="navi-item"
+          :class="{ 'is-focused': !isMenu }"
+          @click="isMenu = false"
+        >
           New agencies and their cheese factories
         </button>
         <button class="navi-item" :class="{ 'is-focused': isMenu }" @click="isMenu = true">
-          <font-awesome-icon icon="search" />
-          Menu
+          <font-awesome-icon icon="search" />Menu
         </button>
       </nav>
       <MenuSection />
@@ -105,18 +127,25 @@
 
 <script>
 import artists from "../assets/artists.json"
-let cleanArtists = [...new Set(artists)]
+import institutions from "../assets/institution.json"
+import companies from "../assets/companies.json"
 
 export default {
-  layout: 'catalog',
-  components: {
-    
-  },
-  data: function() {
+  layout: "catalog",
+  components: {},
+  data: function () {
     return {
-      cleanArtists,
+      artists,
+      institutions,
+      companies,
+      currentArtists: [],
+      currentArtistId: [],
+      currentInstitutionId: [],
+      currentInstitutions: [],
+      currentCompanyId: [],
+      currentCompanies: [],
       isMenu: false,
-      currentFocus: 'artist',
+      currentFocus: "artist",
       currentArtist: {},
     }
   },
@@ -124,21 +153,49 @@ export default {
     this.name = this.$route.params.artist
   },
   methods: {
-    toggleArtwork: function() {
-      document.getElementById('artwork').classList.toggle('is-active')
-      document.getElementById('artinfo').classList.toggle('is-blur')
+    toggleArtwork: function () {
+      document.getElementById("artwork").classList.toggle("is-active")
+      document.getElementById("artinfo").classList.toggle("is-blur")
+    },
+    handleHover: function (item) {
+      switch (item.type) {
+        case "artist":
+          this.currentArtistId = [`${item.artist.id}`]
+          this.currentInstitutionId = item.artist.institutionid ? item.artist.institutionid.split(",") : []
+          this.currentInstitutions = this.currentInstitutionId.map(index => institutions[index])
+          this.currentCompanies = companies.filter((company) => this.currentInstitutionId.includes(`${company.institutionid}`))
+          this.currentCompanyId = this.currentCompanies.map(company => `${company.companyid}`)
+          break
+        case "institution":
+          this.currentInstitutionId = [`${item.institution.id}`]
+          this.currentArtists = artists.filter(artist => artist.institutionid !== null && artist.institutionid.split(',').includes(`${item.institution.id}`))
+          this.currentArtistId = this.currentArtists.map(artist => `${artist.id}`)
+          this.currentCompanies = companies.filter((company) => this.currentInstitutionId.includes(`${company.institutionid}`))
+          this.currentCompanyId = this.currentCompanies.map(company => `${company.companyid}`)
+          break
+        case "company":
+          this.currentCompanyId = [`${item.company.companyid}`]
+          this.currentInstitutionId = [`${item.company.institutionid}`]
+          this.currentArtists = artists.filter(artist => artist.institutionid !== null && artist.institutionid.split(',').includes(`${this.currentInstitutionId}`))
+          this.currentArtistId = this.currentArtists.map(artist => `${artist.id}`)
+          break
+        default:
+          break
+      }
     },
   },
   head() {
     return {
       title: "Emerging Curators 2020",
-      meta: [{
-        hid: "descriptions",
-        name: "descriptions",
-        content: "descriptions"
-      }]
+      meta: [
+        {
+          hid: "descriptions",
+          name: "descriptions",
+          content: "descriptions",
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 
@@ -147,10 +204,10 @@ export default {
   box-sizing: border-box;
 }
 
-.rotating{
+.rotating {
   transform-origin: 3rem 3rem;
   transform: rotate(90deg);
-  transition: transform .3s ease,-webkit-transform .3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   width: 100vh;
   position: absolute;
   top: 0;
@@ -224,7 +281,7 @@ export default {
   display: flex;
   width: calc(100vw - 3rem);
   height: 48%;
-  
+
   & > * {
     display: flex;
     align-items: center;
@@ -266,9 +323,15 @@ export default {
 }
 
 li {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   user-select: none;
   margin-bottom: 0.2rem;
+  padding-left: 2rem;
+  p{
+    padding-top: 0.5rem;
+    line-height: 1.2;
+  }
+  
   a {
     padding: 0.25rem 0.5rem;
     display: block;
@@ -280,11 +343,11 @@ li {
 }
 
 .is-activeHover {
-  background: black;
-  color: white;
+  background: #cecece;
+  /* color: white; */
 }
 
-a.nuxt-link-active{
+a.nuxt-link-active {
   background-color: black;
   color: white;
 }
@@ -295,26 +358,27 @@ a.nuxt-link-active{
   top: 0;
   right: 0;
   padding-top: 1.2rem;
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
   // padding-bottom: 1.2rem;
   height: 10.4rem;
   z-index: 1;
   // width: 1rem;
   height: 100%;
-  
+  border-top: 3px solid black;
   // & * {
   //   transition: ease 300ms all;
   // }
 
   &.is-active {
     left: 0;
-    
+
     z-index: 0;
     // width: calc(100vw - 3rem);
   }
 
   h3 {
     top: 1.2rem;
+    z-index: 1;
   }
 
   &__sectionTitle {
@@ -331,9 +395,9 @@ a.nuxt-link-active{
     line-height: 1.3rem;
     cursor: pointer;
     user-select: none;
-
-    &:hover{
-      background-color: transparent;
+    padding-top: 0.1rem;
+    &:hover {
+      background-color: white;
       color: black;
       border: 1px solid black;
     }
@@ -383,6 +447,18 @@ a.nuxt-link-active{
 figure {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    /* position: absolute; */
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 200ms ease-in-out;
+  }
   img {
     height: 100%;
     width: 100%;

@@ -8,7 +8,7 @@
           :category="{
             left: 'artists',
             middle: 'artwork',
-            right: 'information',
+            right: 'research',
           }" 
           :current-focus="currentFocus" 
           @focus-on-slide="currentFocus = 'artists'"
