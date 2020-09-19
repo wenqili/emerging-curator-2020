@@ -10,13 +10,16 @@
 
         <div class="middle-section">
           <figure>
-            <div :style="'backgroundImage: url(/institution/'+currentInstitutionId[0]+'/1.jpg)'" />
+            <div :style="'backgroundImage: url(/institution/'+currentInstitutionId[0]+'/1.png)'" />
           </figure>
         </div>
 
         <div class="right-section">
           <figure>
-            <div :style="'backgroundImage: url(/company/'+currentCompanyId[0]+'/1.png)'" class="contain" />
+            <div
+              :style="'backgroundImage: url(/company/'+currentCompanyId[0]+'/1.png)'"
+              class="contain"
+            />
           </figure>
         </div>
       </div>
@@ -40,8 +43,8 @@
                   <li
                     v-for="artist in artists"
                     :key="artist.id"
-                    :class="{ 'is-activeHover': currentArtistId.includes(`${artist.id}`) }"
-                    @mouseover="handleHover({ artist: artist, type: 'artist' })"
+                    :class="{ 'is-activeHover': currentArtistId.includes(artist.id), 'onHover': 'a'+artist.id === onHoverId }"
+                    @mouseover="debounce(() => handleHover({ artist: artist, type: 'artist' }))"
                   >
                     <p>{{ artist.name }}</p>
                   </li>
@@ -67,8 +70,8 @@
                 <li
                   v-for="institution in institutions"
                   :key="institution.id"
-                  :class="{ 'is-activeHover': currentInstitutionId.includes(`${institution.id}`) }"
-                  @mouseover="handleHover({ institution: institution, type: 'institution' })"
+                  :class="{ 'is-activeHover': currentInstitutionId.includes(institution.id), 'onHover': 'i'+ institution.id === onHoverId }"
+                  @mouseover="debounce(() => handleHover({ institution: institution, type: 'institution' }))"
                 >
                   <p>{{ institution.name }}</p>
                 </li>
@@ -93,8 +96,8 @@
                 <li
                   v-for="company in companies"
                   :key="company.companyid"
-                  :class="{ 'is-activeHover': currentCompanyId.includes(`${company.companyid}`) }"
-                  @mouseover="handleHover({ company: company, type: 'company' })"
+                  :class="{ 'is-activeHover': currentCompanyId.includes(`${company.companyid}`), 'onHover': 'c'+ company.id === onHoverId }"
+                  @mouseover="debounce(() => handleHover({ company: company, type: 'company' }))"
                 >
                   <p>{{ company.company }}</p>
                 </li>
@@ -104,10 +107,7 @@
         </div>
       </div>
     </div>
-    <NaviBar 
-      @toggle-menu="onMenu = !onMenu" 
-      @toggle-off-menu="onMenu = false"
-    />
+    <NaviBar @toggle-menu="onMenu = !onMenu" @toggle-off-menu="onMenu = false" />
   </div>
 </template>
 
@@ -115,13 +115,17 @@
 import artists from "../assets/artists.json"
 import institutions from "../assets/institution.json"
 import companies from "../assets/companies.json"
-
+let timer
+let ticking = false
 export default {
   layout: "catalog",
   components: {},
   data: function () {
     return {
+      ticking,
+      timer,
       onMenu: false,
+      onHoverId: '',
       artists,
       institutions,
       companies,
@@ -138,6 +142,9 @@ export default {
   created() {
     this.name = this.$route.params.artist
   },
+  mounted(){
+
+  },
   methods: {
     toggleArtwork: function () {
       document.getElementById("artwork").classList.toggle("is-active")
@@ -146,28 +153,81 @@ export default {
     handleHover: function (item) {
       switch (item.type) {
         case "artist":
-          this.currentArtistId = [`${item.artist.id}`]
-          this.currentInstitutionId = item.artist.institutionid ? item.artist.institutionid.split(",") : []
-          this.currentInstitutions = this.currentInstitutionId.map(index => institutions[index])
-          this.currentCompanies = companies.filter((company) => this.currentInstitutionId.includes(`${company.institutionid}`))
-          this.currentCompanyId = this.currentCompanies.map(company => `${company.companyid}`)
+          this.onHoverId = 'a' + item.artist.id
+          this.currentArtistId = [item.artist.id]
+          this.currentInstitutionId = item.artist.institutionid
+            ? item.artist.institutionid.split(",")
+            : []
+          this.currentInstitutions = this.currentInstitutionId.map(
+            (index) => institutions[index]
+          )
+
+          this.currentCompanies = companies.filter((company) => {
+            const companySponsedIns = company.institutionid.split(",")
+            const overlapped = this.currentInstitutionId.filter((ins) =>
+              companySponsedIns.includes(ins)
+            )
+            return overlapped.length > 0
+          })
+          this.currentCompanyId = this.currentCompanies.map(
+            (company) => `${company.companyid}`
+          )
           break
         case "institution":
-          this.currentInstitutionId = [`${item.institution.id}`]
-          this.currentArtists = artists.filter(artist => artist.institutionid !== null && artist.institutionid.split(',').includes(`${item.institution.id}`))
-          this.currentArtistId = this.currentArtists.map(artist => `${artist.id}`)
-          this.currentCompanies = companies.filter((company) => this.currentInstitutionId.includes(`${company.institutionid}`))
-          this.currentCompanyId = this.currentCompanies.map(company => `${company.companyid}`)
+          this.onHoverId = 'i' + item.institution.id
+          this.currentInstitutionId = [item.institution.id]
+          this.currentArtists = artists.filter(
+            (artist) =>
+              artist.institutionid !== null &&
+              artist.institutionid.split(",").includes(item.institution.id)
+          )
+          this.currentArtistId = this.currentArtists.map((artist) => artist.id)
+          this.currentCompanies = companies.filter((company) => {
+            const companySponsedIns = company.institutionid.split(",")
+            const overlapped = this.currentInstitutionId.filter((ins) =>
+              companySponsedIns.includes(ins)
+            )
+            return overlapped.length > 0
+          })
+          this.currentCompanyId = this.currentCompanies.map(
+            (company) => company.companyid
+          )
           break
         case "company":
-          this.currentCompanyId = [`${item.company.companyid}`]
-          this.currentInstitutionId = [`${item.company.institutionid}`]
-          this.currentArtists = artists.filter(artist => artist.institutionid !== null && artist.institutionid.split(',').includes(`${this.currentInstitutionId}`))
-          this.currentArtistId = this.currentArtists.map(artist => `${artist.id}`)
+          this.onHoverId = 'c' + item.company.id
+          this.currentCompanyId = [item.company.companyid]
+          this.currentInstitutionId = item.company.institutionid.split(",")
+
+          this.currentArtists = artists.filter((artist) => {
+            const artistSponsors = artist.institutionid.split(",")
+            const overlapped = this.currentInstitutionId.filter((ins) =>
+              artistSponsors.includes(ins)
+            )
+            return overlapped.length > 0
+          })
+          this.currentArtistId = this.currentArtists.map((artist) => artist.id)
           break
         default:
           break
       }
+      setTimeout(() => {
+        var elementList = document.getElementsByClassName("is-activeHover")
+        elementList.length > 0 && this.scrollView(elementList)
+      }, 20)
+    },
+    scrollView: function (elementList) {
+      for (let item of elementList) {
+        console.log()
+        if(!item.classList.contains('onHover')){
+          item.scrollIntoView()
+        }
+      }
+    },
+    debounce: function (fn) {
+      clearTimeout(timer)
+      timer = setTimeout(() => {
+        fn.apply()
+      }, 20)
     },
   },
   head() {
@@ -232,10 +292,10 @@ export default {
   border-left: 3px black solid;
 }
 
-
 .is-activeHover {
   background: #cecece;
   /* color: white; */
+  /* margin-bottom: 1.5rem; */
 }
 
 a.nuxt-link-active {
@@ -343,7 +403,7 @@ figure {
     transition: background-image 200ms ease-in-out;
   }
 
-  .contain{
+  .contain {
     background-size: contain;
   }
 

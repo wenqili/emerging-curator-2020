@@ -72,7 +72,6 @@ export default {
       companies,
       cleanArtists,
       cleanInstitutions,
-      isMenu: false,
     }
   },
   created() {

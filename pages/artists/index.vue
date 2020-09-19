@@ -92,10 +92,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-li.highlight > a{
+/* li.highlight > a{
   color: #fff;
   background-color: #000;
-}
+} */
 
 // First row
 .first-row-container {

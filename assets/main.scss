@@ -235,6 +235,16 @@ li {
   user-select: none;
   margin-bottom: 0.2rem;
   padding-left: 2rem;
+  // transition: ease 300ms all;
+  cursor: pointer;
+  &.highlight {
+    padding-left: 2rem;
+
+  }
+  &.highlight > a{
+    color: #fff;
+    background-color: #000;
+  }
 
   p{
     padding-top: 0.5rem;
@@ -245,9 +255,6 @@ li {
     padding: 0.25rem 0.5rem;
     display: block;
     width: 100%;
-
-    &:active {
-    }
   }
 }
 
