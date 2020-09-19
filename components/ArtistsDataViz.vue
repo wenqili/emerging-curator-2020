@@ -1,7 +1,7 @@
 <template>
   <div class="DataViz">
     <div v-for="cat in artists_data" :key="cat.name">
-      <OverviewDiagram v-bind:currentData="cat"/>
+      <OverviewDiagram :currentData="cat" @current_list="highlightList" />
       <!-- {{cat}} -->
     </div>
   </div>
@@ -18,8 +18,13 @@ export default {
   data(){
     return{
       artists_data: artists_overview
+    } 
+  },
+  methods:{
+    highlightList: function(list){
+      this.$emit("highlight_list",list)
+      // console.log(list)
     }
-    
   }
 }
 </script>

@@ -20,7 +20,7 @@
             <div class="DataSection__col DataSection__leftCol">
               <div>
                 <ul>
-                  <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" @mouseover="current = artist.name">
+                  <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" :class="[{'highlight':showHighlight.includes(artist.name)},'no-highlight']" @mouseover="current = artist.name">
                     <nuxt-link :to="{ name: 'artists-artist', params: { artist: artist.url, id: artist.id }}">
                       {{ artist.name }}
                     </nuxt-link>
@@ -35,7 +35,7 @@
                 Artwork
               </h4> -->
               <div class="DataSection__richtextContainer">
-                <ArtistsDataViz />
+                <ArtistsDataViz @highlight_list="showList" />
               </div>
             </div>
           </div> <!-- End of sectionContainer -->
@@ -77,6 +77,7 @@ export default {
       cleanArtists,
       isMenu: false,
       currentFocus: 'artist',
+      showHighlight:[],
     }
   },
   created() {
@@ -87,6 +88,9 @@ export default {
       document.getElementById('artwork').classList.toggle('is-active')
       document.getElementById('artinfo').classList.toggle('is-blur')
     },
+    showList: function(list){
+      this.showHighlight = list
+    }
   },
   head() {
     return {
@@ -105,6 +109,12 @@ export default {
 * {
   box-sizing: border-box;
 }
+
+li.highlight > a{
+  color: #fff;
+  background-color: #000;
+}
+
 
 .rotating{
   transform-origin: 3rem 3rem;
