@@ -23,24 +23,12 @@ export default {
       currData: this.currentData,
       height: 380,
       width: 1288,
-      onHover: false,
-      fillColor:"#fff",
-      textColor:"#000"
-    }
-  },
-  watch:{
-    onHover: function(prev, curr){
-      this.fillColor = curr?"#000":"#fff"
-      this.textColor  = curr?"#fff":"#000"
     }
   },
   mounted() {
     this.createDiagram()
   },
   methods: {
-    changeColor(){
-      d3.select
-    },
     createDiagram() {
       const data = this.currData
 
@@ -137,8 +125,11 @@ export default {
         .attr("width", (d) => (d === root ? this.width : x(d.x1) - x(d.x0)))
         .attr("height", (d) => (d === root ? 30 : y(d.y1) - y(d.y0)))
         // .attr("fill", (d) => (d === root ? 30 : y(d.y1) - y(d.y0)))
-        .on('mouseenter', (event, d) => {
+        .on('mouseover', (event, d) => {
             this.$emit('current_list',d === root ?[]: d.data.children.map(each=>each.name))
+            })
+        .on('mouseout', (event, d) => {
+            this.$emit('current_list',d === root ?[]: [])
             })
     },
   },
