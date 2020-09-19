@@ -68,11 +68,11 @@ export default {
         .data(root.children.concat(root))
         .join("g")
         .attr('pointer-events', 'all')
-
+        .attr("class",(d)=>(d===root?"root-tile":"tile"))
 
       node
         .append("rect")
-        .attr("class","tile")
+        // .attr("class",(d)=>(d===root?"root-tile":"tile"))
         .attr("stroke", (d) => (d === root ? "none" : "#000"))
         .attr("stroke-width","0.18em")
         .attr("fill", (d) => (d === root ? "none" : this.onHover?"#000":"none"))
@@ -100,7 +100,7 @@ export default {
         .attr("class","option")
         .attr("font-weight", (d) => (d === root ? "bold" : null))
         .attr("font-size", (d) => (d === root ? "32px" : "19.2px"))
-        .attr("fill", (d) => (d === root ? "#000" : this.onHover?"#fff":"#000"))
+        .attr("fill", "#000")
         .attr("y", (d) => (d === root ? "22.5px" : "32px"))
         .selectAll("tspan")
         .data((d) => d3plus.textWrap().width((x(d.x1) - x(d.x0))*0.45)(`${d.data.name}`).lines)
@@ -116,7 +116,7 @@ export default {
         .append("text")
         .attr("class","count")
         .attr("font-weight", "bold")
-        .attr("fill", (d) => (d === root ? "#000" : this.onHover?"#fff":"#000"))
+        .attr("fill", "#000")
         .attr("font-size", "32px")
         .attr("y", "37px")
         .attr("transform",(d)=>`translate(${x(d.x1) - x(d.x0)-17},0)`)
@@ -138,10 +138,6 @@ export default {
         .attr("height", (d) => (d === root ? 30 : y(d.y1) - y(d.y0)))
         // .attr("fill", (d) => (d === root ? 30 : y(d.y1) - y(d.y0)))
         .on('mouseenter', (event, d) => {
-            // this.currRectRef = d.data.name.replace(/[^A-Z0-9]+/ig, "")
-            console.log(d3.select('rect'))
-            // d3.select(this).attr("fill","#000")
-            this.onHover=true
             this.$emit('current_list',d === root ?[]: d.data.children.map(each=>each.name))
             })
     },
@@ -157,9 +153,10 @@ export default {
     /* svg >rect{
         stroke-width: 15px;
     } */
-
-    /* .tile:hover{
+    g.tile:hover>rect{
       fill:#000;
-      color:#fff;
-    } */
+    }
+    g.tile:hover>text{
+      fill:#fff;
+    }
 </style>

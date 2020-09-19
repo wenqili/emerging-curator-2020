@@ -35,7 +35,7 @@
                 Artwork
               </h4> -->
               <div class="DataSection__richtextContainer">
-                <ArtistsDataViz />
+                <ArtistsDataViz @highlight_list="showList" />
               </div>
             </div>
           </div> <!-- End of sectionContainer -->
@@ -167,6 +167,9 @@ export default {
       document.getElementById('artwork').classList.toggle('is-active')
       document.getElementById('artinfo').classList.toggle('is-blur')
     },
+    showList: function(list){
+      this.$emit('show_highlight',list)
+    }
   },
   head() {
     return {
