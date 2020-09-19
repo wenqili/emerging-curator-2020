@@ -1,84 +1,102 @@
 <template>
-  <nav :style="cssProps" :class="{ 'is-active': isActive }">
-    <div class="dropdown" :class="{ 'is-active': isActive }">
-      <div class="dropdown-trigger">
-        <button
-          class="button is-medium m-1"
-          :class="theme === 'dark' ? 'is-black':'is-white'"
-          aria-controls="dropdown-menu"
-          aria-haspopup="true"
-          @click="isActive = !isActive"
-        >
-          <span class="icon is-medium">
-            <font-awesome-icon v-if="isActive" icon="times" />
-            <font-awesome-icon v-else icon="bars" />
-          </span>
-        </button>
-      </div>
-      <div id="dropdown-menu" class="dropdown-menu" role="menu">
-        <Menu />
-      </div>
-    </div>
-  </nav>
+  <div class="navi-bar">
+    <nav>
+      <nuxt-link
+        class="navi-item siteTitle"
+        to="/"
+      >
+        New agencies and their cheese factories
+      </nuxt-link>
+      <button class="navi-item" :class="{ 'is-focused': isMenu }" @click="toggleMenu">
+        <font-awesome-icon v-if="!isMenu" icon="grip-lines" />
+        <div v-else class="about">
+          <nuxt-link to="/about">
+            About
+          </nuxt-link>
+          <font-awesome-icon icon="slash" />
+        </div>
+        <span>Menu</span>
+      </button>
+    </nav>
+    <ResidencySection />
+  </div>
 </template>
 
 <script>
 export default {
   name: "NaviBar",
   props: {
-    theme: {
-      type: String,
-      default: "dark",
-    },
   },
   data: function() {
     return {
-      isActive: false,
+      isMenu: false,
     }
   },
-  computed: {
-    cssProps() {
-      return {
-        "--nav-bg-color": this.theme === "dark" ? "black" : "white",
-      }
+  methods: {
+    toggleMenu: function(){
+      this.isMenu = !this.isMenu
+      this.$emit('toggle-menu')
     },
-  },
+    toggleOffMenu: function(){
+      this.isMenu = false
+      this.$emit('toggle-off-menu')
+    }
+  }
 }
 </script>
 
-<style scoped>
-nav {
-  background-color: var(--nav-bg-color);
-  grid-area: 1 / 1 / 8 / 2;
-  text-align: center;
-  border-right: 5px solid black;
-}
-
-nav.is-active {
-  grid-area: 1 / 1 / 8 / 8;
-
-}
-
+<style lang='scss' scoped>
 button {
-  z-index: 21;
-  background-color: transparent !important;
-  border: none;
+  span {
+    display: block;
+  }
+}
+.navi-bar {
+  position: relative;
+  height: 100%;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  width: var(--menu-full-width);
+  left: var(--reserve-width);
 }
 
-.dropdown {
-  width: 100%;
-  height: 100%;
-}
-#dropdown-menu{
+.navi-bar nav {
   position: absolute;
-  top: 0;
-  opacity: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
-  background-color: var(--primary-brown);
 }
 
-.is-active #dropdown-menu {
-  opacity: 1 !important;
+.navi-item {
+  position: relative;
+  z-index: 1;
+  padding: 0.5rem;
+  border: none;
+  background: none;
+  outline: transparent;
 }
+
+.navi-item.is-focused {
+  font-weight: 900;
+}
+
+.siteTitle {
+  /* transform-origin: 0 1; */
+  /* transform: rotate(-90deg); */
+  color: black;
+  font-weight: bold;
+  line-height: 1;
+  
+}
+
+.about{
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 </style>

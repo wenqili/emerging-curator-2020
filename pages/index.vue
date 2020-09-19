@@ -1,25 +1,22 @@
 <template>
-  <div class="rotating" :class="{ 'is-menu': isMenu }">
-    <div class="catalog-grid" :class="{ 'is-menu': isMenu }">
+  <div class="rotating" :class="{ 'onMenu': onMenu }">
+    <div class="catalog-grid" :class="{ 'onMenu': onMenu }">
       <div class="first-row-container">
         <div class="left-section">
           <figure>
             <div :style="'backgroundImage: url(/artists/'+currentArtistId[0]+'/static1.jpg)'" />
-            <!-- <img :src="'/artists/'+currentArtistId[0]+'/static1.jpg'"> -->
           </figure>
         </div>
 
         <div class="middle-section">
           <figure>
             <div :style="'backgroundImage: url(/institution/'+currentInstitutionId[0]+'/1.jpg)'" />
-            <!-- <img :src="'/institution/'+currentInstitutionId[0]+'/1.jpg'"> -->
           </figure>
         </div>
 
         <div class="right-section">
           <figure>
-            <div :style="'backgroundImage: url(/company/'+currentCompanyId[0]+'/1.png)'" />
-            <!-- <img :src="'/company/'+currentCompanyId[0]+'/1.png'"> -->
+            <div :style="'backgroundImage: url(/company/'+currentCompanyId[0]+'/1.png)'" class="contain" />
           </figure>
         </div>
       </div>
@@ -107,21 +104,10 @@
         </div>
       </div>
     </div>
-    <div class="navi-bar">
-      <nav>
-        <button
-          class="navi-item"
-          :class="{ 'is-focused': !isMenu }"
-          @click="isMenu = false"
-        >
-          New agencies and their cheese factories
-        </button>
-        <button class="navi-item" :class="{ 'is-focused': isMenu }" @click="isMenu = true">
-          <font-awesome-icon icon="search" />Menu
-        </button>
-      </nav>
-      <MenuSection />
-    </div>
+    <NaviBar 
+      @toggle-menu="onMenu = !onMenu" 
+      @toggle-off-menu="onMenu = false"
+    />
   </div>
 </template>
 
@@ -135,6 +121,7 @@ export default {
   components: {},
   data: function () {
     return {
+      onMenu: false,
       artists,
       institutions,
       companies,
@@ -144,7 +131,6 @@ export default {
       currentInstitutions: [],
       currentCompanyId: [],
       currentCompanies: [],
-      isMenu: false,
       currentFocus: "artist",
       currentArtist: {},
     }
@@ -200,86 +186,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-* {
-  box-sizing: border-box;
-}
-
-.rotating {
-  transform-origin: 3rem 3rem;
-  transform: rotate(90deg);
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  width: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  box-sizing: border-box;
-}
-
-.rotating.is-menu {
-  transform: rotate(0deg) !important;
-  // transform: rotate(90deg) translate(0, -100px) !important;
-  width: 100vw;
-}
-
-.is-menu .navi-bar {
-  width: 100vw;
-}
-
-.navi-bar {
-  width: 100vh;
-  position: relative;
-  top: 3rem;
-  height: calc(100vh - 3rem);
-}
-
-.navi-bar nav {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  height: 3rem;
-  border-top: black 3px solid;
-}
-
-.menu {
-  position: relative;
-  height: 100%;
-}
-
-.navi-item {
-  position: relative;
-  z-index: 1;
-  padding: 0.5rem;
-  border: none;
-  background: none;
-  outline: transparent;
-}
-
-.navi-item.is-focused {
-  font-weight: 900;
-}
-
-.catalog-grid {
-  top: 3rem;
-  position: absolute;
-  width: calc(100vw - 3rem);
-  height: 100vh;
-  transform: rotate(-90deg);
-  transform-origin: left top;
-  height: 100vh;
-  line-height: 1;
-  overflow: hidden;
-}
-
-.catalog-grid.is-menu {
-  height: 100vw;
-}
-
 // First row
 .first-row-container {
   display: flex;
-  width: calc(100vw - 3rem);
+  width: calc(100vw - var(--reserve-width) - var(--menu-full-width));
   height: 48%;
 
   & > * {
@@ -292,7 +202,7 @@ export default {
 // Second row
 .second-row-container {
   display: flex;
-  width: calc(100vw - 3rem);
+  width: calc(100vw - var(--reserve-width) - var(--menu-full-width));
   height: calc(100vh - 48%);
 
   & > * {
@@ -322,25 +232,6 @@ export default {
   border-left: 3px black solid;
 }
 
-li {
-  font-size: 1.2rem;
-  user-select: none;
-  margin-bottom: 0.2rem;
-  padding-left: 2rem;
-  p{
-    padding-top: 0.5rem;
-    line-height: 1.2;
-  }
-  
-  a {
-    padding: 0.25rem 0.5rem;
-    display: block;
-    width: 100%;
-
-    &:active {
-    }
-  }
-}
 
 .is-activeHover {
   background: #cecece;
@@ -358,22 +249,14 @@ a.nuxt-link-active {
   top: 0;
   right: 0;
   padding-top: 1.2rem;
-  /* padding-left: 2rem; */
-  // padding-bottom: 1.2rem;
   height: 10.4rem;
   z-index: 1;
-  // width: 1rem;
   height: 100%;
   border-top: 3px solid black;
-  // & * {
-  //   transition: ease 300ms all;
-  // }
 
   &.is-active {
     left: 0;
-
     z-index: 0;
-    // width: calc(100vw - 3rem);
   }
 
   h3 {
@@ -450,15 +333,20 @@ figure {
   display: flex;
   justify-content: center;
   align-items: center;
+
   div {
-    /* position: absolute; */
     height: 100%;
     width: 100%;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     transition: background-image 200ms ease-in-out;
   }
+
+  .contain{
+    background-size: contain;
+  }
+
   img {
     height: 100%;
     width: 100%;

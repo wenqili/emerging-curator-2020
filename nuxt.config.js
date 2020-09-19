@@ -8,7 +8,7 @@ export default {
   ** Global CSS - https://nuxtjs.org/guides/features/configuration#pre-processors
   */
   css: [
-    '~/assets/main.css',
+    '~/assets/main.scss',
     // Load a Node.js module directly (here it's a Sass file)
     // 'bulma',
     // // CSS file in the project

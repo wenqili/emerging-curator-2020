@@ -27,7 +27,7 @@ export default {
 <style lang="scss" scoped>
 .DataViz{
   overflow: auto;
-  // background-color: yellowgreen;
+  padding-right: 2rem;
   width: 100%;
   height: 100%;
 }

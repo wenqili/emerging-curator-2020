@@ -1,7 +1,7 @@
 <template>
   <div class="DataViz">
     <div v-for="cat in artists_data" :key="cat.name">
-      <OverviewDiagram :currentData="cat" @current_list="highlightList" />
+      <OverviewDiagram :current-data="cat" @current_list="highlightList" />
       <!-- {{cat}} -->
     </div>
   </div>
@@ -32,8 +32,8 @@ export default {
 <style lang="scss" scoped>
 .DataViz{
   overflow: auto;
-  // background-color: yellowgreen;
   width: 100%;
   height: 100%;
+  padding-right: 2rem;
 }
 </style>

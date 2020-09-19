@@ -1,0 +1,259 @@
+:root {
+  --primary-blue:#2f80d5;
+  --primary-font: 'Univers LT Std';
+  --primary-grey: #B7B7B7;
+  --primary-brown: #99815E;
+  --secondary-font: 'Replica';
+  --menu-full-width: 6rem;
+  --reserve-width: 10vw;
+  --move-width: calc(80vw - 6rem);
+  --data-container-active: calc(100vw - var(--menu-full-width) - var(--reserve-width));
+  --data-midcol-active: 70% ;
+}
+
+body {
+  font-family: var(--primary-font);
+  /* , system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+      Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
+  margin: 0;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  /* color: var(--primary-blue); */
+  /* font-style: italic; */
+}
+
+a.nuxt-link-exact-active {
+  color: var(--primary-blue);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 4rem repeat(5, 1fr) 1rem;
+  grid-template-rows: 0.5rem 3.5rem repeat(4, 1fr) 2rem;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh;
+  line-height: 1;
+}
+
+h3.DataSection__sectionTitle{
+  font-family: var(--secondary-font);
+}
+
+@font-face {
+  font-family: 'Replica-Regular';
+  /* font-weight: normal; */
+  src: local("Replica-Regular"), 
+  url('~assets/fonts/Replica/Replica-Regular.otf') format('otf'),
+}
+
+@font-face {
+  font-family: 'Replica';
+  src: url('~assets/fonts/Replica/Replica-Regular.eot?#iefix') format('embedded-opentype'),
+      url('~assets/fonts/Replica/Replica-Regular.woff2') format('woff2'),
+      url('~assets/fonts/Replica/Replica-Regular.woff') format('woff'),
+      url('~assets/fonts/Replica/Replica-Regular.ttf') format('truetype'),
+      url('~assets/fonts/Replica/Replica-Regular.svg#Replica-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Univers LT Std';
+  src: url('~assets/fonts/Univers/UniversLTStd.eot?#iefix') format('embedded-opentype'),
+      url('~assets/fonts/Univers/UniversLTStd.woff2') format('woff2'),
+      url('~assets/fonts/Univers/UniversLTStd.woff') format('woff'),
+      url('~assets/fonts/Univers/UniversLTStd.ttf') format('truetype'),
+      url('~assets/fonts/Univers/UniversLTStd.svg#UniversLTStd') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global container transition */
+* {
+  box-sizing: border-box;
+}
+
+.rotating {
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.rotating.onMenu {
+  transform: translate(var(--move-width), 0) !important;
+  width: 100vw;
+}
+
+.catalog-grid {
+  top: 0;
+  left: calc(var(--reserve-width) + var(--menu-full-width));
+  position: absolute;
+  width: calc(100vw - var(--reserve-width) - var(--menu-full-width));
+  height: 100vh;
+  line-height: 1;
+  overflow: hidden;
+}
+
+
+// New CSS style
+.DataSection {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 1.2rem;
+  padding-left: 2rem;
+  // padding-bottom: 1.2rem;
+  height: 10.4rem;
+  z-index: 1;
+  width: 1rem;
+  border: none;
+
+  & * {
+    transition: ease 300ms all;
+  }
+
+  &.is-active {
+    left: 0;
+    height: 100%;
+    z-index: 0;
+    width: var(--data-container-active);
+  }
+
+  h3 {
+    top: 1.2rem;
+  }
+
+  &__sectionTitle {
+    top: 0;
+    left: 1.2rem;
+    position: absolute;
+    transform-origin: top left;
+    transform: rotate(90deg);
+    background-color: black;
+    color: white;
+    width: 8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.3rem;
+    cursor: pointer;
+    user-select: none;
+    text-transform: capitalize;
+    &:hover{
+      background-color: transparent;
+      color: black;
+      border: 1px solid black;
+    }
+  }
+
+  &__sectionContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  &__col {
+    position: relative;
+  }
+
+  &__leftCol {
+    width: 30%;
+    height: 100%;
+  }
+
+  &__midCol {
+    height: 100%;
+    width: 40%;
+    border-left: black solid 3px;
+    &.is-active{
+      height: 100%;
+      width: calc(70% - 2rem);
+    }
+  }
+
+  &__rightCol {
+    min-width: 2rem;
+    height: 100%;
+    width: 30%;
+    border-left: black solid 3px;
+
+    &.is-blur{
+      border-left: none;
+      width: 2rem;
+
+      h4 {
+        top: 18.4rem;
+      }
+
+      .DataSection__textContainer {
+        display: none;
+        opacity: 0;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  &__richtextContainer {
+    overflow: auto;
+    height: 100%;
+  }
+
+  &__textContainer {
+    padding-left: 2rem;
+    padding-right: 4rem;
+    overflow: auto;
+    height: 100%;
+  }
+}
+
+// list
+
+li {
+  font-size: 1.2rem;
+  user-select: none;
+  margin-bottom: 0.2rem;
+  padding-left: 2rem;
+
+  p{
+    padding-top: 0.5rem;
+    line-height: 1.2;
+  }
+  
+  a {
+    padding: 0.25rem 0.5rem;
+    display: block;
+    width: 100%;
+
+    &:active {
+    }
+  }
+}
+
+
+// Routes
+a.nuxt-link-active{
+  background-color: black;
+  color: white;
+}
