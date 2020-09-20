@@ -3,7 +3,7 @@
         "name": "Role during the residency",
         "children": [
             {
-                "name": "team member",
+                "name": "Team member",
                 "children": [
                     {
                         "name": "Wang Yang & Zhen Zhen",
@@ -32,7 +32,7 @@
                 ]
             },
             {
-                "name": "independent artist",
+                "name": "Independent artist",
                 "children": [
                     {
                         "name": "Liu Xin",
@@ -73,7 +73,7 @@
                 ]
             },
             {
-                "name": "other",
+                "name": "Other",
                 "children": [
                     {
                         "name": "Maya Man (Google Creative Lab)",
@@ -82,7 +82,7 @@
                 ]
             },
             {
-                "name": "curator of the collaborative project",
+                "name": "Curator of the collaborative project",
                 "children": [
                     {
                         "name": "Liu Xin",
@@ -112,7 +112,7 @@
         "name": "Means by which the artist learned about this residency",
         "children": [
             {
-                "name": "internal reference / nomination",
+                "name": "Internal reference / nomination",
                 "children": [
                     {
                         "name": "Maya Man (Google Creative Lab)",
@@ -133,21 +133,7 @@
                     {
                         "name": "Kenny Wong",
                         "value": 1
-                    }
-                ]
-            },
-            {
-                "name": "Reputation",
-                "children": [
-                    {
-                        "name": "Pei-Ying Lin (CERN)",
-                        "value": 1
-                    }
-                ]
-            },
-            {
-                "name": "Internal reference / nomination",
-                "children": [
+                    },
                     {
                         "name": "Liu Xin",
                         "value": 1
@@ -159,8 +145,12 @@
                 ]
             },
             {
-                "name": "reputation",
+                "name": "Reputation",
                 "children": [
+                    {
+                        "name": "Pei-Ying Lin (CERN)",
+                        "value": 1
+                    },
                     {
                         "name": "Jen Liu (LACMA Art + Tech)",
                         "value": 1
@@ -194,7 +184,7 @@
         "name": "Requested materials for the application",
         "children": [
             {
-                "name": "timeline",
+                "name": "Timeline",
                 "children": [
                     {
                         "name": "Liu Xin",
@@ -235,7 +225,7 @@
                 ]
             },
             {
-                "name": "prototypes",
+                "name": "Prototypes",
                 "children": [
                     {
                         "name": "Wang Yang & Zhen Zhen",
@@ -276,7 +266,7 @@
                 ]
             },
             {
-                "name": "budget plan",
+                "name": "Budget plan",
                 "children": [
                     {
                         "name": "Wang Yang & Zhen Zhen",
@@ -305,7 +295,7 @@
                 ]
             },
             {
-                "name": "text-based proposal",
+                "name": "Text-based proposal",
                 "children": [
                     {
                         "name": "Liu Xin",
@@ -358,7 +348,7 @@
                 ]
             },
             {
-                "name": "other",
+                "name": "Other",
                 "children": [
                     {
                         "name": "Maya Man (Processing Foundation)",
@@ -371,7 +361,7 @@
                 ]
             },
             {
-                "name": "technical requirements",
+                "name": "Technical requirements",
                 "children": [
                     {
                         "name": "Wang Yang & Zhen Zhen",
@@ -489,7 +479,7 @@
         "name": "Support recived during the residency",
         "children": [
             {
-                "name": "business incubation (connecting with companies, road shows, etc.)",
+                "name": "Business incubation (connecting with companies, road shows, etc.)",
                 "children": [
                     {
                         "name": "Pei-Ying Lin (BADAward / Erasmus Medical Center)",
@@ -510,7 +500,7 @@
                 ]
             },
             {
-                "name": "funding",
+                "name": "Funding",
                 "children": [
                     {
                         "name": "Pei-Ying Lin (BADAward / Erasmus Medical Center)",
@@ -539,7 +529,7 @@
                 ]
             },
             {
-                "name": "guidance on the project (tutorial, critique, etc.)",
+                "name": "Guidance on the project (tutorial, critique, etc.)",
                 "children": [
                     {
                         "name": "Liu Xin",
@@ -572,7 +562,7 @@
                 ]
             },
             {
-                "name": "pr (referring to curators, institutions, media resources)",
+                "name": "PR (referring to curators, institutions, media resources)",
                 "children": [
                     {
                         "name": "Liu Xin",
@@ -617,7 +607,7 @@
                 ]
             },
             {
-                "name": "publishing and other academic resources",
+                "name": "Publishing and other academic resources",
                 "children": [
                     {
                         "name": "Chen Baoyang",
@@ -638,7 +628,7 @@
                 ]
             },
             {
-                "name": "access to latest technology (specialized team for technology development, technology demo from technology company, etc.)",
+                "name": "Access to latest technology (specialized team for technology development, technology demo from technology company, etc.)",
                 "children": [
                     {
                         "name": "Chen Baoyang",
