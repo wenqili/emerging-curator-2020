@@ -24,10 +24,8 @@
           {{ category.middle }}
         </h4>
         <div class="DataSection__richtextContainer">
-          <!-- <div v-if="assets.length === 0" style="text-align: center">
-            Artist didn't submit images
-          </div> -->
           <Artwork v-if="category.middle === 'artwork'" :artist-id="data.id" />
+          <InstitutionWork v-else-if="category.middle === 'information'" :institution-id="data.id" />
           <!-- <figure v-for="(asset,index) in assets" v-else-if="category.middle === 'artwork' && assets.length > 0" :key="index">
             <img :src="'/artists/'+data.id+'/'+asset">
           </figure> -->

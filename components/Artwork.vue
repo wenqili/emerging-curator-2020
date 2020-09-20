@@ -7,8 +7,10 @@
       :description="project.description"
     />
     <div v-for=" (block, index) in main" :key="index">
-      <Iframe v-if="block.type=== 'video'" :src="block.src" :caption="block.text" />
+      <WritingBlock v-if="block.type === 'text'" :src="block.src" :caption="block.text" />
+      <Iframe v-else-if="block.type=== 'video'" :src="block.src" :caption="block.text" />
       <Photo v-else-if="block.type=== 'image'" :src="block.src" :caption="block.text" />
+      <LinkBlock v-else-if="block.type === 'link'" :src="block.src" :caption="block.text" />
     </div>
     <div />
   </div>
@@ -38,7 +40,7 @@ export default {
     this.project = this.projects.find(project => project.projectid === this.artist.projects)
     console.log(this.project)
     this.main.push(this.parseType(this.project.projectname, this.project.type, this.project.link))
-    for(var i = 1; i < 6; i++) {
+    for(var i = 1; i < 7; i++) {
       console.log(i)
       if(this.project[`asset${i}`] !== null){
         this.main.push(this.parseType(this.project[`asset${i}`], this.project[`asset${i}type`], this.project[`asset${i}link`]))
@@ -61,6 +63,15 @@ export default {
           project.text = asset
           break
         case 'link':
+          project.src = link
+          project.type = 'link'
+          project.text = asset
+          break
+        case 'text':
+          project.src = ''
+          project.type = 'text'
+          project.text = asset
+          break
         default:
           break
       }

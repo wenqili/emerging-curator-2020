@@ -1,11 +1,9 @@
 <template>
-  <div>
+  <div class="contentBlock">
     <figure class="imageContainer">
       <img :src="src">
     </figure>
     <figcaption>{{ caption }}</figcaption>
-
-    <div>FOR DEBUG ONLY: {{ src }}</div>
   </div>
 </template>
 <script>
@@ -39,6 +37,7 @@ export default {
     right: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 }
 

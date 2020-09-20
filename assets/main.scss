@@ -5,8 +5,8 @@
   --primary-brown: #99815E;
   --secondary-font: 'Replica';
   --menu-full-width: 6rem;
-  --reserve-width: 10vw;
-  --move-width: calc(80vw - 6rem);
+  --reserve-width: 6rem;
+  --move-width: calc(88vw - 6rem);
   --data-container-active: calc(100vw - var(--menu-full-width) - var(--reserve-width));
   --data-midcol-active: 70% ;
 }
@@ -219,6 +219,7 @@ h3.DataSection__sectionTitle{
   &__richtextContainer {
     overflow: auto;
     height: 100%;
+    padding-bottom: 3rem;
   }
 
   &__textContainer {
