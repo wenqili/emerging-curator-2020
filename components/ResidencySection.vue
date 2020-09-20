@@ -14,8 +14,8 @@
         <iframe src="https://calendar.google.com/calendar/embed?src=en.china%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="100%" frameborder="0" scrolling="no" />
       </div>
       <div id="langButton">
-        CN
-        <br>EN
+        <a href="https://emerging-curator-2020-cn.vercel.app">CN
+          <br>EN</a>
       </div>
     </div>
   </div>

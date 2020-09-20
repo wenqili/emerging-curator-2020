@@ -59,9 +59,6 @@ export default {
   },
   methods: {
     onMouseMove(e) {
-      // console.log("page x: " + this.page.left)
-      // this.page.left = e.pageX
-      // this.page.top = e.pageY
       const floater = document.getElementById('floater-image')
       floater.style.top = e.clientY + 'px'
       floater.style.left = e.clientX + 'px'

@@ -5,7 +5,8 @@
         class="siteTitle"
         to="/"
       >
-        New agencies and their cheese factories
+        New Agencies & their
+        <br>Cheese factories
       </nuxt-link>
       <button v-if="!showMenuList" class="clear" :class="{ 'is-focused': showMenuList }" @click="toggleMenuList">
         <font-awesome-icon v-if="!showMenuList" icon="grip-lines" />
@@ -103,7 +104,7 @@ button {
   /* transform: rotate(-90deg); */
   color: black;
   font-weight: bold;
-  line-height: 1;
+  line-height: 1.2;
   background-color: transparent;
   padding:0.5rem;
 }
