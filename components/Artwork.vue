@@ -18,6 +18,7 @@
 <script>
 import projects from '../assets/project.json'
 import artists from '../assets/artists.json'
+import projectscn from '../assets/projectcn.json'
 export default {
   name: 'Artwork',
   props: {
@@ -31,22 +32,22 @@ export default {
       artists,
       project: {},
       projects,
+      projectscn,
       artist: {},
       main: [],
     }
   },
   created: function() {
+    // console.log(window)
+    console.log(this.route)
     this.artist = artists.find(artist => artist.id === this.artistId)
     this.project = this.projects.find(project => project.projectid === this.artist.projects)
-    console.log(this.project)
     this.main.push(this.parseType(this.project.projectname, this.project.type, this.project.link))
     for(var i = 1; i < 7; i++) {
-      console.log(i)
       if(this.project[`asset${i}`] !== null){
         this.main.push(this.parseType(this.project[`asset${i}`], this.project[`asset${i}type`], this.project[`asset${i}link`]))
       }
     }
-    console.log(this.main)
   },
   methods: {
     parseType: function(asset, type, link) {

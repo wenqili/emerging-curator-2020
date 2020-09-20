@@ -25,7 +25,7 @@
             <!-- Data Viz Col -->
             <div class="DataSection__col DataSection__midCol DataSection__dataVizCol  is-active">
               <div class="DataSection__richtextContainer">
-                <InstitutionDataViz  @highlight_list="showList" />
+                <InstitutionDataViz @highlight_list="showList" />
               </div>
             </div>
           </div> <!-- End of sectionContainer -->
@@ -84,6 +84,16 @@ export default {
 li.highlight > a{
   color: #fff;
   background-color: #000;
+}
+li{
+  transition: ease 300ms all;
+  &:hover {
+    background: black;
+    color: white;
+    a {
+      color: white;
+    }
+  }
 }
 
 // First row

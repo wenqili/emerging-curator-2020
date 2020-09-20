@@ -4,7 +4,7 @@
       <div class="first-row-container">
         <div class="left-section">
           <figure v-for="(artist, index) in artists" :key="index" :class="{'is-feature': currentArtistId[0] === artist.id}">
-            <div :style="'backgroundImage: url(/artists/'+artist.id+'/static1.jpg)'" />
+            <div :style="'backgroundImage: url(/artists/'+artist.id+'.png)'" />
 
             <!-- <div :style="'backgroundImage: url(/artists/'+currentArtistId[0]+'/static1.jpg)'" /> -->
           </figure>
