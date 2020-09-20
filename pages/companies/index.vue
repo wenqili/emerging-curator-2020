@@ -1,69 +1,48 @@
 <template>
-  <div class="rotating" :class="{ 'is-menu': isMenu }">
-    <div class="catalog-grid" :class="{ 'is-menu': isMenu }">
-      <!-- Second -->
+  <div class="rotating" :class="{ 'onMenu': onMenu }">
+    <div class="catalog-grid" :class="{ 'onMenu': onMenu }">
       <div class="second-row-container">
-        <!-- Artists -->
-        <div class="DataSection" :class="[{ 'is-active': currentFocus === 'artist'}, currentFocus]">
-          <nuxt-link v-if="currentFocus === 'artist'" to="/artists">
-            <h3 class="DataSection__sectionTitle">
-              Artists
-            </h3>
-          </nuxt-link>
-
-          <h3 v-else class="DataSection__sectionTitle" @click="currentFocus = 'artist'">
-            Artists
+        <div class="DataSection is-active">
+          <h3 class="DataSection__sectionTitle">
+            Company
           </h3>
 
-          <div v-if="currentFocus === 'artist'" class="DataSection__sectionContainer">
-            <!-- Artist name list -->
+          <div class="DataSection__sectionContainer">
             <div class="DataSection__col DataSection__leftCol">
               <div>
                 <ul>
-                  <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" @mouseover="current = artist.name">
-                    <!-- <nuxt-link :to="{ name: 'artists-artist', params: { artist: artist.url, id: artist.id }}"> -->
-                    <!-- {{ artist.name }} -->
-                    <!-- </nuxt-link> -->
-                    companies
+                  <li v-for="company in companies" 
+                      :key="company.companyid"
+                      :class="{ 'is-active': `${company.companyid}` === current}"
+                      @mouseover="current = `${company.companyid}`"
+                  >
+                    <p>{{ company.company }}</p>
                   </li>
                 </ul>
               </div>
             </div>
           
-            <!-- Artwork -->
             <div class="DataSection__col DataSection__midCol DataSection__dataVizCol  is-active">
               <div class="DataSection__richtextContainer">
-                <!-- <ArtistsDataViz /> -->
+                <CompanyDataViz :current="current" />
               </div>
             </div>
-          </div> <!-- End of sectionContainer -->
+          </div> 
         </div>
 
-        <GotoButton route="institutions" :order="1" />
-        <GotoButton route="companies" :order="2" />
+        <GotoButton route="artists" :order="1" />
+        <GotoButton route="institutions" :order="2" />
       </div>
     </div>
-    <div class="navi-bar">
-      <nav>
-        <button class="navi-item" :class="{ 'is-focused': !isMenu }" @click="isMenu = false">
-          Index
-        </button>
-        <nuxt-link to="/" class="navi-item" :class="{ 'is-focused': !isMenu }">
-          Home
-        </nuxt-link>
-        <button class="navi-item" :class="{ 'is-focused': isMenu }" @click="isMenu = true">
-          <font-awesome-icon icon="search" />
-          Menu
-        </button>
-      </nav>
-      <MenuSection />
-    </div>
+    <NaviBar 
+      @toggle-menu="onMenu = !onMenu" 
+      @toggle-off-menu="onMenu = false"
+    />
   </div>
 </template>
 
 <script>
-import artists from "../../assets/artists.json"
-let cleanArtists = [...new Set(artists)]
+import companies from "../../assets/companies.json"
 
 export default {
   layout: 'catalog',
@@ -72,9 +51,10 @@ export default {
   },
   data: function() {
     return {
-      cleanArtists,
-      isMenu: false,
-      currentFocus: 'artist',
+      current: '',
+      companies,
+      onMenu: false,
+      currentFocus: 'companies',
     }
   },
   created() {
@@ -100,82 +80,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-* {
-  box-sizing: border-box;
-}
-
-.rotating{
-  transform-origin: 3rem 3rem;
-  transform: rotate(90deg);
-  transition: transform .3s ease,-webkit-transform .3s ease;
-  width: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  box-sizing: border-box;
-}
-
-.rotating.is-menu {
-  transform: rotate(0deg) !important;
-  // transform: rotate(90deg) translate(0, -100px) !important;
-  width: 100vw;
-}
-
-.is-menu .navi-bar {
-  width: 100vw;
-}
-
-.navi-bar {
-  width: 100vh;
-  position: relative;
-  top: 3rem;
-  height: calc(100vh - 3rem);
-}
-
-.navi-bar nav {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  height: 3rem;
-  border-top: black 3px solid;
-}
-
-.menu {
-  position: relative;
-  height: 100%;
-}
-
-.navi-item {
-  position: relative;
-  z-index: 1;
-  padding: 0.5rem;
-  border: none;
-  background: none;
-  outline: transparent;
-}
-
-.navi-item.is-focused {
-  font-weight: 900;
-}
-
-.catalog-grid {
-  top: 3rem;
-  position: absolute;
-  width: calc(100vw - 3rem);
-  height: 100vh;
-  transform: rotate(-90deg);
-  transform-origin: left top;
-  height: 100vh;
-  line-height: 1;
-  overflow: hidden;
-}
-
-.catalog-grid.is-menu {
-  height: 100vw;
-}
-
 // First row
 .first-row-container {
   display: flex;
@@ -233,11 +137,11 @@ export default {
     border-bottom: black 2px solid;
     display: flex;
     align-items: center;
-    transition: all 300ms ease;
+    /* transition: all 300ms ease; */
   }
 }
 
-.is-menu {
+.onMenu {
   .second-row-container {
     height: calc(100vw - 6rem) !important;
   }
@@ -267,20 +171,6 @@ export default {
   }
 }
 
-li {
-  font-size: 2rem;
-
-  a {
-    padding: 0.25rem 0.5rem;
-    display: block;
-    width: 100%;
-
-    &:active {
-    }
-  }
-
-}
-
 a.nuxt-link-active{
   background-color: black;
   color: white;
@@ -293,21 +183,20 @@ a.nuxt-link-active{
   right: 0;
   padding-top: 1.2rem;
   padding-left: 2rem;
-  // padding-bottom: 1.2rem;
   height: 10.4rem;
   z-index: 1;
   width: 1rem;
   border: none;
 
   & * {
-    transition: ease 300ms all;
+    transition: ease 300ms background-color;
   }
 
   &.is-active {
     left: 0;
     height: 100%;
     z-index: 0;
-    width: calc(100vw - 3rem);
+    width: var(--data-container-active);
   }
 
   h3 {
@@ -357,7 +246,7 @@ a.nuxt-link-active{
     border-left: black solid 3px;
     &.is-active{
       height: 100%;
-      width: calc(70% - 2rem);
+      width: 70%;
     }
   }
 

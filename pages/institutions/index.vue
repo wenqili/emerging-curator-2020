@@ -1,6 +1,6 @@
 <template>
-  <div class="rotating" :class="{ 'is-menu': isMenu }">
-    <div class="catalog-grid" :class="{ 'is-menu': isMenu }">
+  <div class="rotating" :class="{ 'onMenu': onMenu }">
+    <div class="catalog-grid" :class="{ 'onMenu': onMenu }">
       <!-- Second -->
       <div class="second-row-container">
         <div class="DataSection is-active">
@@ -35,21 +35,10 @@
         <GotoButton route="companies" :order="2" />
       </div>
     </div>
-    <div class="navi-bar">
-      <nav>
-        <button class="navi-item" :class="{ 'is-focused': !isMenu }" @click="isMenu = false">
-          Index
-        </button>
-        <nuxt-link to="/" class="navi-item" :class="{ 'is-focused': !isMenu }">
-          Home
-        </nuxt-link>
-        <button class="navi-item" :class="{ 'is-focused': isMenu }" @click="isMenu = true">
-          <font-awesome-icon icon="search" />
-          Menu
-        </button>
-      </nav>
-      <MenuSection />
-    </div>
+    <NaviBar 
+      @toggle-menu="onMenu = !onMenu" 
+      @toggle-off-menu="onMenu = false"
+    />
   </div>
 </template>
 
@@ -58,19 +47,15 @@ import institutions from '../../assets/institution.json'
 
 export default {
   layout: 'catalog',
-  components: {
-    
-  },
   data: function() {
     return {
       institutions,
-      isMenu: false,
+      onMenu: false,
       currentFocus: 'artist',
       showHighlight:[],
     }
   },
   created() {
-    // this.name = this.$route.params.artist
     this.institutions = institutions
   },
   methods: {
@@ -96,85 +81,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-* {
-  box-sizing: border-box;
-}
-
 li.highlight > a{
   color: #fff;
   background-color: #000;
-}
-
-.rotating{
-  transform-origin: 3rem 3rem;
-  transform: rotate(90deg);
-  transition: transform .3s ease,-webkit-transform .3s ease;
-  width: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  box-sizing: border-box;
-}
-
-.rotating.is-menu {
-  transform: rotate(0deg) !important;
-  // transform: rotate(90deg) translate(0, -100px) !important;
-  width: 100vw;
-}
-
-.is-menu .navi-bar {
-  width: 100vw;
-}
-
-.navi-bar {
-  width: 100vh;
-  position: relative;
-  top: 3rem;
-  height: calc(100vh - 3rem);
-}
-
-.navi-bar nav {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  height: 3rem;
-  border-top: black 3px solid;
-}
-
-.menu {
-  position: relative;
-  height: 100%;
-}
-
-.navi-item {
-  position: relative;
-  z-index: 1;
-  padding: 0.5rem;
-  border: none;
-  background: none;
-  outline: transparent;
-}
-
-.navi-item.is-focused {
-  font-weight: 900;
-}
-
-.catalog-grid {
-  top: 3rem;
-  position: absolute;
-  width: calc(100vw - 3rem);
-  height: 100vh;
-  transform: rotate(-90deg);
-  transform-origin: left top;
-  height: 100vh;
-  line-height: 1;
-  overflow: hidden;
-}
-
-.catalog-grid.is-menu {
-  height: 100vw;
 }
 
 // First row
@@ -185,7 +94,6 @@ li.highlight > a{
 
   & > * {
     border-right: black 2px solid;
-  /* border-right: black 2px solid; */
     border-bottom: black 2px solid;
     display: flex;
     align-items: center;
@@ -238,7 +146,7 @@ li.highlight > a{
   }
 }
 
-.is-menu {
+.onMenu {
   .second-row-container {
     height: calc(100vw - 6rem) !important;
   }
@@ -258,20 +166,6 @@ li.highlight > a{
   top: 9.2rem !important;
 }
 
-li {
-  font-size: 2rem;
-
-  a {
-    padding: 0.25rem 0.5rem;
-    display: block;
-    width: 100%;
-
-    &:active {
-    }
-  }
-
-}
-
 a.nuxt-link-active{
   background-color: black;
   color: white;
@@ -284,10 +178,9 @@ a.nuxt-link-active{
   right: 0;
   padding-top: 1.2rem;
   padding-left: 2rem;
-  // padding-bottom: 1.2rem;
   height: 10.4rem;
   z-index: 1;
-  width: 1rem;
+  width: 2.2rem;
   border: none;
 
   & * {
@@ -298,7 +191,7 @@ a.nuxt-link-active{
     left: 0;
     height: 100%;
     z-index: 0;
-    width: calc(100vw - 3rem);
+    width: var(--data-container-active);
   }
 
   h3 {
@@ -348,7 +241,7 @@ a.nuxt-link-active{
     border-left: black solid 3px;
     &.is-active{
       height: 100%;
-      width: calc(70% - 2rem);
+      width: 70%;
     }
   }
 

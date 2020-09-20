@@ -40,19 +40,19 @@ export default {
   // padding-bottom: 1.2rem;
   height: 10.4rem;
   z-index: 1;
-  width: 1rem;
+  width: 2.2rem;
   border: none;
 
   & * {
     transition: ease 300ms all;
   }
-
+/* 
   &.is-active {
     left: 0;
     height: 100%;
     z-index: 0;
     width: calc(100vw - 3rem);
-  }
+  } */
 
   h3 {
     top: 1.2rem;
@@ -80,72 +80,6 @@ export default {
       color: black;
       border: 1px solid black;
     }
-  }
-
-  &__sectionContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-  }
-
-  &__col {
-    position: relative;
-  }
-
-  &__leftCol {
-    width: 30%;
-    height: 100%;
-  }
-
-  &__midCol {
-    height: 100%;
-    width: 40%;
-    border-left: black solid 3px;
-    &.is-active{
-      height: 100%;
-      width: calc(70% - 2rem);
-    }
-  }
-
-  &__dataVizCol {
-    border-left: none;
-  }
-
-  &__rightCol {
-    min-width: 2rem;
-    height: 100%;
-    width: 30%;
-    border-left: black solid 3px;
-
-    &.is-blur{
-      border-left: none;
-      width: 2rem;
-
-      h4 {
-        top: 18.4rem;
-      }
-
-      .DataSection__textContainer {
-        display: none;
-        opacity: 0;
-      }
-    }
-
-    p {
-      font-size: 2rem;
-    }
-  }
-
-  &__richtextContainer {
-    overflow: auto;
-    height: 100%;
-  }
-
-  &__textContainer {
-    padding-left: 2rem;
-    padding-right: 4rem;
-    overflow: auto;
-    height: 100%;
   }
 }
 </style>
