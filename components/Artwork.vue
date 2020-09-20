@@ -1,8 +1,16 @@
 <template>
   <div>
-    <div>Artwork</div>
     <div>{{ artist.id }}</div>
-    <div><Iframe :src="main[0].src" /></div>
+    <FeatureBlock 
+      :name="project.projectname"
+      :medium="project.medium"
+      :description="project.description"
+    />
+    <div v-for=" (block, index) in main" :key="index">
+      <Iframe v-if="block.type=== 'video'" :src="block.src" :caption="block.text" />
+      <Photo v-else-if="block.type=== 'image'" :src="block.src" :caption="block.text" />
+    </div>
+    <div />
   </div>
 </template>
 <script>
@@ -30,6 +38,12 @@ export default {
     this.project = this.projects.find(project => project.projectid === this.artist.projects)
     console.log(this.project)
     this.main.push(this.parseType(this.project.projectname, this.project.type, this.project.link))
+    for(var i = 1; i < 6; i++) {
+      console.log(i)
+      if(this.project[`asset${i}`] !== null){
+        this.main.push(this.parseType(this.project[`asset${i}`], this.project[`asset${i}type`], this.project[`asset${i}link`]))
+      }
+    }
     console.log(this.main)
   },
   methods: {
@@ -41,7 +55,10 @@ export default {
           project.type = 'video'
           project.text = asset
           break
-        case 'image':
+        case 'photo':
+          project.src = `/images/${link}`
+          project.type = 'image'
+          project.text = asset
           break
         case 'link':
         default:
