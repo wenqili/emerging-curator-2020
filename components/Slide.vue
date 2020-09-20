@@ -24,12 +24,13 @@
           {{ category.middle }}
         </h4>
         <div class="DataSection__richtextContainer">
-          <div v-if="assets.length === 0" style="text-align: center">
+          <!-- <div v-if="assets.length === 0" style="text-align: center">
             Artist didn't submit images
-          </div>
-          <figure v-for="(asset,index) in assets" v-else-if="category.middle === 'artwork' && assets.length > 0" :key="index">
+          </div> -->
+          <Artwork v-if="category.middle === 'artwork'" :artist-id="data.id" />
+          <!-- <figure v-for="(asset,index) in assets" v-else-if="category.middle === 'artwork' && assets.length > 0" :key="index">
             <img :src="'/artists/'+data.id+'/'+asset">
-          </figure>
+          </figure> -->
         </div>
       </div>
 
@@ -79,6 +80,7 @@ export default {
     switch(this.category.left) {
       case 'artists':
         this.data = cleanArtists.find(artist => artist.url === routeName) || {}
+        console.log(this.data)
       break
       case 'institutions':
         this.data = institutions[this.$route.params.institution] || {}

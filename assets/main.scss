@@ -158,8 +158,9 @@ h3.DataSection__sectionTitle{
     cursor: pointer;
     user-select: none;
     text-transform: capitalize;
+    z-index: 1;
     &:hover{
-      background-color: transparent;
+      background-color: white;
       color: black;
       border: 1px solid black;
     }
@@ -186,7 +187,7 @@ h3.DataSection__sectionTitle{
     border-left: black solid 3px;
     &.is-active{
       height: 100%;
-      width: calc(70% - 2rem);
+      width: calc(70% - 2.2rem);
     }
   }
 
@@ -198,7 +199,7 @@ h3.DataSection__sectionTitle{
 
     &.is-blur{
       border-left: none;
-      width: 2rem;
+      width: 2.2rem;
 
       h4 {
         top: 18.4rem;

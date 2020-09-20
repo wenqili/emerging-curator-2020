@@ -19,7 +19,7 @@
     "thoughs": null,
     "ideal": null,
     "assets": null,
-    "projects": "1,2"
+    "projects": "0"
   },
   {
     "id": "1",
@@ -41,7 +41,7 @@
     "thoughs": "During several internal check-ins at NEW INC, I spoke about the general concept of the project. The biggest challenge so far seems to be explaining its obscure theoretical foundation clearly within 1-2 sentences. On one hand, research-oriented works, coupled with the abstract perspective of media and design theory, makes a friendly and approachable expression especially difficult. Although contemporary art has already become diversified, storytelling is still at the core. We are discussing the possibility of collaboration with a mentor from NEW INC who has a writing and strategy background. She will provide guidance to Zhenzheng and I. Togethr we will present the project in a suitable manner.",
     "ideal": "Ideal institutions seem to imply that there are undesirable institutions. It may be that I myself do not have any special interest in the discussion of the subject of \"institution\", so I do not have any particularly critical views on the \"management\" of NEW INC. Just like ITP, I have always paid close attention to why ITP and NEW INC \"works.\" I think both NEW INC and ITP are very \"successful\" organizations. (NEW INC is a bit like a doctoral station of POST ITP to a certain extent) I don't know what the standard of \"institution\" is. In an everyday context, institutions seem to have countless relationships with authority. Both NEW INC and ITP focus on building a community. In addition to basic literacy, this community does not impose too many restrictions-the classic incubator model, incubating \"chaos\". The chaos gives birth to possibility, and both ITP and NEW INC have done this. To incubate chaos, there are two extremely important points. One is to build a non-critical environment. It is the premise of chaos that can encourage but not criticize, and praise but not criticize; the other is inclusiveness, although their admission is not accepted by all. , But they all try their best to be inclusive. Their annual admission of close to 3 digits is an attempt by them to counter prestigiousness. Moreover, if you cannot be a full member, then you can participate in other ways, and you can get the most valuable thing of this \"organization\", which is his Community. But having said that, they couldn't do no vetting at all, but they tried their best to move the adjusting lever to open between prestigious and open for all. NEW INC has no roles such as creative director or chief curator. Staff only has director of community, director, and head of program. The role is more like a server, which is very similar to itp. It is probably not a coincidence that the two institutions that came to New York experienced this pattern. For the initial discomfort, discomfort, and contempt of this model until now, this journey is very exciting.",
     "assets": null,
-    "projects": null
+    "projects": "1"
   },
   {
     "id": "2",
@@ -63,7 +63,7 @@
     "thoughs": null,
     "ideal": null,
     "assets": null,
-    "projects": null
+    "projects": "2"
   },
   {
     "id": "3",
@@ -85,7 +85,7 @@
     "thoughs": null,
     "ideal": null,
     "assets": null,
-    "projects": null
+    "projects": "3"
   },
   {
     "id": "4",
@@ -107,7 +107,7 @@
     "thoughs": "Take it easy",
     "ideal": null,
     "assets": "static1.jpg,static2.jpg,static3.jpg",
-    "projects": null
+    "projects": "4"
   },
   {
     "id": "5",
@@ -129,7 +129,7 @@
     "thoughs": null,
     "ideal": "institution needs to know artists' practice and interest; organizer shall possess long term vision.",
     "assets": null,
-    "projects": null
+    "projects": "5"
   },
   {
     "id": "6",
@@ -151,7 +151,7 @@
     "thoughs": null,
     "ideal": null,
     "assets": null,
-    "projects": null
+    "projects": "6"
   },
   {
     "id": "7",
@@ -173,7 +173,7 @@
     "thoughs": "I think Max Plank’s residency still runs on a relatively conservative model. It only allows “one mode of art production”.  The projects that it promotes in the end are all more or less production-oriented rather than innovative. It led me to think about the value of such projects like ArtSci.",
     "ideal": null,
     "assets": "static1.jpg,static2.jpg,static3.jpg",
-    "projects": null
+    "projects": "7"
   },
   {
     "id": "8",
@@ -195,7 +195,7 @@
     "thoughs": "The success was located in the significant capital dedicated to each artist project.  What was less successful was the engagement with corporate partners: SpaceX, Hyundai, Google, etc - especially if, in my case, the proposal has nothing to do with them specifically.",
     "ideal": "Encouraging corporate partners to dedicate tangible/physical resources to the fellowship, to provide a concrete structure of engagement.",
     "assets": "static1.jpg,static2.jpg,static3.jpg,static4.jpg,static5.jpg",
-    "projects": null
+    "projects": "8"
   },
   {
     "id": "9",
@@ -217,7 +217,7 @@
     "thoughs": "The residency is very open, with many resources, so the success/failure depends on the artist.  I did not like having open windows to the public who were very frequently touring the space, I found it distracting but other people seemed to have no problem.",
     "ideal": "It is already ideal.",
     "assets": null,
-    "projects": null
+    "projects": "8"
   },
   {
     "id": "10",
@@ -239,7 +239,7 @@
     "thoughs": "Mainly about the collaborative experience. I think that in most transdisciplinary collaborations, the artist is usually the one who is content and joyful about the whole project. What they do is simply put forward some requests to the scientists/engineers and in return they provide the artist the techonology required. The artist remains the core body of the project whereas the scientist's participation is almost negelctable. I personally don't enjoy such collaboration - it makes me feel very arrogant and ashamed of myself. I hope the scientist in such projects can obtain as much satisfaction and reward as the artist. Therefore when I was at SymbioticA, I did some interviews with the participating scientists, asking what they think about art, interdisciplinary collaboration, and their own ambitions and accomplishment. But after all, a good collaboration cannot be made - it is very much dependent on the vibe of the group.",
     "ideal": "I think the mode of collaboration at BAD was quite ideal - both parties are willing to collaborate, and both are equally granted the rights to choose and speak.",
     "assets": "static1.jpg,static2.jpg",
-    "projects": null
+    "projects": "9"
   },
   {
     "id": "11",
@@ -261,7 +261,7 @@
     "thoughs": null,
     "ideal": null,
     "assets": null,
-    "projects": null
+    "projects": "10"
   },
   {
     "id": "12",
@@ -283,7 +283,7 @@
     "thoughs": null,
     "ideal": null,
     "assets": null,
-    "projects": null
+    "projects": "11"
   },
   {
     "id": "13",
@@ -305,7 +305,7 @@
     "thoughs": null,
     "ideal": null,
     "assets": null,
-    "projects": null
+    "projects": "12"
   },
   {
     "id": "14",
@@ -327,6 +327,6 @@
     "thoughs": null,
     "ideal": null,
     "assets": null,
-    "projects": null
+    "projects": "13"
   }
 ]
