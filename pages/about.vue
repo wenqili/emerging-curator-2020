@@ -65,8 +65,6 @@ export default {
       const floater = document.getElementById('floater-image')
       floater.style.top = e.clientY + 'px'
       floater.style.left = e.clientX + 'px'
-
-      console.log(e)
     },
   },
 }
