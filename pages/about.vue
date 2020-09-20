@@ -11,8 +11,7 @@
       <div class="about-container">
         <div class="left">
           <h1>
-            New Agencies & their
-            <br>Cheese factories
+            Blue Cables in Venetan Watercourse
           </h1>
           <h3>Curator</h3>
           <p>Xinyang Cai / Iris Long</p>

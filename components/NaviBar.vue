@@ -5,8 +5,7 @@
         class="siteTitle"
         to="/"
       >
-        New Agencies & their
-        <br>Cheese factories
+        Blue Cables in Venetan Watercourse
       </nuxt-link>
       <button v-if="!showMenuList" class="clear" :class="{ 'is-focused': showMenuList }" @click="toggleMenuList">
         <font-awesome-icon v-if="!showMenuList" icon="grip-lines" />
@@ -102,6 +101,7 @@ button {
 .siteTitle {
   /* transform-origin: 0 1; */
   /* transform: rotate(-90deg); */
+  font-size:0.8rem;
   color: black;
   font-weight: bold;
   line-height: 1.2;
