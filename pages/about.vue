@@ -11,7 +11,7 @@
       <div class="about-container">
         <div class="left">
           <h1>
-            Blue Cables in Venetan Watercourse
+            Blue Cables in Venetian Watercourse
           </h1>
           <h3>Curator</h3>
           <p>Xinyang Cai / Iris Long</p>

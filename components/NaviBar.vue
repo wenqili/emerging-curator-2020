@@ -5,7 +5,7 @@
         class="siteTitle"
         to="/"
       >
-        Blue Cables in Venetan Watercourse
+        Blue Cables in Venetian Watercourse
       </nuxt-link>
       <button v-if="!showMenuList" class="clear" :class="{ 'is-focused': showMenuList }" @click="toggleMenuList">
         <font-awesome-icon v-if="!showMenuList" icon="grip-lines" />
