@@ -1,32 +1,27 @@
 <template>
   <div class="rotating" :class="{ 'onMenu': onMenu }">
     <div class="catalog-grid" :class="{ 'onMenu': onMenu }">
-      <!-- Second -->
       <div class="second-row-container">
-        <!-- Artists -->
-        <div class="DataSection" :class="[{ 'is-active': currentFocus === 'artist'}, currentFocus]">
-          <nuxt-link v-if="currentFocus === 'artist'" to="/artists">
+        <div class="DataSection is-active">
+          <nuxt-link to="/artists">
             <h3 class="DataSection__sectionTitle">
               Artists
             </h3>
           </nuxt-link>
 
-          <h3 v-else class="DataSection__sectionTitle" @click="currentFocus = 'artist'">
-            Artists
-          </h3>
-
-          <div v-if="currentFocus === 'artist'" class="DataSection__sectionContainer">
+          <div class="DataSection__sectionContainer">
             <!-- Artist name list -->
             <div class="DataSection__col DataSection__leftCol">
-              <div>
-                <ul>
-                  <li v-for="(artist, index) in cleanArtists" :key="artist.id+index" :class="[{'highlight':showHighlight.includes(artist.name)},'no-highlight']" @mouseover="current = artist.name">
-                    <nuxt-link :to="{ name: 'artists-artist', params: { artist: artist.url, id: artist.id }}">
-                      {{ artist.name }}
-                    </nuxt-link>
-                  </li>
-                </ul>
-              </div>
+              <ul>
+                <li v-for="(artist, index) in artists" 
+                    :key="artist.id+index" 
+                    :class="[{'highlight':showHighlight.includes(artist.name)}, 'no-highlight']" 
+                >
+                  <nuxt-link :to="{ name: 'artists-artist', params: { artist: artist.url, id: artist.id }}">
+                    {{ artist.name }}
+                  </nuxt-link>
+                </li>
+              </ul>
             </div>
           
             <!-- Data Viz -->
@@ -51,23 +46,16 @@
 
 <script>
 import artists from "../../assets/artists.json"
-let cleanArtists = [...new Set(artists)]
 
 export default {
   layout: 'catalog',
-  components: {
-    
-  },
   data: function() {
     return {
-      cleanArtists,
+      artists,
       onMenu: false,
-      currentFocus: 'artist',
+      currentFocus: '',
       showHighlight:[],
     }
-  },
-  created() {
-    this.name = this.$route.params.artist
   },
   methods: {
     toggleArtwork: function() {
@@ -92,66 +80,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* li.highlight > a{
-  color: #fff;
-  background-color: #000;
-} */
 
-// First row
-.first-row-container {
-  display: flex;
-  width: calc(100vw - 3rem);
-  height: 3rem;
-
-  & > * {
-    border-right: black 2px solid;
-    border-bottom: black 2px solid;
-    display: flex;
-    align-items: center;
-    transition: all 200ms linear;
+li{
+  transition: ease 300ms all;
+  &:hover {
+    background: black;
+    color: white;
+    a {
+      color: white;
+    }
   }
 }
 
-.artist-collection {
-  width: 3rem;
-  border-bottom: none;
-  &.is-active {
-    border-bottom: 2px black solid;
-    flex-grow: 2;
-  }
-}
-
-.insititution-collection {
-  width: 3rem;
-  border-bottom: none;
-  &.is-active {
-    border-bottom: 2px black solid;
-    flex-grow: 2;
-  }
-}
-
-.company-collection {
-  width: 3rem;
-  border-bottom: none;
-  &.is-active {
-    border-bottom: 2px black solid;
-    flex-grow: 2;
-  }
-}
 
 // Second row
 .second-row-container {
   display: flex;
   width: calc(100vw - 3rem);
   height: calc(100vh - 6rem);
-  
 
   & > * {
     border-right: black 2px solid;
     border-bottom: black 2px solid;
     display: flex;
     align-items: center;
-    transition: all 300ms ease;
   }
 }
 
@@ -159,35 +111,6 @@ export default {
   .second-row-container {
     height: calc(100vw - 6rem) !important;
   }
-}
-
-.middle-section {
-
-  &.is-active {
-  }
-
-  &.company {
-    top: 9.2rem;
-  }
-}
-
-.right-section {
- 
-  &.is-active {
-  }
-
-  &.artist {
-    top: 9.2rem;
-  }
-
-  &.insititution {
-    top: 9.2rem;
-  }
-}
-
-a.nuxt-link-active{
-  background-color: black;
-  color: white;
 }
 
 // New CSS style
@@ -201,10 +124,6 @@ a.nuxt-link-active{
   z-index: 1;
   width: 2.2rem;
   border: none;
-
-  & * {
-    transition: ease 300ms all;
-  }
 
   &.is-active {
     left: 0;
@@ -303,17 +222,6 @@ a.nuxt-link-active{
     padding-right: 4rem;
     overflow: auto;
     height: 100%;
-  }
-}
-
-figure {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2rem;
-  
-  img {
-    width: 100%;
   }
 }
 </style>

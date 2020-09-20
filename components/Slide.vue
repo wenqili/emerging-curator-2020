@@ -11,11 +11,9 @@
               {{ company.company }}
             </li>
           </ul>
-          <ul v-else>
-            <li>
-              {{ data.name }}
-            </li>
-          </ul>
+          <h3 v-else>
+            {{ data.name }}
+          </h3>
         </div>
       </div>
           
@@ -114,6 +112,9 @@ export default {
 
 <style lang="scss" scoped>
 
+h3 {
+  font-size: 2rem;
+}
 // Second row
 .second-row-container {
   display: flex;

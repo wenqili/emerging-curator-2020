@@ -3,21 +3,23 @@
     <div class="catalog-grid" :class="{ 'onMenu': onMenu }">
       <div class="first-row-container">
         <div class="left-section">
-          <figure>
-            <div :style="'backgroundImage: url(/artists/'+currentArtistId[0]+'/static1.jpg)'" />
+          <figure v-for="(artist, index) in artists" :key="index" :class="{'is-feature': currentArtistId[0] === artist.id}">
+            <div :style="'backgroundImage: url(/artists/'+artist.id+'/static1.jpg)'" />
+
+            <!-- <div :style="'backgroundImage: url(/artists/'+currentArtistId[0]+'/static1.jpg)'" /> -->
           </figure>
         </div>
 
         <div class="middle-section">
-          <figure>
-            <div :style="'backgroundImage: url(/institution/'+currentInstitutionId[0]+'/1.png)'" />
+          <figure v-for="(institution, index) in institutions" :key="index" :class="{'is-feature': currentInstitutionId[0] === institution.id}">
+            <div :style="'backgroundImage: url(/institution/'+institution.id+'/1.png)'" />
           </figure>
         </div>
 
         <div class="right-section">
-          <figure>
+          <figure v-for="(company, index) in companies" :key="index" :class="{'is-feature': currentCompanyId[0] === company.companyid}">
             <div
-              :style="'backgroundImage: url(/company/'+currentCompanyId[0]+'/1.png)'"
+              :style="'backgroundImage: url(/company/'+company.companyid+'/1.png)'"
               class="contain"
             />
           </figure>
@@ -282,16 +284,21 @@ export default {
 
 .left-section {
   width: 28%;
+    position: relative;
+
 }
 
 .middle-section {
   width: 44%;
   border-left: 3px black solid;
+  position: relative;
 }
 
 .right-section {
   width: 28%;
   border-left: 3px black solid;
+    position: relative;
+
 }
 
 .is-activeHover {
@@ -390,11 +397,26 @@ a.nuxt-link-active {
 }
 
 figure {
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+  /* filter: blur(15px); */
+  /* opacity: 1; */
+  /* transition: height 1s, opacity 0.3s linear; */
+  /* animation: fadeOut 1s; */
+
+  &.is-feature {
+    width: 100%;
+    height: 100%;
+    /* display: block; */
+    opacity: 1;
+    filter: none;
+    animation: fadeIn 3s ;
+  }
 
   div {
     height: 100%;
@@ -402,17 +424,39 @@ figure {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    transition: background-image 200ms ease-in-out;
   }
 
   .contain {
     background-size: contain;
+    background-color: white;
   }
 
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+}
+@keyframes fadeIn {
+  /* You could think of as "step 1" */
+  0% {
+    opacity: 0;
+  }
+  /* You could think of as "step 2" */
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  /* You could think of as "step 1" */
+  0% {
+    opacity: 1;
+  }
+  /* You could think of as "step 2" */
+  100% {
+    opacity: 0;
+    height: 0;
+    width: 0;
   }
 }
 </style>

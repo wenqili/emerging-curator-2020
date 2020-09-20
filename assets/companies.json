@@ -60,7 +60,7 @@
     "company": "Google",
     "introduction": "Google, LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.",
     "institution": "Google Creative Lab",
-    "institutionid": "6,7",
+    "institutionid": "6,7,9",
     "assets": null
   },
   {
@@ -131,14 +131,6 @@
     "companyid": "18",
     "company": "Space X",
     "introduction": "Space Exploration Technologies Corp., t/a SpaceX, is an American aerospace manufacturer and space transportation services company headquartered in Hawthorne, California. It was founded in 2002 by Elon Musk with the goal of reducing space transportation costs to enable the colonization of Mars.",
-    "institution": "LACMA Art + Technology Lab",
-    "institutionid": "9",
-    "assets": null
-  },
-  {
-    "companyid": "19",
-    "company": "Google",
-    "introduction": "Google, LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.",
     "institution": "LACMA Art + Technology Lab",
     "institutionid": "9",
     "assets": null

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div>{{ artist.id }}</div>
     <FeatureBlock 
       :name="project.projectname"
+      :year="project.year"
       :medium="project.medium"
       :description="project.description"
     />

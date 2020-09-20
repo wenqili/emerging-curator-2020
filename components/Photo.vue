@@ -3,7 +3,9 @@
     <figure class="imageContainer">
       <img :src="src">
     </figure>
-    <figcaption>{{ caption }}</figcaption>
+    <figcaption v-if="caption !== 'N/A'">
+      {{ caption }}
+    </figcaption>
   </div>
 </template>
 <script>
