@@ -211,8 +211,10 @@ export default {
           break
       }
       setTimeout(() => {
-        var elementList = document.getElementsByClassName("is-activeHover")
-        elementList.length > 0 && this.scrollView(elementList)
+        if(document.getElementsByClassName('onMenu').length <= 1) {
+          var elementList = document.getElementsByClassName("is-activeHover")
+          elementList.length > 0 && this.scrollView(elementList)
+        }
       }, 20)
     },
     scrollView: function (elementList) {

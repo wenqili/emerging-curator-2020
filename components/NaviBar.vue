@@ -2,21 +2,33 @@
   <div class="navi-bar">
     <nav>
       <nuxt-link
-        class="navi-item siteTitle"
+        class="siteTitle"
         to="/"
       >
         New agencies and their cheese factories
       </nuxt-link>
-      <button class="navi-item" :class="{ 'is-focused': isMenu }" @click="toggleMenu">
-        <font-awesome-icon v-if="!isMenu" icon="grip-lines" />
-        <div v-else class="about">
+      <button v-if="!showMenuList" class="clear" :class="{ 'is-focused': showMenuList }" @click="toggleMenuList">
+        <font-awesome-icon v-if="!showMenuList" icon="grip-lines" />
+
+        <span>Menu</span>
+      </button>
+      <div v-else @click="toggleMenuList">
+        <div class="about">
+          <button class="clear" @click="toggleMenu">
+            {{ isMenu ? 'Home' : 'Online Residency' }}
+          </button>
+          <nuxt-link to="/about">
+            Contact
+          </nuxt-link>
           <nuxt-link to="/about">
             About
           </nuxt-link>
           <font-awesome-icon icon="slash" />
+          <button class="clear">
+            Menu
+          </button>
         </div>
-        <span>Menu</span>
-      </button>
+      </div>
     </nav>
     <ResidencySection />
   </div>
@@ -30,16 +42,20 @@ export default {
   data: function() {
     return {
       isMenu: false,
+      showMenuList: false,
     }
   },
   methods: {
-    toggleMenu: function(){
+    toggleMenu: function() {
       this.isMenu = !this.isMenu
       this.$emit('toggle-menu')
     },
-    toggleOffMenu: function(){
+    toggleOffMenu: function() {
       this.isMenu = false
       this.$emit('toggle-off-menu')
+    },
+    toggleMenuList: function() {
+      this.showMenuList = !this.showMenuList
     }
   }
 }
@@ -88,15 +104,32 @@ button {
   color: black;
   font-weight: bold;
   line-height: 1;
-  
+  background-color: transparent;
+  padding:0.5rem;
+}
+
+.clear{
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+  padding:0.5rem;
+  cursor: pointer;
 }
 
 .about{
-  height: 4rem;
+  height: 15rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  transition: all 300ms ease;
+
+  a {
+    font-size: 0.9rem;
+    font-weight: 900;
+    line-height: 1;
+    font-family: var(--secondary-font);
+  }
 }
 
 </style>

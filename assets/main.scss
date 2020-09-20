@@ -4,9 +4,9 @@
   --primary-grey: #B7B7B7;
   --primary-brown: #99815E;
   --secondary-font: 'Replica';
-  --menu-full-width: 6rem;
-  --reserve-width: 6rem;
-  --move-width: calc(88vw - 6rem);
+  --menu-full-width: 100px;
+  --reserve-width: 100px;
+  --move-width: calc(100vw - 300px);
   --data-container-active: calc(100vw - var(--menu-full-width) - var(--reserve-width));
   --data-midcol-active: 70% ;
 }
@@ -38,6 +38,11 @@ a:hover {
 a.nuxt-link-exact-active {
   color: var(--primary-blue);
 }
+
+button {
+  font-family: var(--secondary-font);
+}
+
 
 main {
   display: grid;
