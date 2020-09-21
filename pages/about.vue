@@ -2,10 +2,12 @@
   <div class="rotating" :class="{ 'onMenu': onMenu }" @mousemove="onMouseMove($event)">
     <div class="catalog-grid" :class="{ 'onMenu': onMenu }">
       <div class="floater">
-        <button @click="onCursorOn = !onCursorOn">
-          <font-awesome-icon v-if="onCursorOn" icon="times" />
-          <font-awesome-icon v-else icon="circle" />
+        <button>
+          <nuxt-link to="/">
+            <font-awesome-icon icon="times" />
+          </nuxt-link>
         </button>
+
         <div id="floater-image" :class="{ 'onCursorOn': onCursorOn }" />
       </div>
       <div class="about-container">
@@ -143,5 +145,10 @@ a {
   padding: 0 0.5rem;
   column-count: 2;
   column-gap: 40px;
+}
+
+a.nuxt-link-active {
+  background-color: transparent;
+  color:black;
 }
 </style>
