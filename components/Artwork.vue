@@ -16,9 +16,6 @@
   </div>
 </template>
 <script>
-import projects from '../assets/project.json'
-import artists from '../assets/artists.json'
-import projectscn from '../assets/projectcn.json'
 export default {
   name: 'Artwork',
   props: {
@@ -29,18 +26,15 @@ export default {
   },
   data: function() {
     return {
-      artists,
+      artists: this.$store.state.localeArtistData,
       project: {},
-      projects,
-      projectscn,
+      projects: this.$store.state.localeProjectData,
       artist: {},
       main: [],
     }
   },
   created: function() {
-    // console.log(window)
-    console.log(this.route)
-    this.artist = artists.find(artist => artist.id === this.artistId)
+    this.artist = this.artists.find(artist => artist.id === this.artistId)
     this.project = this.projects.find(project => project.projectid === this.artist.projects)
     this.main.push(this.parseType(this.project.projectname, this.project.type, this.project.link))
     for(var i = 1; i < 7; i++) {

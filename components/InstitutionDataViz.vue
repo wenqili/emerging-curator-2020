@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import institution_overview from "~/assets/institution_overview.json"
 import OverviewDiagram from "~/components/OverviewDiagram.vue"
 export default {
   name: "InstitutionDataViz",
@@ -14,13 +13,12 @@ export default {
   },
   data(){
     return{
-      institution_data: institution_overview
+      institution_data: this.$store.state.localeInstitutionOverview
     } 
   },
   methods:{
     highlightList: function(list){
       this.$emit("highlight_list",list)
-      // console.log(list)
     }
   }
 }

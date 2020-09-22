@@ -19,20 +19,17 @@
           
       <div id="artwork" class="DataSection__col DataSection__midCol">
         <h4 class="DataSection__sectionTitle" @click="toggleArtwork">
-          {{ category.middle }}
+          {{ $t('links')[category.middle] }}
         </h4>
         <div class="DataSection__richtextContainer">
           <Artwork v-if="category.middle === 'artwork'" :artist-id="data.id" />
           <InstitutionWork v-else-if="category.middle === 'information'" :institution-id="data.id" />
-          <!-- <figure v-for="(asset,index) in assets" v-else-if="category.middle === 'artwork' && assets.length > 0" :key="index">
-            <img :src="'/artists/'+data.id+'/'+asset">
-          </figure> -->
         </div>
       </div>
 
       <div id="artinfo" class="DataSection__col DataSection__rightCol">
         <h4 class="DataSection__sectionTitle" @click="toggleArtwork">
-          {{ category.right }}
+          {{ $t('links')[category.right] }}
         </h4>
         <div class="DataSection__textContainer">
           <TextBlock :content="data" :type="category.left" />
@@ -43,12 +40,6 @@
 </template>
 
 <script>
-import artists from "../assets/artists.json"
-import institutions from '../assets/institution.json'
-import companies from '../assets/companies.json'
-
-let cleanArtists = [...new Set(artists)]
-let cleanInstitutions = [...new Set(institutions)]
 export default {
   name: "Slide",
   layout: 'catalog',
@@ -66,20 +57,19 @@ export default {
   },
   data: function() {
     return {
-      companies,
-      cleanArtists,
-      cleanInstitutions,
+      companies: this.$store.state.localeCompanyData,
+      artists: this.$store.state.localeArtistData,
+      institutions: this.$store.state.localeInstitutionData,
     }
   },
   created() {
     const routeName = this.$route.params.artist
     switch(this.category.left) {
       case 'artists':
-        this.data = cleanArtists.find(artist => artist.url === routeName) || {}
-        console.log(this.data)
+        this.data = this.artists.find(artist => artist.url === routeName) || {}
       break
       case 'institutions':
-        this.data = institutions[this.$route.params.institution] || {}
+        this.data = this.institutions[this.$route.params.institution] || {}
         break
       case 'companys':
         this.data = this.companies
@@ -87,7 +77,7 @@ export default {
       default:
         this.data = {}
     }
-    this.cleanInstitutions = cleanInstitutions
+    // this.cleanInstitutions = cleanInstitutions
     this.assets = this.data.assets ? this.data.assets.split(",") : []
   },
   methods: {

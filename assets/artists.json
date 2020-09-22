@@ -1,7 +1,7 @@
 [
   {
     "id": "0",
-    "url": "lx/en",
+    "url": "lx",
     "name": "Liu Xin",
     "residency": "New INC",
     "institutionid": "5,7",
@@ -23,7 +23,7 @@
   },
   {
     "id": "1",
-    "url": "zzwy/en",
+    "url": "zzwy",
     "name": "Wang Yang & Zhen Zhen",
     "residency": "NEW INC",
     "institutionid": "5",
@@ -45,7 +45,7 @@
   },
   {
     "id": "2",
-    "url": "lpyb/en",
+    "url": "lpyb",
     "name": "Pei-Ying Lin (BADAward / Erasmus Medical Center)",
     "residency": "BADAward / Erasmus Medical Center",
     "institutionid": "11",
@@ -67,7 +67,7 @@
   },
   {
     "id": "3",
-    "url": "lpyc/en",
+    "url": "lpyc",
     "name": "Pei-Ying Lin (CERN)",
     "residency": "CERN",
     "institutionid": "0",
@@ -89,7 +89,7 @@
   },
   {
     "id": "4",
-    "url": "cby/en",
+    "url": "cby",
     "name": "Chen Baoyang",
     "residency": "jd.com",
     "institutionid": "2",
@@ -111,7 +111,7 @@
   },
   {
     "id": "5",
-    "url": "mmg/en",
+    "url": "mmg",
     "name": "Maya Man (Google Creative Lab)",
     "residency": "Google Creative Lab",
     "institutionid": "6",
@@ -133,7 +133,7 @@
   },
   {
     "id": "6",
-    "url": "mmp/en",
+    "url": "mmp",
     "name": "Maya Man (Processing Foundation)",
     "residency": "Processing Foundation (#SupportP5 campaign)",
     "institutionid": "12",
@@ -155,7 +155,7 @@
   },
   {
     "id": "7",
-    "url": "vx/en",
+    "url": "vx",
     "name": "Vivian Xu",
     "residency": "Max Plank Institute",
     "institutionid": "13",
@@ -177,7 +177,7 @@
   },
   {
     "id": "8",
-    "url": "jll/en",
+    "url": "jll",
     "name": "Jen Liu (LACMA Art + Tech)",
     "residency": "LACMA Art + Tech",
     "institutionid": "9",
@@ -199,7 +199,7 @@
   },
   {
     "id": "9",
-    "url": "jlp/en",
+    "url": "jlp",
     "name": "Jen Liu (Pioneer Works)",
     "residency": "Pioneer Works",
     "institutionid": "10",
@@ -221,7 +221,7 @@
   },
   {
     "id": "10",
-    "url": "cyy/en",
+    "url": "cyy",
     "name": "Yiyun Chen",
     "residency": "Bio Art & Design Award; SymbioticA",
     "institutionid": "8,11",
@@ -243,7 +243,7 @@
   },
   {
     "id": "11",
-    "url": "asw/en",
+    "url": "asw",
     "name": "Angela Su",
     "residency": "Wellcome Trust, Hong Kong Museum of Medical Sciences",
     "institutionid": "3",
@@ -265,7 +265,7 @@
   },
   {
     "id": "12",
-    "url": "kw/en",
+    "url": "kw",
     "name": "Kenny Wong",
     "residency": "Bloomberg Digital Arts Initiative",
     "institutionid": "4",
@@ -287,7 +287,7 @@
   },
   {
     "id": "13",
-    "url": "cph/en",
+    "url": "cph",
     "name": "Chi Pohao(v2_Lab for Unstable Media)",
     "residency": "v2_Lab for Unstable Media",
     "institutionid": "1",
@@ -309,7 +309,7 @@
   },
   {
     "id": "14",
-    "url": "cphf/en",
+    "url": "cphf",
     "name": "Chi Pohao(FACT)",
     "residency": "FACT",
     "institutionid": "14",

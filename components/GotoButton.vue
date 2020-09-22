@@ -1,8 +1,8 @@
 <template>
   <div class="DataSection" :class="[{ 'is-active': order === 0}, { 'middle-section': order === 0}, { 'middle-section': order === 1}, { 'right-section': order === 2 }]">
-    <nuxt-link :to="'/'+route">
+    <nuxt-link :to="$i18n.path(route)">
       <h3 class="DataSection__sectionTitle">
-        {{ route }}
+        {{ $t('links')[route] }}
       </h3>
     </nuxt-link>
   </div>

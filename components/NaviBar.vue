@@ -3,29 +3,32 @@
     <nav>
       <nuxt-link
         class="siteTitle"
-        to="/"
+        :to="$i18n.path('')"
       >
-        Blue Cables in Venetian Watercourse
+        {{ $t('home.title') }}
       </nuxt-link>
       <button v-if="!showMenuList" class="clear" :class="{ 'is-focused': showMenuList }" @click="toggleMenuList">
         <font-awesome-icon v-if="!showMenuList" icon="grip-lines" />
 
-        <span>Menu</span>
+        <span>{{ $t('links.menu') }}</span>
       </button>
       <div v-else @click="toggleMenuList">
         <div class="about">
-          <button class="clear" @click="toggleMenu">
-            {{ isMenu ? 'Home' : 'Online Residency' }}
+          <button v-if="isMenu" class="clear" @click="toggleMenu">
+            {{ $t('links.home') }}
           </button>
-          <nuxt-link to="/about">
-            Contact
+          <button v-else class="clear" @click="toggleMenu">
+            {{ $t('links.onlineResidency') }}
+          </button>
+          <nuxt-link :to="$i18n.path('about')">
+            {{ $t('links.contact') }}
           </nuxt-link>
-          <nuxt-link to="/about">
-            About
+          <nuxt-link :to="$i18n.path('about')">
+            {{ $t('links.about') }}
           </nuxt-link>
           <font-awesome-icon icon="slash" />
           <button class="clear">
-            Menu
+            {{ $t('links.menu') }}
           </button>
         </div>
       </div>
@@ -107,6 +110,8 @@ button {
   line-height: 1.2;
   background-color: transparent;
   padding:0.5rem;
+  white-space: pre-line;
+  /* text-align: center; */
 }
 
 .clear{

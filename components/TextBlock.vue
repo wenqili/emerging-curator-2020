@@ -1,108 +1,106 @@
 <template>
   <div v-if="type === 'artists'">
     <figure>
-      <img src="~/static/diagram-10.png">
+      <img :src="artistDiagramLink">
     </figure>
-    <h4>Artist</h4>
-    <p>{{ content.name }}</p>
 
-    <h4>Participated Transdisciplinary Project/Residency Program</h4>
+    <h4>{{ $t('research.residency') }}</h4>
     <p>{{ content.residency }}</p>
 
-    <h4>Accomplished artwork during the residency (Name/URL)</h4>
+    <h4>{{ $t('research.works') }}</h4>
     <p>{{ content.works }}</p>
 
-    <h4>Role during the program</h4>
+    <h4>{{ $t('research.role') }}</h4>
     <p>{{ content.role }}</p>
 
-    <h4>Responsibilities in the project</h4>
+    <h4>{{ $t('research.responsibility') }}</h4>
     <p>{{ content.responsibility }}</p>
 
-    <h4>Disciplines involved in the project</h4>
+    <h4>{{ $t('research.disciplines') }}</h4>
     <p>{{ content.disciplines }}</p>
 
-    <h4>Technologies used in the project</h4>
+    <h4>{{ $t('research.stack') }}</h4>
     <p>{{ content.stack }}</p>
 
-    <h4>Means by which the artist learned about this residency</h4>
+    <h4>{{ $t('research.ref') }}</h4>
     <p>{{ content.ref }}</p>
 
-    <h4>Selection criteria</h4>
+    <h4>{{ $t('research.criteria') }}</h4>
     <p>{{ content.criteria }}</p>
 
-    <h4>Requested materials for the application</h4>
+    <h4>{{ $t('research.materials') }}</h4>
     <p>{{ content.materials }}</p>
 
-    <h4>Time duration</h4>
+    <h4>{{ $t('research.duration') }}</h4>
     <p>{{ content.duration }}</p>
 
-    <h4>Support recived during the residency (in detail)</h4>
+    <h4>{{ $t('research.support') }}</h4>
     <p>{{ content.support }}</p>
 
-    <h4>Post-residency exhibition/private collection</h4>
+    <h4>{{ $t('research.exhibitions') }}</h4>
     <p>{{ content.exhibitions }}</p>
 
-    <h4>Any thoughts on how the residency succeeded/failed (emphasize on the collaboration if applicable)</h4>
+    <h4>{{ $t('research.thoughs') }}</h4>
     <p>{{ content.thoughs !== null ? content.thoughs : "..." }}</p>
 
-    <h4>Your ideal institution</h4>
+    <h4>{{ $t('research.ideal') }}</h4>
     <p>{{ content.ideal !== null ? content.ideal : "..." }}</p>
   </div>
   <div v-else-if="type === 'institutions'">
     <figure>
-      <img src="~/static/diagram-09.png">
+      <img :src="institutionDiagramLink">
     </figure>
-    <h4>Location</h4>
+    <h4>{{ $t('research.location') }}</h4>
     <p>
       {{ content.location }}
     </p>
 
-    <h4>Institution Category</h4>
+    <h4>{{ $t('research.category') }}</h4>
     <p>{{ content.category }}</p>
 
-    <h4>Program of Institution</h4>
+    <h4>{{ $t('research.program') }}</h4>
     <p>{{ content.program }}</p>
     
-    <h4>Support Received from Instution</h4>
+    <h4>{{ $t('research.support') }}</h4>
     <p>{{ content.support }}</p>
     
-    <h4>Details of support (if applicable)</h4>
+    <h4>{{ $t('research.detail') }}</h4>
     <p>{{ content.detail }}</p>
     
-    <h4>Resources Provided by Institution</h4>
+    <h4>{{ $t('research.resource') }}</h4>
     <p>{{ content.resource }}</p>
     
-    <h4>Sources of Fund</h4>
+    <h4>{{ $t('research.fund') }}</h4>
     <p>{{ content.fund }}</p>
     
-    <h4>sources of fund (details)</h4>
+    <h4>{{ $t('research.funddetails') }}</h4>
     <p>{{ content.funddetails }}</p>
     
-    <h4>Artists</h4>
+    <h4>{{ $t('research.artists') }}</h4>
     <p>{{ content.artists }} </p>
     
-    <h4>Institution’s Mission</h4>
+    <h4>{{ $t('research.mission') }}</h4>
     <p>{{ content.mission }} </p>
     
-    <h4>Historical development of Institution</h4>
+    <h4>{{ $t('research.history') }}</h4>
     <p>{{ content.history }}</p>
     
-    <h4>Core program and performance </h4>
+    <h4>{{ $t('research.core') }}</h4>
     <p>{{ content.core }}</p>
     
-    <h4>work-flow of institution</h4>
+    <h4>{{ $t('research.workflow') }}</h4>
     <p>{{ content.workflow }}</p>
     
-    <h4>Reputation and Influence</h4>
+    <h4>{{ $t('research.reputation') }}</h4>
     <p>{{ content.reputation }}</p>
     
-    <h4>Reputation and Influence</h4>
+    <h4>{{ $t('research.head') }}</h4>
     <p>{{ content.head }} </p>
     
-    <h4>Disciplinary Interests</h4>
+    <h4>{{ $t('research.disciplinary') }}</h4>
     <p>{{ content.disciplinary }}</p>
     
-    <h4>Strength Analysis</h4>
+    <h4>{{ $t('research.strength') }}</h4>
     <p>{{ content.strength }}</p>
   </div>
 </template>
@@ -124,7 +122,8 @@ export default {
   },
   data: function() {
     return {
-      
+      artistDiagramLink: this.$store.state.localeArtistDiagram,
+      institutionDiagramLink: this.$store.state.localeInstitutionDiagram
     }
   }
 }

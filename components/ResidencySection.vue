@@ -2,7 +2,7 @@
   <div class="menu">
     <div class="residency-containert">
       <div class="top-section">
-        <h2>Online Residency</h2>
+        <h2>{{ $t('links.onlineResidency') }}</h2>
         <form>
           <input type="text" value="Search">
           <button>
@@ -14,8 +14,14 @@
         <iframe src="https://calendar.google.com/calendar/embed?src=en.china%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="100%" frameborder="0" scrolling="no" />
       </div>
       <div id="langButton">
-        <a href="https://emerging-curator-2020-cn.netlify.app/">CN
-          <br>EN</a>
+        <NuxtLink v-if="$i18n.locale === 'en'" :to="`/cn` + $route.fullPath" class="Header__Link" active-class="none" exact>
+          CN
+          <br>EN
+        </NuxtLink>
+        <NuxtLink v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" class="Header__Link" active-class="none" exact>
+          CN
+          <br>EN
+        </NuxtLink>
       </div>
     </div>
   </div>

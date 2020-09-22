@@ -29,6 +29,10 @@ export default {
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
   ],
+  plugins: ['plugins/i18n.js'],
+  router: {
+    middleware: ['i18n']
+  },
   build: {
     /*
      ** You can extend webpack config here
