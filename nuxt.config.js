@@ -1,6 +1,5 @@
 export default {
   target: 'static',
-
   /*
   ** Activate components - https://nuxtjs.org/guides/directory-structure/components#components-module
   */

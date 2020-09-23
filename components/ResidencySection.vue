@@ -14,7 +14,7 @@
         <iframe src="https://calendar.google.com/calendar/embed?src=en.china%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="100%" frameborder="0" scrolling="no" />
       </div>
       <div id="langButton">
-        <NuxtLink v-if="$i18n.locale === 'en'" :to="`/cn` + $route.fullPath" class="Header__Link" active-class="none" exact>
+        <NuxtLink v-if="$i18n.locale === 'cn'" :to="`/en` + $route.fullPath" class="Header__Link" active-class="none" exact>
           CN
           <br>EN
         </NuxtLink>

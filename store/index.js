@@ -13,7 +13,7 @@ import institutionOverviewCN from "~/assets/institution_overview_cn.json"
 
 export const state = () => ({
   locales: ['en', 'cn'],
-  locale: 'en',
+  locale: 'cn',
   localeArtistData: artists,
   localeInstitutionData:institutions,
   localeCompanyData: companies,
