@@ -1,4 +1,6 @@
 export default {
+  target: 'static',
+
   /*
   ** Activate components - https://nuxtjs.org/guides/directory-structure/components#components-module
   */
@@ -31,7 +33,8 @@ export default {
   ],
   plugins: ['plugins/i18n.js'],
   router: {
-    middleware: ['i18n']
+    middleware: ['i18n'],
+    base: '/emerging-curator-2020/'
   },
   build: {
     /*
