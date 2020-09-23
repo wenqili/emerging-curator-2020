@@ -40,7 +40,7 @@
     <h4>{{ $t('research.exhibitions') }}</h4>
     <p>{{ content.exhibitions }}</p>
 
-    <h4>{{ $t('research.thoughs') }}</h4>
+    <h4>{{ $t('research.thought') }}</h4>
     <p>{{ content.thoughs !== null ? content.thoughs : "..." }}</p>
 
     <h4>{{ $t('research.ideal') }}</h4>

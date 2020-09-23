@@ -5,7 +5,7 @@
     }"
     >
       <!-- <p>{{ company.company }}</p> -->
-      <div :style="'backgroundImage: url(/company/'+company.companyid+'/1.png)'" />
+      <div :style="'backgroundImage: url(./company/'+company.companyid+'/1.png)'" />
     </figure>
   </div>
 </template>

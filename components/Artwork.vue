@@ -53,7 +53,7 @@ export default {
           project.text = asset
           break
         case 'photo':
-          project.src = `/images/${link}`
+          project.src = `./images/${link}`
           project.type = 'image'
           project.text = asset
           break

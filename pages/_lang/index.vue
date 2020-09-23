@@ -4,20 +4,20 @@
       <div class="first-row-container">
         <div class="left-section">
           <figure v-for="(artist, index) in artists" :key="index" :class="{'is-feature': currentArtistId[0] === artist.id}">
-            <div :style="'backgroundImage: url(/artists/'+artist.id+'.png)'" />
+            <div :style="'backgroundImage: url(./artists/'+artist.id+'.png)'" />
           </figure>
         </div>
 
         <div class="middle-section">
           <figure v-for="(institution, index) in institutions" :key="index" :class="{'is-feature': currentInstitutionId[0] === institution.id}">
-            <div :style="'backgroundImage: url(/institution/'+institution.id+'/1.png)'" />
+            <div :style="'backgroundImage: url(./institution/'+institution.id+'/1.png)'" />
           </figure>
         </div>
 
         <div class="right-section">
           <figure v-for="(company, index) in companies" :key="index" :class="{'is-feature': currentCompanyId[0] === company.companyid}">
             <div
-              :style="'backgroundImage: url(/company/'+company.companyid+'/1.png)'"
+              :style="'backgroundImage: url(./company/'+company.companyid+'/1.png)'"
               class="contain"
             />
           </figure>

@@ -34,8 +34,8 @@ export const mutations = {
       state.localeProjectData = locale === "cn" ? projectsCN : projects
       state.localeArtistsOverview = locale === "cn" ? artistsOverviewCN : artistsOverview
       state.localeInstitutionOverview = locale === "cn" ? institutionOverviewCN : institutionOverview
-      state.localeArtistDiagram = locale === "cn" ? '/artist-diagram-cn.png' : '/artist-diagram.png'
-      state.localeInstitutionDiagram = locale === "cn" ? '/institution-diagram-cn.png' : '/institution-diagram.png'
+      state.localeArtistDiagram = locale === "cn" ? './artist-diagram-cn.png' : './artist-diagram.png'
+      state.localeInstitutionDiagram = locale === "cn" ? './institution-diagram-cn.png' : './institution-diagram.png'
     }
   }
 }

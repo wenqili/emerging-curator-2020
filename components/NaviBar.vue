@@ -20,9 +20,9 @@
           <button v-else class="clear" @click="toggleMenu">
             {{ $t('links.onlineResidency') }}
           </button>
-          <nuxt-link :to="$i18n.path('about')">
+          <a href="mailto:trigger.trigger.art@gmail.com">
             {{ $t('links.contact') }}
-          </nuxt-link>
+          </a>
           <nuxt-link :to="$i18n.path('about')">
             {{ $t('links.about') }}
           </nuxt-link>
