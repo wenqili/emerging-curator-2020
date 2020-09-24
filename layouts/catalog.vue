@@ -9,7 +9,20 @@
 export default {
   components: {
 
-  }
+  },
+  head() {
+    return {
+      title: "他山之石 新代理人",
+      meta: [
+        { charset: 'utf-8' },
+        {
+          hid: "他山之石 新代理人",
+          name: "他山之石 新代理人",
+          content: "他山之石 新代理人",
+        },
+      ],
+    }
+  },
 }
 </script>
 
