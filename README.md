@@ -14,10 +14,16 @@ yarn dev
 
 ## Deploy
 
+- Codebase for mainland China：https://github.com/wenqili/emerging-curator-2020/tree/cn（emerging-curator-2020 cn branch）
+- After update codebase, run
+，
+```bash
+yarn generate
+```
 
-## Style Convention
+to generate static site deployment folder `/dist`
 
-### Global style and reset
+- Push `/dist` to gitee repo：https://gitee.com/emergingcurator/emergingcurator
+- Message wenqi to update the static page
 
-../layout/default.vue
 
