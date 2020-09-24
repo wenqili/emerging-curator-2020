@@ -63,16 +63,6 @@ export default {
       document.getElementById('artwork').classList.toggle('is-active')
       document.getElementById('artinfo').classList.toggle('is-blur')
     },
-  },
-  head() {
-    return {
-      title: "Emerging Curators 2020",
-      meta: [{
-        hid: "descriptions",
-        name: "descriptions",
-        content: "descriptions"
-      }]
-    }
   }
 }
 </script>

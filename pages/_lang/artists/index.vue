@@ -67,16 +67,6 @@ export default {
     showList: function(list){
       this.showHighlight = list
     }
-  },
-  head() {
-    return {
-      title: "Emerging Curators 2020",
-      meta: [{
-        hid: "descriptions",
-        name: "descriptions",
-        content: "descriptions"
-      }]
-    }
   }
 }
 </script>

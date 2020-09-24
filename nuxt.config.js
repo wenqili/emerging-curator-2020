@@ -1,4 +1,17 @@
 export default {
+  title: {
+    title: '他山之石 新代理人',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: '他山之石 新代理人',
+        name: '他山之石 新代理人',
+        content: '他山之石 新代理人'
+      }
+    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+  },
   target: 'static',
   /*
   ** Activate components - https://nuxtjs.org/guides/directory-structure/components#components-module

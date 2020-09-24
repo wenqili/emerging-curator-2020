@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/artists/kw", {data:[{}],fetch:[],mutations:[]});

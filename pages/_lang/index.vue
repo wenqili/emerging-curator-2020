@@ -232,18 +232,6 @@ export default {
       }, 20)
     },
   },
-  head() {
-    return {
-      title: "Emerging Curators 2020",
-      meta: [
-        {
-          hid: "descriptions",
-          name: "descriptions",
-          content: "descriptions",
-        },
-      ],
-    }
-  },
 }
 </script>
 
