@@ -46,7 +46,7 @@ export default {
   plugins: ['plugins/i18n.js'],
   router: {
     middleware: ['i18n'],
-    base: '/emerging-curator-2020/'
+    // base: '/emerging-curator-2020/'
   },
   build: {
     /*

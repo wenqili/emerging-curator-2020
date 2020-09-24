@@ -62,16 +62,16 @@ h3.DataSection__sectionTitle{
   font-family: 'Replica-Regular';
   /* font-weight: normal; */
   src: local("Replica-Regular"), 
-  url('~assets/fonts/Replica/Replica-Regular.otf') format('otf'),
+  url('fonts/Replica/Replica-Regular.otf') format('otf'),
 }
 
 @font-face {
   font-family: 'Replica';
-  src: url('~assets/fonts/Replica/Replica-Regular.eot?#iefix') format('embedded-opentype'),
-      url('~assets/fonts/Replica/Replica-Regular.woff2') format('woff2'),
-      url('~assets/fonts/Replica/Replica-Regular.woff') format('woff'),
-      url('~assets/fonts/Replica/Replica-Regular.ttf') format('truetype'),
-      url('~assets/fonts/Replica/Replica-Regular.svg#Replica-Regular') format('svg');
+  src: url('fonts/Replica/Replica-Regular.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Replica/Replica-Regular.woff2') format('woff2'),
+      url('fonts/Replica/Replica-Regular.woff') format('woff'),
+      url('fonts/Replica/Replica-Regular.ttf') format('truetype'),
+      url('fonts/Replica/Replica-Regular.svg#Replica-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -79,11 +79,11 @@ h3.DataSection__sectionTitle{
 
 @font-face {
   font-family: 'Univers LT Std';
-  src: url('~assets/fonts/Univers/UniversLTStd.eot?#iefix') format('embedded-opentype'),
-      url('~assets/fonts/Univers/UniversLTStd.woff2') format('woff2'),
-      url('~assets/fonts/Univers/UniversLTStd.woff') format('woff'),
-      url('~assets/fonts/Univers/UniversLTStd.ttf') format('truetype'),
-      url('~assets/fonts/Univers/UniversLTStd.svg#UniversLTStd') format('svg');
+  src: url('fonts/Univers/UniversLTStd.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Univers/UniversLTStd.woff2') format('woff2'),
+      url('fonts/Univers/UniversLTStd.woff') format('woff'),
+      url('fonts/Univers/UniversLTStd.ttf') format('truetype'),
+      url('fonts/Univers/UniversLTStd.svg#UniversLTStd') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
