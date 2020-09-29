@@ -34,7 +34,7 @@
               {{ $t('links.artists') }}
             </h3>
           </nuxt-link>
-
+          <Hint :hintText="hintContent" />
           <div class="IndexSection__sectionContainer">
             <!-- Artist name list -->
             <div class="IndexSection__col IndexSection__leftCol">
@@ -62,7 +62,7 @@
               {{ $t('links.institutions') }}
             </nuxt-link>
           </h3>
-
+          <Hint :hintText="hintContent" />
           <!-- Institution list -->
           <div class="IndexSection__col IndexSection__leftCol">
             <div class="IndexSection__richtextContainer">
@@ -88,7 +88,7 @@
               {{ $t('links.companies') }}
             </nuxt-link>
           </h3>
-
+          <Hint :hintText="hintContent" />
           <!-- Company list -->
           <div class="IndexSection__col IndexSection__leftCol">
             <div class="IndexSection__richtextContainer">
@@ -115,6 +115,7 @@
 // import artists from "../assets/artists.json"
 // import institutions from "../assets/institution.json"
 // import companies from "../assets/companies.json"
+// import Hint from ""
 let timer
 let ticking = false
 export default {
@@ -137,7 +138,8 @@ export default {
       currentCompanies: [],
       currentFocus: "artist",
       currentArtist: {},
-      homeDirectory: this.$route.fullPath === '/en/'?'..':'.'
+      homeDirectory: this.$route.fullPath === '/en/'?'..':'.',
+      hintContent: this.$route.fullPath === '/en/'?'Click':'点击',
     }
   },
   created() {
@@ -444,5 +446,36 @@ figure {
     height: 0;
     width: 0;
   }
+}
+
+.hideMarker {
+  padding-left: 2px;
+  z-index: 100;
+  position: fixed;
+  text-align: center;
+  margin-top: -120px;
+  -moz-animation: hideAnimation 0s ease-in 5s forwards;
+  /* Firefox */
+  -webkit-animation: hideAnimation 0s ease-in 5s forwards;
+  /* Safari and Chrome */
+  -o-animation: hideAnimation 0s ease-in 5s forwards;
+  /* Opera */
+  animation: hideAnimation 0s ease-in 5s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes hideAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes hideAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
 }
 </style>
