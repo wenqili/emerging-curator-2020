@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en/artists/cby", {data:[{}],fetch:[],mutations:[]});
