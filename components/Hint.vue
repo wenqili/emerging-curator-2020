@@ -34,5 +34,22 @@ export default {
 
 .upArrow {
 	padding-left: 2px;
+	-moz-animation: blinkAnimation 1.5s ease-in-out infinite;
+	-webkit-animation: blinkAnimation 1.5s ease-in-out infinite;
+	-o-animation: blinkAnimation 1.5s ease-in-out infinite;
+	animation: blinkAnimation 1.5s ease-in-out infinite;
 }
+
+@keyframes blinkAnimation {
+  50% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blinkAnimation {
+  50% {
+    opacity: 0;
+  }
+}
+
 </style>

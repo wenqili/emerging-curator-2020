@@ -455,11 +455,8 @@ figure {
   text-align: center;
   margin-top: -120px;
   -moz-animation: hideAnimation 0s ease-in 5s forwards;
-  /* Firefox */
   -webkit-animation: hideAnimation 0s ease-in 5s forwards;
-  /* Safari and Chrome */
   -o-animation: hideAnimation 0s ease-in 5s forwards;
-  /* Opera */
   animation: hideAnimation 0s ease-in 5s forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
