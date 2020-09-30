@@ -105,6 +105,7 @@ form {
   border-bottom: 3px solid black;
   border-right: none;
   border-top: none;
+  overflow: auto;;
 }
 
 iframe {

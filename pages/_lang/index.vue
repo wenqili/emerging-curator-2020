@@ -29,12 +29,14 @@
         <!-- Artists -->
 
         <div class="IndexSection left-section">
-          <nuxt-link :to="$i18n.path('artists')">
-            <h3 class="IndexSection__sectionTitle">
-              {{ $t('links.artists') }}
-            </h3>
-          </nuxt-link>
-          <Hint :hintText="hintContent" />
+          <div class="IndexSection title-section">
+            <nuxt-link :to="$i18n.path('artists')">
+              <h3 class="IndexSection__sectionTitle">
+                {{ $t('links.artists') }}
+              </h3>
+            </nuxt-link>
+            <Hint :hintText="hintContent" />
+          </div>
           <div class="IndexSection__sectionContainer">
             <!-- Artist name list -->
             <div class="IndexSection__col IndexSection__leftCol">
@@ -57,12 +59,14 @@
 
         <!-- Institution -->
         <div class="IndexSection middle-section">
-          <h3 class="IndexSection__sectionTitle">
-            <nuxt-link :to="$i18n.path('institutions')">
-              {{ $t('links.institutions') }}
-            </nuxt-link>
-          </h3>
-          <Hint :hintText="hintContent" />
+          <div class="IndexSection title-section">
+            <h3 class="IndexSection__sectionTitle">
+              <nuxt-link :to="$i18n.path('institutions')">
+                {{ $t('links.institutions') }}
+              </nuxt-link>
+            </h3>
+            <Hint :hintText="hintContent" />
+          </div>
           <!-- Institution list -->
           <div class="IndexSection__col IndexSection__leftCol">
             <div class="IndexSection__richtextContainer">
@@ -83,12 +87,14 @@
 
         <!-- Company -->
         <div class="IndexSection right-section">
-          <h3 class="IndexSection__sectionTitle">
-            <nuxt-link :to="$i18n.path('companies')">
-              {{ $t('links.companies') }}
-            </nuxt-link>
-          </h3>
-          <Hint :hintText="hintContent" />
+          <div class="IndexSection title-section">
+            <h3 class="IndexSection__sectionTitle">
+              <nuxt-link :to="$i18n.path('companies')">
+                {{ $t('links.companies') }}
+              </nuxt-link>
+            </h3>
+            <Hint :hintText="hintContent" />
+          </div>
           <!-- Company list -->
           <div class="IndexSection__col IndexSection__leftCol">
             <div class="IndexSection__richtextContainer">
@@ -305,8 +311,8 @@ a.nuxt-link-active {
   position: relative;
   top: 0;
   right: 0;
-  padding-top: 1.2rem;
-  height: 10.4rem;
+  /* padding-top: 1.2rem; */
+  overflow: hidden;
   z-index: 1;
   height: 100%;
   border-top: 3px solid black;
@@ -319,6 +325,12 @@ a.nuxt-link-active {
   h3 {
     top: 1.2rem;
     z-index: 1;
+  }
+
+  &.title-section {
+    width: 2rem;
+    border-top: none;
+    height: 100%;
   }
 
   &__sectionTitle {
@@ -374,6 +386,8 @@ a.nuxt-link-active {
   &__richtextContainer {
     overflow: auto;
     height: 100%;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
   }
 
   &__textContainer {
@@ -450,29 +464,35 @@ figure {
 
 .hideMarker {
   padding-left: 2px;
-  z-index: 100;
-  position: fixed;
+  position: absolute;
   text-align: center;
-  margin-top: -120px;
-  -moz-animation: hideAnimation 0s ease-in 5s forwards;
-  -webkit-animation: hideAnimation 0s ease-in 5s forwards;
-  -o-animation: hideAnimation 0s ease-in 5s forwards;
-  animation: hideAnimation 0s ease-in 5s forwards;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  top: 0;
+  padding-top: 9.5rem;
+  -moz-animation: hideAnimation ease-in-out 10s infinite;
+  -webkit-animation: hideAnimation ease-in-out 10s infinite;
+  -o-animation: hideAnimation ease-in-out 10s infinite;
+  animation: hideAnimation ease-in-out 10s infinite;
+  /* -webkit-animation-fill-mode: forwards; */
+  /* animation-fill-mode: forwards; */
+  user-select: none;
 }
 @keyframes hideAnimation {
-    to {
-        width:0;
-        height:0;
-        overflow:hidden;
-    }
+  60%, 100% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 0;
+  }
+
+  10%, 50% {
+    opacity: 1;
+  }
 }
-@-webkit-keyframes hideAnimation {
+/* @-webkit-keyframes hideAnimation {
     to {
         width:0;
         height:0;
         visibility:hidden;
     }
-}
+} */
 </style>
